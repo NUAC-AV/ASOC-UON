@@ -28,6 +28,7 @@ This project provides a Python script to read data from a Google Sheets document
 - Python 3.x
 - `pandas` library
 - `folium` library
+- `gpxpy` libary
 
 ## Setup
 
@@ -35,4 +36,6 @@ This project provides a Python script to read data from a Google Sheets document
 Make sure you have `pandas` and `folium` installed. You can install these libraries using `pip`:
 
 ```sh
-pip install pandas folium
+pip install folium
+pip install pandas
+pip install gpxpy

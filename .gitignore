@@ -1,1 +1,7 @@
 .DS_Store
+
+.venv
+
+# Remove gpx files
+Strava_Routes/
+\*.gpx

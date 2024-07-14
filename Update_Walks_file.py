@@ -16,7 +16,7 @@ addresses = df['Address'].tolist()
 descriptions = df['Description'].tolist()
 
 # Create a map centered around the first location
-m = folium.Map(location=locations[0], zoom_start=15)
+m = folium.Map(location=(-32.9, 151.79), zoom_start=10)
 
 # Add markers for each location
 for name, loc, link, address, desc in zip(names, locations, links, addresses, descriptions):
