@@ -16,11 +16,13 @@
 - [License](#license)
 
 ## Overview
-This project provides a Python script to read data from a Google Sheets document and create an interactive map with markers using the `folium` library. The map is saved as an HTML file, which can be viewed in any web browser.
+This project provides a Python scripts to read data from a ASOC_Walks_Database Google Sheets document. Which is used to create an interactive map with markers using the `folium` library. The map is saved as an HTML file, which can be viewed in any web browser.
+
+https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/edit?fbclid=IwZXh0bgNhZW0CMTAAAR3rcnaz2qedGxf1LaI0fz7X7gUQiZrvZTjs3x-MfPTNZODKO8ykz3piWDI_aem_mtzQRofiQxsPinF7C6uSHg&gid=0#gid=0
 
 ## Features
-- Read data from a publicly accessible Google Sheet
-- Create an interactive map centered around the first location
+- Read data from "ASOC_Walks_Database"
+- Create an interactive map from the database
 - Add markers for each location with popups containing relevant information
 - Save the map as an HTML file
 
@@ -39,3 +41,7 @@ Make sure you have `pandas` and `folium` installed. You can install these librar
 pip install folium
 pip install pandas
 pip install gpxpy
+
+## Usage
+You can access any of the maps by the link https://roryyarr.github.io/ASOC-Walks/filename.
+For example https://roryyarr.github.io/ASOC-Walks/strava_route_map.html or 
