@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_123f776c3d0cb6a1679547bacf25e725 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_123f776c3d0cb6a1679547bacf25e725" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_123f776c3d0cb6a1679547bacf25e725 = L.map(
+                "map_123f776c3d0cb6a1679547bacf25e725",
+                {
+                    center: [-32.92415683, 151.7912836],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_af5196c3905405cc35cfeac4ad47a2c8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_af5196c3905405cc35cfeac4ad47a2c8.addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+            var marker_c58fec1e9f07c5b6f3b73f8708c48027 = L.marker(
+                [-32.92415683, 151.7912836],
+                {}
+            ).addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+        var popup_3ef7897dccf2fb50e4d8208a2a6717a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c614dbbd2e4cb09d73e70981a88becfe = $(`<div id="html_c614dbbd2e4cb09d73e70981a88becfe" style="width: 100.0%; height: 100.0%;"><b>Nobby Breakwall</b><br><a href='https://www.google.com/maps/place/East+End+Beach+Parking+Area+-+Horseshoe+Beach/@-32.9236887,151.7910799,18.07z/data=!4m6!3m5!1s0x6b73147e2bf0100d:0xfffc85f51891a3b6!8m2!3d-32.922514!4d151.790882!16s%2Fg%2F11gd681jg2?entry=ttu' target='_blank'>Google Maps Link</a><br>Horseshoe Beach Rd, Newcastle East NSW 2300<br>We can walk accross the breakwall with possible extentions of the lighthouse. Or we can wall to city beach.</div>`)[0];
+                popup_3ef7897dccf2fb50e4d8208a2a6717a2.setContent(html_c614dbbd2e4cb09d73e70981a88becfe);
+            
+        
+
+        marker_c58fec1e9f07c5b6f3b73f8708c48027.bindPopup(popup_3ef7897dccf2fb50e4d8208a2a6717a2)
+        ;
+
+        
+    
+    
+            marker_c58fec1e9f07c5b6f3b73f8708c48027.bindTooltip(
+                `<div>
+                     Nobby Breakwall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78bb6f0bc07118e60d52b036b89ee996 = L.marker(
+                [-32.91879584, 151.783338],
+                {}
+            ).addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+        var popup_2758e0afe124678ebb269c0c8c85b476 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf6e4ee06c6a325a351bd5091179aba5 = $(`<div id="html_cf6e4ee06c6a325a351bd5091179aba5" style="width: 100.0%; height: 100.0%;"><b>Stockton Breakwall</b><br><a href='https://www.google.com/maps/place/Car+Park/@-32.9191859,151.7830461,19.63z/data=!4m6!3m5!1s0x6b731536f34ee44d:0x62aa05ab0e20218a!8m2!3d-32.91882!4d151.7832969!16s%2Fg%2F11fm17jly_?entry=ttu' target='_blank'>Google Maps Link</a><br>3 Hunter St, Stockton NSW 2295<br>We can walk to the left until we reach the breakwall.</div>`)[0];
+                popup_2758e0afe124678ebb269c0c8c85b476.setContent(html_cf6e4ee06c6a325a351bd5091179aba5);
+            
+        
+
+        marker_78bb6f0bc07118e60d52b036b89ee996.bindPopup(popup_2758e0afe124678ebb269c0c8c85b476)
+        ;
+
+        
+    
+    
+            marker_78bb6f0bc07118e60d52b036b89ee996.bindTooltip(
+                `<div>
+                     Stockton Breakwall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_809dba083453ad17fe13709851fb9fc8 = L.marker(
+                [-32.890779, 151.539436],
+                {}
+            ).addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+        var popup_5f66adf9d961e7b133bce22f4eeb2162 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82ea4b4d2e76955fd11d6aa35806869b = $(`<div id="html_82ea4b4d2e76955fd11d6aa35806869b" style="width: 100.0%; height: 100.0%;"><b>Mount Sugarloaf</b><br><a href='https://www.google.com/maps/place/Mount+Sugarloaf+Lookout/@-32.9411111,151.7239133,11z/data=!4m6!3m5!1s0x6b73393b2c49f021:0x7bc423b61a9121b6!8m2!3d-32.8910854!4d151.5381866!16s%2Fg%2F11gxmgm780?entry=ttu' target='_blank'>Google Maps Link</a><br>West Wallsend NSW 2286<br>Walk around</div>`)[0];
+                popup_5f66adf9d961e7b133bce22f4eeb2162.setContent(html_82ea4b4d2e76955fd11d6aa35806869b);
+            
+        
+
+        marker_809dba083453ad17fe13709851fb9fc8.bindPopup(popup_5f66adf9d961e7b133bce22f4eeb2162)
+        ;
+
+        
+    
+    
+            marker_809dba083453ad17fe13709851fb9fc8.bindTooltip(
+                `<div>
+                     Mount Sugarloaf
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3da3748ee96f05202c2be653837eb047 = L.marker(
+                [-33.01358455, 151.6287538],
+                {}
+            ).addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+        var popup_70b94a3a69c001b2e86c7a48e4584f32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3cfc2c3608e7178e86ff6e9f06e41f8 = $(`<div id="html_e3cfc2c3608e7178e86ff6e9f06e41f8" style="width: 100.0%; height: 100.0%;"><b>Green Point</b><br><a href='https://www.google.com/maps?q=134+Dilkera+Ave,+Valentine+NSW+2280&ftid=0x6b732349c06e0e19:0xe3c03eb15da5a60d&entry=gps&lucs=,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447,94213316&g_ep=CAISDTYuMTIzLjAuNzEzODAYACDXggMqYyw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0Nyw5NDIxMzMxNkICQVU%3D&g_st=ifm' target='_blank'>Google Maps Link</a><br>134 Dilkera Ave, Valentine NSW 2280<br>This is a 5 km loop</div>`)[0];
+                popup_70b94a3a69c001b2e86c7a48e4584f32.setContent(html_e3cfc2c3608e7178e86ff6e9f06e41f8);
+            
+        
+
+        marker_3da3748ee96f05202c2be653837eb047.bindPopup(popup_70b94a3a69c001b2e86c7a48e4584f32)
+        ;
+
+        
+    
+    
+            marker_3da3748ee96f05202c2be653837eb047.bindTooltip(
+                `<div>
+                     Green Point
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab810533863a48a0208fb6fde7a3dade = L.marker(
+                [-32.98938257, 151.6363871],
+                {}
+            ).addTo(map_123f776c3d0cb6a1679547bacf25e725);
+        
+    
+        var popup_e7ecdf4e34b8029de916809bb9517ce7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce12b0cd2caa856eb6225f8026a13a89 = $(`<div id="html_ce12b0cd2caa856eb6225f8026a13a89" style="width: 100.0%; height: 100.0%;"><b>Elebana Park</b><br><a href='https://www.google.com/maps/place/Lions+Park/@-32.98911,151.6346886,17.26z/data=!4m14!1m7!3m6!1s0x6b7323475f570447:0xf1ebe11175d69940!2sGreen+Point!8m2!3d-33.0215867!4d151.6304169!16s%2Fg%2F11cjgd86tc!3m5!1s0x6b733cc21e5963cd:0x39f503798d6ddc75!8m2!3d-32.9889518!4d151.6364334!16s%2Fg%2F11c5sd783s?entry=ttu' target='_blank'>Google Maps Link</a><br>Eleebana NSW 2282<br>Elebana Boat ramp</div>`)[0];
+                popup_e7ecdf4e34b8029de916809bb9517ce7.setContent(html_ce12b0cd2caa856eb6225f8026a13a89);
+            
+        
+
+        marker_ab810533863a48a0208fb6fde7a3dade.bindPopup(popup_e7ecdf4e34b8029de916809bb9517ce7)
+        ;
+
+        
+    
+    
+            marker_ab810533863a48a0208fb6fde7a3dade.bindTooltip(
+                `<div>
+                     Elebana Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
