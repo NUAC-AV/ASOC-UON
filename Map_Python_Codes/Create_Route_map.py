@@ -73,4 +73,5 @@ start_marker = {
     "description": "Starting point"
 }
 
+
 create_map_with_markers(gpx_file, output_file, map_settings, start_marker)

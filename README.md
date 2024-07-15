@@ -6,6 +6,7 @@
 - [Requirements](#requirements)
 - [Setup](#setup)
   - [Install Required Libraries](#install-required-libraries)
+- [Running Code](# )
 - [Usage](#usage)
   - [Clone the Repository](#clone-the-repository)
   - [Run the Script](#run-the-script)
