@@ -2,7 +2,7 @@ import folium
 import gpxpy
 
 """
-Code asks 
+Code asks user input to create the 
 Returns:
 
 None
@@ -15,7 +15,7 @@ while True:
     print("Enter marker details:")
     name = input("Name: ")
     link = input("Link: ")
-    icon = input("Icon: ")
+    icon = input("Icon: ").strip().lower()
     colour = input("Colour: ")
     description = input("Description: ")
 
@@ -25,7 +25,8 @@ while True:
         break
 
 
-# Parse the GPX file
+
+# Open the GPX file
 with open(gpx_file, 'r') as f:
     gpx = gpxpy.parse(f)
 
@@ -37,10 +38,15 @@ for track in gpx.tracks:
             route.append((point.latitude, point.longitude))
 
 
-
+# Loop allows users to change settings
 while True:
-    centre = int(input("Which node do you want to be the centre? (int)" ))
+    while True:
+        centre = int(input("Which node do you want to be the centre? (int)" ))
+        if center > len(route):
+            print("The route only has ",len(route),"points. Please choose a smaller number.")
+            continue
     zoom = int(input("What zoom setting do you want? (int)"))
+        
 
 
     # Create a map centered around the specified point
@@ -48,14 +54,19 @@ while True:
         start_point = route[centre]
     else:
         start_point = [0, 0]
+
     # Initialize map layer
     m = folium.Map(location=start_point, zoom_start=zoom)
     
     # Add the GPX route to the map
     folium.PolyLine(route, color='blue', weight=2.5, opacity=1).add_to(m)
 
-    # Make marker Icon
-    custom_icon = folium.Icon(color=colour, icon=icon, prefix='fa')
+    # Check if the icon is the ASOC logo and inalize the logo
+    if icon == 'asoc':
+        custom_icon = folium.CustomIcon(custom_icon_path, icon_size=(50, 50))
+    else:
+        custom_icon = folium.Icon(color=colour, icon=icon, prefix='fa')
+
 
     # Add start marker to the map
     folium.Marker(
@@ -64,6 +75,7 @@ while True:
         tooltip=name,
         icon=custom_icon
     ).add_to(m)
+
 
 
     # Ask user if they want a endpoint marker
@@ -87,14 +99,13 @@ while True:
             icon=custom_icon
         ).add_to(m)
 
-
-    # Ask the user if they want to add another marker or finalize the map
-    proceed = input("Do you want finalize the map? (add/finalize): (y/n)").strip().lower()
+    # Ask the user if they want to add change names
+    proceed = input("Do you want to move on? (y/n): ").strip().lower()
     if proceed == 'y':
         break
+
+
 
 # Save the map as an HTML file
 m.save(output_file)
 print(f"Map has been saved to {output_file}")
-
-#create_map_with_markers(gpx_file, output_file, map_settings, start_marker)
