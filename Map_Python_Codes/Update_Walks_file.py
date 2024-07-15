@@ -13,10 +13,10 @@ df
 # Extract data from the DataFrame
 names = df['Name'].tolist()
 locations = df[['Latitude', 'Longitude']].values.tolist()
-links = df['Link'].tolist()
+links = df['Google_Link'].tolist()
 addresses = df['Address'].tolist()
 descriptions = df['Description'].tolist()
-routes = df['Routes'].tolist()
+routes = df['Route_Links'].tolist()
 icons = df['Icon'].tolist()
 colours = df['Colour'].tolist()
 
