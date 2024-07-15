@@ -2,6 +2,9 @@ import folium
 import pandas as pd
 
 # Google Sheets URL
+
+#https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/edit?fbclid=IwZXh0bgNhZW0CMTAAAR3rcnaz2qedGxf1LaI0fz7X7gUQiZrvZTjs3x-MfPTNZODKO8ykz3piWDI_aem_mtzQRofiQxsPinF7C6uSHg&gid=0#gid=0
+#sheet_url = 'https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/export?format=csv'
 sheet_url = 'https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/export?format=csv'
 
 # Read the data into a DataFrame
@@ -28,7 +31,7 @@ for name, loc, link, address, desc, route in zip(names, locations, links, addres
     ).add_to(m)
 
 # Save the map as an HTML file
-html_file = '/ASOC_walk_locations_map.html'
+html_file = 'Maps/ASOC_walk_locations_map.html'
 m.save(html_file)
 
 print(f"Map has been saved to {html_file}")

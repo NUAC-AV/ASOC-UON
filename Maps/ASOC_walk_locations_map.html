@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4601b0e574b36b7891536d0ac48bfcd7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4601b0e574b36b7891536d0ac48bfcd7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4601b0e574b36b7891536d0ac48bfcd7 = L.map(
+                "map_4601b0e574b36b7891536d0ac48bfcd7",
+                {
+                    center: [-32.9, 151.79],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2686cee408693b1be33aa7882b681562 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_2686cee408693b1be33aa7882b681562.addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+            var marker_a7b913ff94efab851a12604b2ea4a11e = L.marker(
+                [-32.99149503, 151.7222826],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_96fef621e85b33e69b3fb241dae2a74e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdbbc174a02cb293329201a7600efbcc = $(`<div id="html_fdbbc174a02cb293329201a7600efbcc" style="width: 100.0%; height: 100.0%;"><b>Awabakal Nature Reserve</b><br><a href='https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Maps Link</a><br>13 Ivy St, Dudley NSW 2290<br>It will be in the bush, so pls have proper walking shoes for the walk. We can park on the road around Ivy Street.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_96fef621e85b33e69b3fb241dae2a74e.setContent(html_fdbbc174a02cb293329201a7600efbcc);
+            
+        
+
+        marker_a7b913ff94efab851a12604b2ea4a11e.bindPopup(popup_96fef621e85b33e69b3fb241dae2a74e)
+        ;
+
+        
+    
+    
+            marker_a7b913ff94efab851a12604b2ea4a11e.bindTooltip(
+                `<div>
+                     Awabakal Nature Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3503e16bf2a4e67ba82399033d1b8a5 = L.marker(
+                [-32.94047053, 151.7695674],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_2e7857d6a76a7b9c4df07d74f17cecb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9944ae4cf0fd0722c462b9b6c0c26894 = $(`<div id="html_9944ae4cf0fd0722c462b9b6c0c26894" style="width: 100.0%; height: 100.0%;"><b>Bar Beach</b><br><a href='https://www.google.com/maps/place/Yuelarbah+Track,+Bar+Beach+NSW+2300/@-32.9406461,151.764718,946m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x6b73143fbd4c9111:0x5017d681632e890!2sBar+Beach+NSW+2300!3b1!8m2!3d-32.9377866!4d151.7701917!16s%2Fm%2F02x66br!3m5!1s0x6b73143e338a20c5:0xbac9ffd0659c571a!8m2!3d-32.9406507!4d151.7695889!16s%2Fg%2F11m_lcwt1h?entry=ttu' target='_blank'>Google Maps Link</a><br>Yuelarbah Track, Bar Beach NSW 2300<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_2e7857d6a76a7b9c4df07d74f17cecb2.setContent(html_9944ae4cf0fd0722c462b9b6c0c26894);
+            
+        
+
+        marker_b3503e16bf2a4e67ba82399033d1b8a5.bindPopup(popup_2e7857d6a76a7b9c4df07d74f17cecb2)
+        ;
+
+        
+    
+    
+            marker_b3503e16bf2a4e67ba82399033d1b8a5.bindTooltip(
+                `<div>
+                     Bar Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38643489b1afca50ea4d9e6b8f6e6a3c = L.marker(
+                [-32.93190146, 151.7043623],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_9c8fdf41c45477e847ae5cb11d746c9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7c9fdcdfa239b582c13a72c46b6ec96 = $(`<div id="html_b7c9fdcdfa239b582c13a72c46b6ec96" style="width: 100.0%; height: 100.0%;"><b>Blackbutt/Richely Reserve</b><br><a href='https://www.google.com/maps/place/32°55'55.6%22S+151°42'15.6%22E/@-32.932124,151.7043207,17.04z/data=!4m4!3m3!8m2!3d-32.932112!4d151.704321?entry=ttu' target='_blank'>Google Maps Link</a><br>26-4 Mahogany Dr, New Lambton NSW 2305<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_9c8fdf41c45477e847ae5cb11d746c9f.setContent(html_b7c9fdcdfa239b582c13a72c46b6ec96);
+            
+        
+
+        marker_38643489b1afca50ea4d9e6b8f6e6a3c.bindPopup(popup_9c8fdf41c45477e847ae5cb11d746c9f)
+        ;
+
+        
+    
+    
+            marker_38643489b1afca50ea4d9e6b8f6e6a3c.bindTooltip(
+                `<div>
+                     Blackbutt/Richely Reserve
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ade27da855983ad75ee5ce32dbe97466 = L.marker(
+                [-33.08061148, 151.656147],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_4b9668dfe77af6462c4d0c6282acfcea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26729ab1259b94a2b1d257387830eae6 = $(`<div id="html_26729ab1259b94a2b1d257387830eae6" style="width: 100.0%; height: 100.0%;"><b>Blacksmiths Playground</b><br><a href='https://www.google.com/maps/place/Blacksmiths+Playground/@-33.0808542,151.6560612,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7322337cc6a489:0xe3bc985979e22237!8m2!3d-33.0808542!4d151.6560612!16s%2Fg%2F11csrc_r65?entry=ttu' target='_blank'>Google Maps Link</a><br>128 Ungala Rd, Blacksmiths NSW 2281<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_4b9668dfe77af6462c4d0c6282acfcea.setContent(html_26729ab1259b94a2b1d257387830eae6);
+            
+        
+
+        marker_ade27da855983ad75ee5ce32dbe97466.bindPopup(popup_4b9668dfe77af6462c4d0c6282acfcea)
+        ;
+
+        
+    
+    
+            marker_ade27da855983ad75ee5ce32dbe97466.bindTooltip(
+                `<div>
+                     Blacksmiths Playground
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6b21b5979e10ead6cb6923ed221cc44d = L.marker(
+                [-32.88399493, 151.6212706],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_d14b368aeafe51c48927c8c9057246d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_929691f4c47cf0ae46ea20de034f4f10 = $(`<div id="html_929691f4c47cf0ae46ea20de034f4f10" style="width: 100.0%; height: 100.0%;"><b>Blue Gums Hills</b><br><a href='https://www.google.com/maps/place/Village+Green+picnic+area+and+playground/@-32.8841526,151.6212813,17z/data=!3m1!4b1!4m6!3m5!1s0x6b733f025c37ef9d:0xe5ac2e325022b738!8m2!3d-32.8841526!4d151.6212813!16s%2Fg%2F11rx0hpx5f?entry=ttu' target='_blank'>Google Maps Link</a><br>4J8C+8G, Minmi NSW 2287<br>The walk is on gravel in the bushes with slight inclines. It will take about an hour to complete the walk. Please wear proper shoes and have mosquito repellent for the walk.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_d14b368aeafe51c48927c8c9057246d0.setContent(html_929691f4c47cf0ae46ea20de034f4f10);
+            
+        
+
+        marker_6b21b5979e10ead6cb6923ed221cc44d.bindPopup(popup_d14b368aeafe51c48927c8c9057246d0)
+        ;
+
+        
+    
+    
+            marker_6b21b5979e10ead6cb6923ed221cc44d.bindTooltip(
+                `<div>
+                     Blue Gums Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_24e9f5b0f982b2944a5c039567571add = L.marker(
+                [-32.91642674, 151.7610844],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_d903b530848ef4efc65fc0ed4bb98e59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18993ab99b964dad2bf1dbe539c2d459 = $(`<div id="html_18993ab99b964dad2bf1dbe539c2d459" style="width: 100.0%; height: 100.0%;"><b>Carrington Boat Ramp</b><br><a href='https://www.google.com/maps/place/Carrington+Boat+Ramp,+Tully+St,+Carrington+NSW+2294/data=!4m2!3m1!1s0x6b73145844f7ae51:0xef5c81ec4e93927?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Maps Link</a><br>Tully St, Carrington NSW 2294<br>We can either go upstream of Throsby Creek around Maryville or downstream to Honeysuckle. The walk is flat on paved walkway.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_d903b530848ef4efc65fc0ed4bb98e59.setContent(html_18993ab99b964dad2bf1dbe539c2d459);
+            
+        
+
+        marker_24e9f5b0f982b2944a5c039567571add.bindPopup(popup_d903b530848ef4efc65fc0ed4bb98e59)
+        ;
+
+        
+    
+    
+            marker_24e9f5b0f982b2944a5c039567571add.bindTooltip(
+                `<div>
+                     Carrington Boat Ramp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6aa4039c49533f9a98830f29146eea61 = L.marker(
+                [-33.10947441, 151.6465794],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_c8364afd093c8e7a73dbe8f78fc1511e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2359c389367ea1536d1c628fecb1526 = $(`<div id="html_c2359c389367ea1536d1c628fecb1526" style="width: 100.0%; height: 100.0%;"><b>Caves Beach</b><br><a href='https://www.google.com/maps/place/Public+Toilet+Caves+Beach,+127+Caves+Beach+Rd,+Caves+Beach+NSW+2281/data=!4m2!3m1!1s0x6b7321285e8b07ab:0xd11423c7e3b0eea5?utm_source=mstt_1&entry=gps&lucs=47068615,,47075915&g_ep=CAESCjExLjEwMy4xMDEYACDXggMqEjQ3MDY4NjE1LCw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Maps Link</a><br>127 Caves Beach Rd, Caves Beach NSW 2281<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_c8364afd093c8e7a73dbe8f78fc1511e.setContent(html_c2359c389367ea1536d1c628fecb1526);
+            
+        
+
+        marker_6aa4039c49533f9a98830f29146eea61.bindPopup(popup_c8364afd093c8e7a73dbe8f78fc1511e)
+        ;
+
+        
+    
+    
+            marker_6aa4039c49533f9a98830f29146eea61.bindTooltip(
+                `<div>
+                     Caves Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bfdc8c5f31f2d5a3bb56ed900a357a4 = L.marker(
+                [-32.9979984, 151.6377425],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_5591ff9bf97ef9eb4d0503110220a5d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a232ba3bb1bc52831643a309cb989ef = $(`<div id="html_0a232ba3bb1bc52831643a309cb989ef" style="width: 100.0%; height: 100.0%;"><b>Croundace Bay Park</b><br><a href='https://www.google.com/maps/place/Croudace+Bay+Park/@-32.9979984,151.6377854,17z/data=!3m1!4b1!4m6!3m5!1s0x6b733cc79b4e602f:0xac13b79f6acddc6b!8m2!3d-32.9979984!4d151.6377854!16s%2Fg%2F11dxf0lbzl?entry=ttu' target='_blank'>Google Maps Link</a><br>Bareki Rd, Eleebana NSW 2282<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_5591ff9bf97ef9eb4d0503110220a5d5.setContent(html_0a232ba3bb1bc52831643a309cb989ef);
+            
+        
+
+        marker_3bfdc8c5f31f2d5a3bb56ed900a357a4.bindPopup(popup_5591ff9bf97ef9eb4d0503110220a5d5)
+        ;
+
+        
+    
+    
+            marker_3bfdc8c5f31f2d5a3bb56ed900a357a4.bindTooltip(
+                `<div>
+                     Croundace Bay Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90150b1c6f99588ff73c95d80bf6266e = L.marker(
+                [-32.98938257, 151.6363871],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_587efa800da1fd42abe74ec288ebadd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de8a2be3d4e941076a9b548e3b0767e5 = $(`<div id="html_de8a2be3d4e941076a9b548e3b0767e5" style="width: 100.0%; height: 100.0%;"><b>Elebana Park</b><br><a href='https://www.google.com/maps/place/Lions+Park/@-32.98911,151.6346886,17.26z/data=!4m14!1m7!3m6!1s0x6b7323475f570447:0xf1ebe11175d69940!2sGreen+Point!8m2!3d-33.0215867!4d151.6304169!16s%2Fg%2F11cjgd86tc!3m5!1s0x6b733cc21e5963cd:0x39f503798d6ddc75!8m2!3d-32.9889518!4d151.6364334!16s%2Fg%2F11c5sd783s?entry=ttu' target='_blank'>Google Maps Link</a><br>Eleebana NSW 2282<br>Elebana Boat ramp<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_587efa800da1fd42abe74ec288ebadd5.setContent(html_de8a2be3d4e941076a9b548e3b0767e5);
+            
+        
+
+        marker_90150b1c6f99588ff73c95d80bf6266e.bindPopup(popup_587efa800da1fd42abe74ec288ebadd5)
+        ;
+
+        
+    
+    
+            marker_90150b1c6f99588ff73c95d80bf6266e.bindTooltip(
+                `<div>
+                     Elebana Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_12ee4c92527fb19bc4e6dfd736d52ab3 = L.marker(
+                [-32.8626379, 151.8058781],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_a4dcfc85f3dac745b8e2b43095fca8da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57c4793d616f75a01c951c12ca927295 = $(`<div id="html_57c4793d616f75a01c951c12ca927295" style="width: 100.0%; height: 100.0%;"><b>Fern Bay</b><br><a href='https://www.google.com/maps/place/Fern+Bay+Forest+Walk+Car+Park/@-32.8627866,151.805921,17z/data=!3m1!4b1!4m6!3m5!1s0x6b736d66f2f153c7:0xe04d17d81dba5ea2!8m2!3d-32.8627866!4d151.805921!16s%2Fg%2F11s7dkd332?entry=ttu' target='_blank'>Google Maps Link</a><br>Fern Bay Access Track, Fern Bay NSW 2295<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_a4dcfc85f3dac745b8e2b43095fca8da.setContent(html_57c4793d616f75a01c951c12ca927295);
+            
+        
+
+        marker_12ee4c92527fb19bc4e6dfd736d52ab3.bindPopup(popup_a4dcfc85f3dac745b8e2b43095fca8da)
+        ;
+
+        
+    
+    
+            marker_12ee4c92527fb19bc4e6dfd736d52ab3.bindTooltip(
+                `<div>
+                     Fern Bay
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c7011c124193cc8f77091fd5d709a975 = L.marker(
+                [-32.93855176, 151.7167741],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_f3b3cfee2895b98d7ddcf4c6f6a3f3a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10b4c15962cc9f5d6f5ca0b040dd4bc3 = $(`<div id="html_10b4c15962cc9f5d6f5ca0b040dd4bc3" style="width: 100.0%; height: 100.0%;"><b>Fernleigh Cafe</b><br><a href='Fernleigh Cafe' target='_blank'>Google Maps Link</a><br>89 Fletcher St, Adamstown NSW 2289<br>We can park near the above mentioned cafe. The walk is on paved walkways with a slight slope, it will take about an hour to finish the walk.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_f3b3cfee2895b98d7ddcf4c6f6a3f3a7.setContent(html_10b4c15962cc9f5d6f5ca0b040dd4bc3);
+            
+        
+
+        marker_c7011c124193cc8f77091fd5d709a975.bindPopup(popup_f3b3cfee2895b98d7ddcf4c6f6a3f3a7)
+        ;
+
+        
+    
+    
+            marker_c7011c124193cc8f77091fd5d709a975.bindTooltip(
+                `<div>
+                     Fernleigh Cafe
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a19752ed76dd26a143fa3206d594c9b4 = L.marker(
+                [-33.01358455, 151.6287538],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_f65b3181cfca7d1e5d0f0a060f7f374b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de88a16dde71dbd23b2d466a8094fd41 = $(`<div id="html_de88a16dde71dbd23b2d466a8094fd41" style="width: 100.0%; height: 100.0%;"><b>Green Point</b><br><a href='https://www.google.com/maps?q=134+Dilkera+Ave,+Valentine+NSW+2280&ftid=0x6b732349c06e0e19:0xe3c03eb15da5a60d&entry=gps&lucs=,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447,94213316&g_ep=CAISDTYuMTIzLjAuNzEzODAYACDXggMqYyw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0Nyw5NDIxMzMxNkICQVU%3D&g_st=ifm' target='_blank'>Google Maps Link</a><br>134 Dilkera Ave, Valentine NSW 2280<br>This is a 5 km loop<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_f65b3181cfca7d1e5d0f0a060f7f374b.setContent(html_de88a16dde71dbd23b2d466a8094fd41);
+            
+        
+
+        marker_a19752ed76dd26a143fa3206d594c9b4.bindPopup(popup_f65b3181cfca7d1e5d0f0a060f7f374b)
+        ;
+
+        
+    
+    
+            marker_a19752ed76dd26a143fa3206d594c9b4.bindTooltip(
+                `<div>
+                     Green Point
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_476c7fbd7681d359ef9b5d65121959a1 = L.marker(
+                [-32.95303927, 151.746542],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_3e355a843ba524280334fc430382ff0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40373f06e03fb28bd8b7c9d016f119ba = $(`<div id="html_40373f06e03fb28bd8b7c9d016f119ba" style="width: 100.0%; height: 100.0%;"><b>Hickson Street Lookout</b><br><a href='https://www.google.com/maps/place/Hickson+Street+Lookout/@-32.9531743,151.746488,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7315d54bfbc527:0xdda9d29f3b2f085d!8m2!3d-32.9531743!4d151.746488!16s%2Fg%2F11b_25x7fp?hl=en-AU&entry=ttu' target='_blank'>Google Maps Link</a><br>14 Hickson St, Merewether NSW 2291<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_3e355a843ba524280334fc430382ff0a.setContent(html_40373f06e03fb28bd8b7c9d016f119ba);
+            
+        
+
+        marker_476c7fbd7681d359ef9b5d65121959a1.bindPopup(popup_3e355a843ba524280334fc430382ff0a)
+        ;
+
+        
+    
+    
+            marker_476c7fbd7681d359ef9b5d65121959a1.bindTooltip(
+                `<div>
+                     Hickson Street Lookout
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69ca4fdd17dd21e206060acd359400b0 = L.marker(
+                [-32.91300428, 151.7487202],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_7428ffacdab75aeed980df6783147f95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_89441249d090de26e4f206e4985a15a2 = $(`<div id="html_89441249d090de26e4f206e4985a15a2" style="width: 100.0%; height: 100.0%;"><b>Islington Park</b><br><a href='https://www.google.com/maps/place/Islington+Park+Cricket+Ground,+63+Power+St,+Islington+NSW+2296/data=!4m2!3m1!1s0x6b7314553fba44e5:0x4df60ded56ec74c7?utm_source=mstt_1&entry=gps&g_ep=CAESCTExLjc4LjMwMRgAINeCAyoAQgJBVQ%3D%3D' target='_blank'>Google Maps Link</a><br>63 Power St, Islington NSW 2296<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_7428ffacdab75aeed980df6783147f95.setContent(html_89441249d090de26e4f206e4985a15a2);
+            
+        
+
+        marker_69ca4fdd17dd21e206060acd359400b0.bindPopup(popup_7428ffacdab75aeed980df6783147f95)
+        ;
+
+        
+    
+    
+            marker_69ca4fdd17dd21e206060acd359400b0.bindTooltip(
+                `<div>
+                     Islington Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45f50ed5dd32c1cdd54f6e2eea0f19cf = L.marker(
+                [-32.84612538, 151.7010464],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_1ff339fad8b93e8b4417417f8bd08e95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_877d5f679fef206910f3b796f0062736 = $(`<div id="html_877d5f679fef206910f3b796f0062736" style="width: 100.0%; height: 100.0%;"><b>Koorangang Wetlands</b><br><a href='https://www.google.com/maps/place/Kooragang+Wetland+Rehabilitation+Project,+Schoolhouse+Rd,+Kooragang+NSW+2322/data=!4m2!3m1!1s0x6b736aa7844ab18d:0xbc656751c2f84dfc?utm_source=mstt_1&entry=gps&lucs=47068615&g_ep=CAESCTExLjgyLjMwMRgAINeCAyoINDcwNjg2MTVCAkFV' target='_blank'>Google Maps Link</a><br>Schoolhouse Rd, Kooragang NSW 2322<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_1ff339fad8b93e8b4417417f8bd08e95.setContent(html_877d5f679fef206910f3b796f0062736);
+            
+        
+
+        marker_45f50ed5dd32c1cdd54f6e2eea0f19cf.bindPopup(popup_1ff339fad8b93e8b4417417f8bd08e95)
+        ;
+
+        
+    
+    
+            marker_45f50ed5dd32c1cdd54f6e2eea0f19cf.bindTooltip(
+                `<div>
+                     Koorangang Wetlands
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f55cc2eac259b548d620804712656aa = L.marker(
+                [-32.95692798, 151.6511448],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_a992c2c7d0f95c409315745f32f04567 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f58d0bf15c6847bfd7f9434d2211b14a = $(`<div id="html_f58d0bf15c6847bfd7f9434d2211b14a" style="width: 100.0%; height: 100.0%;"><b>Macquarie Hills</b><br><a href='https://www.google.com/maps/place/32°57'27.1%22S+151°39'04.8%22E/@-32.957514,151.651332,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-32.957514!4d151.651332?entry=ttu' target='_blank'>Google Maps Link</a><br>17-35 Blaxland Rd, Macquarie Hills NSW 2285<br>The walk is hilly and on unsealed paths in the bush, will take about 1h45mins for the round trip. Please wear proper walking shoes and clothes for the walk. Please take adequate water, sunscreen and mosquito repellent as needed.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_a992c2c7d0f95c409315745f32f04567.setContent(html_f58d0bf15c6847bfd7f9434d2211b14a);
+            
+        
+
+        marker_2f55cc2eac259b548d620804712656aa.bindPopup(popup_a992c2c7d0f95c409315745f32f04567)
+        ;
+
+        
+    
+    
+            marker_2f55cc2eac259b548d620804712656aa.bindTooltip(
+                `<div>
+                     Macquarie Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_523089243627df81f74d2d7390b0761b = L.marker(
+                [-32.890779, 151.539436],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_91535d937d34a09bc63e085ccfa80a2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eddecff7c8c47bb5ef5aa687cc1ecfe5 = $(`<div id="html_eddecff7c8c47bb5ef5aa687cc1ecfe5" style="width: 100.0%; height: 100.0%;"><b>Mount Sugarloaf</b><br><a href='https://www.google.com/maps/place/Mount+Sugarloaf+Lookout/@-32.9411111,151.7239133,11z/data=!4m6!3m5!1s0x6b73393b2c49f021:0x7bc423b61a9121b6!8m2!3d-32.8910854!4d151.5381866!16s%2Fg%2F11gxmgm780?entry=ttu' target='_blank'>Google Maps Link</a><br>West Wallsend NSW 2286<br>Walk around<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_91535d937d34a09bc63e085ccfa80a2e.setContent(html_eddecff7c8c47bb5ef5aa687cc1ecfe5);
+            
+        
+
+        marker_523089243627df81f74d2d7390b0761b.bindPopup(popup_91535d937d34a09bc63e085ccfa80a2e)
+        ;
+
+        
+    
+    
+            marker_523089243627df81f74d2d7390b0761b.bindTooltip(
+                `<div>
+                     Mount Sugarloaf
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2de66117273ec65e9b2366fa00841fed = L.marker(
+                [-32.96417018, 151.6300255],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_c35ef3bca0f430ebed61c2957a969288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a0217cced53fcd373faa655619e8541 = $(`<div id="html_9a0217cced53fcd373faa655619e8541" style="width: 100.0%; height: 100.0%;"><b>Munibung Hills</b><br><a href='https://www.google.com/maps/place/1+Quarry+Rd,+Speers+Point+NSW+2284/@-32.967287,151.6243255,14.2z/data=!4m6!3m5!1s0x6b733c600d5b8807:0x7da0689b0ea055fb!8m2!3d-32.9642413!4d151.6297225!16s%2Fg%2F11c4ljbg5c?entry=ttu' target='_blank'>Google Maps Link</a><br>1 Quarry Rd, Speers Point NSW 2284<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_c35ef3bca0f430ebed61c2957a969288.setContent(html_9a0217cced53fcd373faa655619e8541);
+            
+        
+
+        marker_2de66117273ec65e9b2366fa00841fed.bindPopup(popup_c35ef3bca0f430ebed61c2957a969288)
+        ;
+
+        
+    
+    
+            marker_2de66117273ec65e9b2366fa00841fed.bindTooltip(
+                `<div>
+                     Munibung Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c547a7aeec4279399dd50bcdf6c95b81 = L.marker(
+                [-32.92415683, 151.7912836],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_ff1e320df4dd7cf7a3203c878eb8ad94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd2ef9d1ac54cb615d8b6cb60dec41a8 = $(`<div id="html_bd2ef9d1ac54cb615d8b6cb60dec41a8" style="width: 100.0%; height: 100.0%;"><b>Nobby Breakwall</b><br><a href='https://www.google.com/maps/place/East+End+Beach+Parking+Area+-+Horseshoe+Beach/@-32.9236887,151.7910799,18.07z/data=!4m6!3m5!1s0x6b73147e2bf0100d:0xfffc85f51891a3b6!8m2!3d-32.922514!4d151.790882!16s%2Fg%2F11gd681jg2?entry=ttu' target='_blank'>Google Maps Link</a><br>Horseshoe Beach Rd, Newcastle East NSW 2300<br>We can walk accross the breakwall with possible extentions of the lighthouse. Or we can wall to city beach.<br><a href='https://roryyarr.github.io/ASOC-Walks/Maps/walking_routes_map.html' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_ff1e320df4dd7cf7a3203c878eb8ad94.setContent(html_bd2ef9d1ac54cb615d8b6cb60dec41a8);
+            
+        
+
+        marker_c547a7aeec4279399dd50bcdf6c95b81.bindPopup(popup_ff1e320df4dd7cf7a3203c878eb8ad94)
+        ;
+
+        
+    
+    
+            marker_c547a7aeec4279399dd50bcdf6c95b81.bindTooltip(
+                `<div>
+                     Nobby Breakwall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_34405f013d80a7115c694c4409745d71 = L.marker(
+                [-33.07111198, 151.6335904],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_5321626bf04def7db70949b8a25e91f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91828f2eb81163fc934df70ef41ad3c6 = $(`<div id="html_91828f2eb81163fc934df70ef41ad3c6" style="width: 100.0%; height: 100.0%;"><b>Pirrita island carpark and foreshore</b><br><a href='https://www.google.com/maps/place/Pirrita+island+carpark+and+foreshore/@-33.0715455,151.6331766,16.19z/data=!4m6!3m5!1s0x6b732394a90441a9:0x4c7119d9b466ee8c!8m2!3d-33.071468!4d151.6335264!16s%2Fg%2F11rw6l2xts?hl=en-AU&entry=ttu' target='_blank'>Google Maps Link</a><br>Cedar St, Swansea NSW 2281<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_5321626bf04def7db70949b8a25e91f5.setContent(html_91828f2eb81163fc934df70ef41ad3c6);
+            
+        
+
+        marker_34405f013d80a7115c694c4409745d71.bindPopup(popup_5321626bf04def7db70949b8a25e91f5)
+        ;
+
+        
+    
+    
+            marker_34405f013d80a7115c694c4409745d71.bindTooltip(
+                `<div>
+                     Pirrita island carpark and foreshore
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8126c0b56c21bd32273772b175400b0f = L.marker(
+                [-32.96098092, 151.6147737],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_500b677272278c451e2734208911fae2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9293e3acd077eddf23297f0c00dac73 = $(`<div id="html_d9293e3acd077eddf23297f0c00dac73" style="width: 100.0%; height: 100.0%;"><b>Speers Point Boat Ramp</b><br><a href='https://www.google.com/maps/place/Speers+Point+Boat+Ramp/@-32.96135,151.6146879,16z/data=!3m1!4b1!4m6!3m5!1s0x6b733c7d8c2f9275:0xcf051f4312b52cbb!8m2!3d-32.96135!4d151.6146879!16s%2Fg%2F11csr440vv?entry=ttu' target='_blank'>Google Maps Link</a><br>62 Creek Reserve Rd, Speers Point NSW 2284<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_500b677272278c451e2734208911fae2.setContent(html_d9293e3acd077eddf23297f0c00dac73);
+            
+        
+
+        marker_8126c0b56c21bd32273772b175400b0f.bindPopup(popup_500b677272278c451e2734208911fae2)
+        ;
+
+        
+    
+    
+            marker_8126c0b56c21bd32273772b175400b0f.bindTooltip(
+                `<div>
+                     Speers Point Boat Ramp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a09e9af406b2012174aad2308ec1a82 = L.marker(
+                [-32.91879584, 151.783338],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_0a063144305f7f4ce1d5507e71955e25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b20d52c78458d4ead1dd2b496189ac45 = $(`<div id="html_b20d52c78458d4ead1dd2b496189ac45" style="width: 100.0%; height: 100.0%;"><b>Stockton Foreshore</b><br><a href='https://www.google.com/maps/place/Car+Park/@-32.9191859,151.7830461,19.63z/data=!4m6!3m5!1s0x6b731536f34ee44d:0x62aa05ab0e20218a!8m2!3d-32.91882!4d151.7832969!16s%2Fg%2F11fm17jly_?entry=ttu' target='_blank'>Google Maps Link</a><br>3 Hunter St, Stockton NSW 2295<br>We can walk to the left until we reach the breakwall.<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_0a063144305f7f4ce1d5507e71955e25.setContent(html_b20d52c78458d4ead1dd2b496189ac45);
+            
+        
+
+        marker_3a09e9af406b2012174aad2308ec1a82.bindPopup(popup_0a063144305f7f4ce1d5507e71955e25)
+        ;
+
+        
+    
+    
+            marker_3a09e9af406b2012174aad2308ec1a82.bindTooltip(
+                `<div>
+                     Stockton Foreshore
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e08ec6e75ed8181d19d8b7e59a33165b = L.marker(
+                [-33.00842556, 151.5849263],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_cf65f3645d04965c942012a466195fcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b45df8a2640c9747696919db59e66c7d = $(`<div id="html_b45df8a2640c9747696919db59e66c7d" style="width: 100.0%; height: 100.0%;"><b>Stoney Creek</b><br><a href='https://www.google.com/maps/place/33°00'31.0%22S+151°35'05.8%22E/@-33.008601,151.584937,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-33.008601!4d151.584937?entry=ttu' target='_blank'>Google Maps Link</a><br>Blundell Parade, Toronto NSW 2283<br>We can park on the street near Toronto High School<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_cf65f3645d04965c942012a466195fcd.setContent(html_b45df8a2640c9747696919db59e66c7d);
+            
+        
+
+        marker_e08ec6e75ed8181d19d8b7e59a33165b.bindPopup(popup_cf65f3645d04965c942012a466195fcd)
+        ;
+
+        
+    
+    
+            marker_e08ec6e75ed8181d19d8b7e59a33165b.bindTooltip(
+                `<div>
+                     Stoney Creek
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5733113e18665492117167545f984f61 = L.marker(
+                [-33.07442368, 151.6372785],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_f5a8e44d7abede562f44b72422286035 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29014e1716386a21631073e78d6100f1 = $(`<div id="html_29014e1716386a21631073e78d6100f1" style="width: 100.0%; height: 100.0%;"><b>Swansea Beach</b><br><a href='https://www.google.com/maps/place/-33.074590,151.637300/data=!4m6!3m5!1s0!7e2!8m2!3d-33.074590199999996!4d151.63729999999998?utm_source=mstt_1&entry=gps&lucs=47068615,,47075915&g_ep=CAESCTExLjkyLjMwMRgAINeCAyoSNDcwNjg2MTUsLDQ3MDc1OTE1QgJBVQ%3D%3D' target='_blank'>Google Maps Link</a><br> Swansea, New South Wales<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_f5a8e44d7abede562f44b72422286035.setContent(html_29014e1716386a21631073e78d6100f1);
+            
+        
+
+        marker_5733113e18665492117167545f984f61.bindPopup(popup_f5a8e44d7abede562f44b72422286035)
+        ;
+
+        
+    
+    
+            marker_5733113e18665492117167545f984f61.bindTooltip(
+                `<div>
+                     Swansea Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9a8d9e5eb787ed164ff33efc5b9dd2a0 = L.marker(
+                [-18.00894401, 31.05855787],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_b702dbbc40555c5699e99d968579c18e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e8d5eb13e6dfbe6c6f946a29d010af8 = $(`<div id="html_1e8d5eb13e6dfbe6c6f946a29d010af8" style="width: 100.0%; height: 100.0%;"><b>TJ's House</b><br><a href='https://www.google.com/maps/place/Chipo+Rd,+Chitungwiza,+Zimbabwe/@-18.0091787,31.0559937,17z/data=!3m1!4b1!4m6!3m5!1s0x193199c0451377c9:0xf14dfb8982fea11!8m2!3d-18.0091787!4d31.0585686!16s%2Fg%2F1hd_c2nvg?entry=ttu' target='_blank'>Google Maps Link</a><br>Chitungwiza, Zimbabwe<br>A fun place!<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_b702dbbc40555c5699e99d968579c18e.setContent(html_1e8d5eb13e6dfbe6c6f946a29d010af8);
+            
+        
+
+        marker_9a8d9e5eb787ed164ff33efc5b9dd2a0.bindPopup(popup_b702dbbc40555c5699e99d968579c18e)
+        ;
+
+        
+    
+    
+            marker_9a8d9e5eb787ed164ff33efc5b9dd2a0.bindTooltip(
+                `<div>
+                     TJ's House
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fdd41d4b156fe2811243de1a6ce66720 = L.marker(
+                [-32.90695754, 151.6626628],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_36a7d913cc69caa59da1802407b22943 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4801b1d3228cd639507f3bb8961e8aac = $(`<div id="html_4801b1d3228cd639507f3bb8961e8aac" style="width: 100.0%; height: 100.0%;"><b>Tramway Trail</b><br><a href='https://www.google.com/maps/place/Ganney+Rd,+Wallsend+NSW+2287/@-32.9074791,151.6613105,17.34z/data=!4m6!3m5!1s0x6b733e5c62405f95:0x50f063dd949802d3!8m2!3d-32.9070975!4d151.6626505!16s%2Fg%2F1thf8qxn?entry=ttu' target='_blank'>Google Maps Link</a><br>Granney Rd, Wallsend NSW 2287<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_36a7d913cc69caa59da1802407b22943.setContent(html_4801b1d3228cd639507f3bb8961e8aac);
+            
+        
+
+        marker_fdd41d4b156fe2811243de1a6ce66720.bindPopup(popup_36a7d913cc69caa59da1802407b22943)
+        ;
+
+        
+    
+    
+            marker_fdd41d4b156fe2811243de1a6ce66720.bindTooltip(
+                `<div>
+                     Tramway Trail
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_48b7679de3e771b55194a7f519fb11db = L.marker(
+                [-32.71344705, 151.5535839],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_122366eef608e187edf0d76a92f5d2bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65ec07367bca31a8dce57bc8075ce5a2 = $(`<div id="html_65ec07367bca31a8dce57bc8075ce5a2" style="width: 100.0%; height: 100.0%;"><b>Walka Water Works</b><br><a href='https://www.google.com/maps/place/Walka+Water+Works,+S+Willards+Ln,+Oakhampton+Heights+NSW+2320/data=!4m2!3m1!1s0x6b7345b6b123d155:0xbe65523f767a37c7?utm_source=mstt_1&entry=gps&g_ep=CAESCjExLjgxLjEzMDEYACCIJyoAQgJBVQ%3D%3D' target='_blank'>Google Maps Link</a><br>S Willards Ln, Oakhampton Heights NSW 2320<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_122366eef608e187edf0d76a92f5d2bb.setContent(html_65ec07367bca31a8dce57bc8075ce5a2);
+            
+        
+
+        marker_48b7679de3e771b55194a7f519fb11db.bindPopup(popup_122366eef608e187edf0d76a92f5d2bb)
+        ;
+
+        
+    
+    
+            marker_48b7679de3e771b55194a7f519fb11db.bindTooltip(
+                `<div>
+                     Walka Water Works
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_666db1fe06138242962c701c4cfb1f7c = L.marker(
+                [-32.96217575, 151.719625],
+                {}
+            ).addTo(map_4601b0e574b36b7891536d0ac48bfcd7);
+        
+    
+        var popup_da3f4f3df69942522830c71c2ff5262a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e4f625ceb8ff2e79c23a349014ca7aa = $(`<div id="html_5e4f625ceb8ff2e79c23a349014ca7aa" style="width: 100.0%; height: 100.0%;"><b>Yuelarbah Trail</b><br><a href='https://www.google.com/maps/place/Yuelarbah+Trail+Carpark/@-32.9624053,151.7196143,17z/data=!3m1!4b1!4m6!3m5!1s0x6b7316146d59ee39:0xe49a09f0ac9e9943!8m2!3d-32.9624053!4d151.7196143!16s%2Fg%2F11b6swhdr0?entry=ttu' target='_blank'>Google Maps Link</a><br>Burwood Rd, Whitebridge NSW 2290<br>nan<br><a href='nan' target='_blank'>Route Map Link</a></div>`)[0];
+                popup_da3f4f3df69942522830c71c2ff5262a.setContent(html_5e4f625ceb8ff2e79c23a349014ca7aa);
+            
+        
+
+        marker_666db1fe06138242962c701c4cfb1f7c.bindPopup(popup_da3f4f3df69942522830c71c2ff5262a)
+        ;
+
+        
+    
+    
+            marker_666db1fe06138242962c701c4cfb1f7c.bindTooltip(
+                `<div>
+                     Yuelarbah Trail
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
