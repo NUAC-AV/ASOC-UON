@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_900d27ae05a4e158f41bb8d2b78553a7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_900d27ae05a4e158f41bb8d2b78553a7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_900d27ae05a4e158f41bb8d2b78553a7 = L.map(
+                "map_900d27ae05a4e158f41bb8d2b78553a7",
+                {
+                    center: [-32.89164090073688, 151.70169711112982],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 26,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0572eabeffb16ba4acf6c7be6421b842 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_0572eabeffb16ba4acf6c7be6421b842.addTo(map_900d27ae05a4e158f41bb8d2b78553a7);
+        
+    
+            var poly_line_c26afebc5356f17bff02673a9d5b88f9 = L.polyline(
+                [[-32.891815449823646, 151.70189157128337], [-32.891835156956994, 151.70184195041662], [-32.891854864085964, 151.70179232954982], [-32.89174788247602, 151.7017447203398], [-32.89164090073688, 151.70169711112982], [-32.89163020255585, 151.70167431235316], [-32.89161950437355, 151.70165151357654], [-32.89154236481023, 151.70160792768004], [-32.891465225179736, 151.70156434178352], [-32.891399346756, 151.70150063931942], [-32.891333468283285, 151.70143693685532], [-32.89126533750357, 151.7013926804066], [-32.891197206671436, 151.70134842395785]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_900d27ae05a4e158f41bb8d2b78553a7);
+        
+    
+            var marker_caf40a29cc1b61257792584e32dc5b8e = L.marker(
+                [-32.891815449823646, 151.70189157128337],
+                {}
+            ).addTo(map_900d27ae05a4e158f41bb8d2b78553a7);
+        
+    
+            var icon_780230ffec0d34e7a34741e0141ed26d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "square-parking", "iconColor": "white", "markerColor": "darkpurple", "prefix": "fa"}
+            );
+            marker_caf40a29cc1b61257792584e32dc5b8e.setIcon(icon_780230ffec0d34e7a34741e0141ed26d);
+        
+    
+        var popup_cc0047af99053d68938e561d06f1c6f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d045f8314da91b7724144e1d0f964517 = $(`<div id="html_d045f8314da91b7724144e1d0f964517" style="width: 100.0%; height: 100.0%;"><b>Please park here!</b><br><a href='https://www.google.com/maps/place/Parking+lot,+Callaghan+NSW+2308/@-32.8915462,151.7023315,19.03z/data=!4m6!3m5!1s0x6b73157d17a89ce3:0x7bd17aa167266c5d!8m2!3d-32.89178!4d151.7026658!16s%2Fg%2F11c0vrsp7r?entry=ttu' target='_blank'>Google Maps Link</a><br>Follow route to ES building for church or caregroup.</div>`)[0];
+                popup_cc0047af99053d68938e561d06f1c6f3.setContent(html_d045f8314da91b7724144e1d0f964517);
+            
+        
+
+        marker_caf40a29cc1b61257792584e32dc5b8e.bindPopup(popup_cc0047af99053d68938e561d06f1c6f3)
+        ;
+
+        
+    
+    
+            marker_caf40a29cc1b61257792584e32dc5b8e.bindTooltip(
+                `<div>
+                     Please park here!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd932c72658cc2c5384c401b98f9be64 = L.marker(
+                [-32.891197206671436, 151.70134842395785],
+                {}
+            ).addTo(map_900d27ae05a4e158f41bb8d2b78553a7);
+        
+    
+            var icon_05d543914f8964ec4cf5c925bdc9c2a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "asoc", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bd932c72658cc2c5384c401b98f9be64.setIcon(icon_05d543914f8964ec4cf5c925bdc9c2a9);
+        
+    
+        var popup_6c4fe8cf02570de1fe6e9b3d9c97756c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2173aed78627988e6777f86b35ae2d2 = $(`<div id="html_c2173aed78627988e6777f86b35ae2d2" style="width: 100.0%; height: 100.0%;"><b>ES Building!</b><br>This is the church building!</div>`)[0];
+                popup_6c4fe8cf02570de1fe6e9b3d9c97756c.setContent(html_c2173aed78627988e6777f86b35ae2d2);
+            
+        
+
+        marker_bd932c72658cc2c5384c401b98f9be64.bindPopup(popup_6c4fe8cf02570de1fe6e9b3d9c97756c)
+        ;
+
+        
+    
+    
+            marker_bd932c72658cc2c5384c401b98f9be64.bindTooltip(
+                `<div>
+                     ES Building!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

@@ -49,7 +49,7 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
   - **Create_Route_UI.py**: Script for creating routes with a user interface.
 - **Maps**: Contains the HTML files for the maps.
 - **Pictures**: Contains all pictures used as logos.
-- **ASOC_Walks.ipynb**: Jupyter notebook for testing.
+- **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
 - **README.md**: Explains the project.
 
 ### Icon Colors and Symbols
@@ -62,21 +62,20 @@ Icons can be chosen from [Font Awesome](https://fontawesome.com/search?o=r&m=fre
 
 ### Install Required Libraries
 Make sure you have the required libraries installed. You can install these libraries using `pip`:
-
-pip install folium
-pip install pandas
-pip install gpxpy
-pip install pdf2image pillow
+- pip install folium
+- pip install pandas
+- pip install gpxpy
+- pip install pdf2image pillow
 
 ## Google Sheet Structure
-- Name: The name of the location.
-- Latitude: The latitude of the location.
-- Longitude: The longitude of the location.
-- Link: A Google Maps link or other relevant URL.
-- Address: The address of the location.
-- Description: A description of the location or any additional notes.
-- Icon: The icon to use for the marker.
-- Colour: The color of the marker.
+- **Name**: The name of the location.
+- **Latitude**: The latitude of the location.
+- **Longitude**: The longitude of the location.
+- **Link**: A Google Maps link or other relevant URL.
+- **Address**: The address of the location.
+- **Description**: A description of the location or any additional notes.
+- **Icon****: The icon to use for the marker.
+- **Colour**: The color of the marker.
 
 ## License
 This project is licensed under the MIT License.

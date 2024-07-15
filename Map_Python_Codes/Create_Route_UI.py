@@ -42,9 +42,11 @@ for track in gpx.tracks:
 while True:
     while True:
         centre = int(input("Which node do you want to be the centre? (int)" ))
-        if center > len(route):
+        if centre > len(route):
             print("The route only has ",len(route),"points. Please choose a smaller number.")
             continue
+        else:
+            break
     zoom = int(input("What zoom setting do you want? (int)"))
         
 
