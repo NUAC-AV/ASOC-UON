@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8b914cdaf5faffc80da3276e28cde422 {
+                #map_dd6bfddc901e7ad8713ab8366648011e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_8b914cdaf5faffc80da3276e28cde422" ></div>
+            <div class="folium-map" id="map_dd6bfddc901e7ad8713ab8366648011e" ></div>
         
 </body>
 <script>
     
     
-            var map_8b914cdaf5faffc80da3276e28cde422 = L.map(
-                "map_8b914cdaf5faffc80da3276e28cde422",
+            var map_dd6bfddc901e7ad8713ab8366648011e = L.map(
+                "map_dd6bfddc901e7ad8713ab8366648011e",
                 {
                     center: [-32.89334, 151.69619],
                     crs: L.CRS.EPSG3857,
@@ -60,19 +60,54 @@
 
         
     
-            var tile_layer_6201495af0043d2cc12b093f20900ce6 = L.tileLayer(
+            var tile_layer_cb62172a9d19416eb0aa38cec4c7a104 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_6201495af0043d2cc12b093f20900ce6.addTo(map_8b914cdaf5faffc80da3276e28cde422);
+            tile_layer_cb62172a9d19416eb0aa38cec4c7a104.addTo(map_dd6bfddc901e7ad8713ab8366648011e);
         
     
-            var poly_line_485e59fa9f4f11ab441e1f549c71b952 = L.polyline(
+            var poly_line_ddde5334eabc8edf82e50ed8ec555b60 = L.polyline(
                 [[-32.89334, 151.69619], [-32.89327, 151.69625000000002], [-32.893240000000006, 151.69637], [-32.89321, 151.69659000000001], [-32.89321, 151.69680000000002], [-32.89322, 151.69680000000002], [-32.89318, 151.69714000000002], [-32.89318, 151.69713000000002], [-32.89318, 151.69733000000002], [-32.89313, 151.69747], [-32.89313, 151.69755], [-32.892970000000005, 151.69758000000002], [-32.892970000000005, 151.69757], [-32.89266, 151.69760000000002], [-32.89265, 151.69740000000002], [-32.89266, 151.69739], [-32.892700000000005, 151.69739]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
-            ).addTo(map_8b914cdaf5faffc80da3276e28cde422);
+            ).addTo(map_dd6bfddc901e7ad8713ab8366648011e);
+        
+    
+            var marker_a3970dfd6428673885c170c780a30e56 = L.marker(
+                [-32.89334, 151.69619],
+                {}
+            ).addTo(map_dd6bfddc901e7ad8713ab8366648011e);
+        
+    
+            var icon_fe144d677f5b4cf3ce3b5655eeaffd32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fire", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a3970dfd6428673885c170c780a30e56.setIcon(icon_fe144d677f5b4cf3ce3b5655eeaffd32);
+        
+    
+        var popup_417c46288bcfa0f676521d77d51616c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0e33bfe778253938255ab763ea2c5c3 = $(`<div id="html_c0e33bfe778253938255ab763ea2c5c3" style="width: 100.0%; height: 100.0%;"><b>Library</b><br><a href='www.something.com' target='_blank'>Google Maps Link</a><br>Starting point</div>`)[0];
+                popup_417c46288bcfa0f676521d77d51616c6.setContent(html_c0e33bfe778253938255ab763ea2c5c3);
+            
+        
+
+        marker_a3970dfd6428673885c170c780a30e56.bindPopup(popup_417c46288bcfa0f676521d77d51616c6)
+        ;
+
+        
+    
+    
+            marker_a3970dfd6428673885c170c780a30e56.bindTooltip(
+                `<div>
+                     Library
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>

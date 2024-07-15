@@ -1,7 +1,8 @@
 .DS_Store
 
+# Home terminal
 .venv
 
 # Remove gpx files
-Strava_Routes/
-\*.gpx
+GPX_Routes
+*.gpx
