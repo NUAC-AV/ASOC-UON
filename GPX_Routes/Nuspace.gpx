@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <name>Nuspace</name>
+  <author>
+   <name>Rory Yarr</name>
+   <link href="https://www.strava.com/athletes/27886052"/>
+  </author>
+  <copyright author="OpenStreetMap contributors">
+   <year>2020</year>
+   <license>https://www.openstreetmap.org/copyright</license>
+  </copyright>
+  <link href="https://www.strava.com/routes/3247920941223078068"/>
+ </metadata>
+ <trk>
+  <name>Nuspace</name>
+  <link href="https://www.strava.com/routes/3247920941223078068"/>
+  <type>cycling</type>
+  <trkseg>
+   <trkpt lat="-32.928920000000005" lon="151.77118000000002">
+    <ele>14.0</ele>
+   </trkpt>
+   <trkpt lat="-32.928920000000005" lon="151.77115">
+    <ele>14.0</ele>
+   </trkpt>
+   <trkpt lat="-32.92879" lon="151.77114">
+    <ele>14.13</ele>
+   </trkpt>
+   <trkpt lat="-32.92831" lon="151.77108">
+    <ele>17.71</ele>
+   </trkpt>
+   <trkpt lat="-32.92832" lon="151.77108">
+    <ele>17.46</ele>
+   </trkpt>
+   <trkpt lat="-32.92815" lon="151.77106">
+    <ele>18.04</ele>
+   </trkpt>
+   <trkpt lat="-32.927640000000004" lon="151.77099">
+    <ele>14.96</ele>
+   </trkpt>
+   <trkpt lat="-32.927200000000006" lon="151.77093000000002">
+    <ele>15.0</ele>
+   </trkpt>
+   <trkpt lat="-32.92718" lon="151.77114">
+    <ele>15.0</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>

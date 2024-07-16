@@ -4,5 +4,5 @@
 .venv
 
 # Remove gpx files
-GPX_Routes
-*.gpx
+#GPX_Routes
+#*.gpx

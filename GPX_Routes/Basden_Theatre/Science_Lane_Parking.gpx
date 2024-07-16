@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2" version="1.1" creator="https://gpx.studio">
+<metadata>
+    <name>new</name>
+    <author>
+        <name>gpx.studio</name>
+        <link href="https://gpx.studio"></link>
+    </author>
+</metadata>
+<trk>
+    <name>new</name>
+    <type>Running</type>
+    <trkseg>
+    <trkpt lat="-32.89276814393942" lon="151.6969066858292">
+        <ele>36.0</ele>
+    </trkpt>
+    <trkpt lat="-32.89276476560959" lon="151.69700860977176">
+        <ele>35.8</ele>
+    </trkpt>
+    <trkpt lat="-32.89276138727963" lon="151.6971105337143">
+        <ele>35.6</ele>
+    </trkpt>
+    <trkpt lat="-32.892688190098944" lon="151.69711723923686">
+        <ele>34.3</ele>
+    </trkpt>
+    <trkpt lat="-32.89261499285777" lon="151.69712394475937">
+        <ele>33.3</ele>
+    </trkpt>
+    <trkpt lat="-32.892625127864" lon="151.69726878404617">
+        <ele>34.3</ele>
+    </trkpt>
+    <trkpt lat="-32.89263526286907" lon="151.69741362333298">
+        <ele>35.3</ele>
+    </trkpt>
+    <trkpt lat="-32.892665667877324" lon="151.69740960001948">
+        <ele>35.7</ele>
+    </trkpt>
+    <trkpt lat="-32.892696072875154" lon="151.69740557670596">
+        <ele>36.1</ele>
+    </trkpt>
+    </trkseg>
+</trk>
+</gpx>
