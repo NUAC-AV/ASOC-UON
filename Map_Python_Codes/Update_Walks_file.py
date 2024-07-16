@@ -17,15 +17,17 @@ links = df['Google_Link'].tolist()
 routes = df['Route_Link'].tolist()
 addresses = df['Address'].tolist()
 descriptions = df['Description'].tolist()
-lengths = df['Length']
 icons = df['Icon'].tolist()
 colours = df['Colour'].tolist()
 
 # Create a map centered around the first location
 m = folium.Map(location=(-32.9, 151.79), zoom_start=11)
 
+# Create a dictionary to hold feature groups based on color
+feature_groups = {}
+
 # Add markers for each location
-for name, loc, link, route, address, desc, len, icon, colour in zip(names, locations, links, routes, addresses, descriptions, lengths, icons, colours):
+for name, loc, link, route, address, desc, icon, colour in zip(names, locations, links, routes, addresses, descriptions, icons, colours):
     # Set a default icon if the icon field is blank
     if pd.isna(icon) or icon == "":
         icon = 'info-sign'  # Default icon
@@ -37,14 +39,28 @@ for name, loc, link, route, address, desc, len, icon, colour in zip(names, locat
 
     custom_icon = folium.Icon(color = colour, icon=icon, prefix='fa')
 
-    route_link = f"<a href='{route}' target='_blank'>Route Map Link</a><br>" if not pd.isna(route) else ""
+    if pd.isna(route):
+        route_link = f"<a href='{link}' target='_blank'>Google Map Link</a><br>"
+    else:
+        route_link = f"<a href='{route}' target='_blank'>Route Map Link</a><br>"
+
+    # Create a feature group for the color if it doesn't exist
+    if colour not in feature_groups:
+        feature_groups[colour] = folium.FeatureGroup(name=colour)
 
     folium.Marker(
         location=loc,
         popup = f"<b>{name}</b><br>{route_link}{desc}<br>",
         tooltip=name,
         icon = custom_icon
-    ).add_to(m)
+    ).add_to(feature_groups[colour])
+
+# Add all feature groups to the map
+for fg in feature_groups.values():
+    fg.add_to(m)
+
+# Add layer control to toggle different layers
+folium.LayerControl().add_to(m)
 
 # Save the map as an HTML file
 html_file = 'Maps/ASOC_walk_locations_map.html'

@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2c236e1ef19f2ab74a8bb24d1fc5b7c5 {
+                #map_cb9a9b6468b4a094f1d504093e2ac4d5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_2c236e1ef19f2ab74a8bb24d1fc5b7c5" ></div>
+            <div class="folium-map" id="map_cb9a9b6468b4a094f1d504093e2ac4d5" ></div>
         
 </body>
 <script>
     
     
-            var map_2c236e1ef19f2ab74a8bb24d1fc5b7c5 = L.map(
-                "map_2c236e1ef19f2ab74a8bb24d1fc5b7c5",
+            var map_cb9a9b6468b4a094f1d504093e2ac4d5 = L.map(
+                "map_cb9a9b6468b4a094f1d504093e2ac4d5",
                 {
                     center: [-32.9, 151.79],
                     crs: L.CRS.EPSG3857,
@@ -60,43 +60,48 @@
 
         
     
-            var tile_layer_560e636a8e165c7e95e7d19a2e3abaa2 = L.tileLayer(
+            var tile_layer_ee759108cb4e73a86ddf9a2d631d78ab = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_560e636a8e165c7e95e7d19a2e3abaa2.addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            tile_layer_ee759108cb4e73a86ddf9a2d631d78ab.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
         
     
-            var marker_f1a4c5536c8b7549f6b7a1085e3167f6 = L.marker(
+            var feature_group_97e63c03f392fbff48ab6e87ce87dad2 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_8f8d04bbd3081ed96b9594c625560283 = L.marker(
                 [-32.99149503, 151.7222826],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_dd1e9547bc1fde76eac41cdea358632b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_46bba9e1e798b24e2c62702fe0dd9f33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_f1a4c5536c8b7549f6b7a1085e3167f6.setIcon(icon_dd1e9547bc1fde76eac41cdea358632b);
+            marker_8f8d04bbd3081ed96b9594c625560283.setIcon(icon_46bba9e1e798b24e2c62702fe0dd9f33);
         
     
-        var popup_ff2342e9c04b2f063655bb1be9a9ca4b = L.popup({"maxWidth": "100%"});
+        var popup_d26a982c55206fbd2294ccb750b25825 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_8249a1487ca4f1d8c33f28a2f5ba6d60 = $(`<div id="html_8249a1487ca4f1d8c33f28a2f5ba6d60" style="width: 100.0%; height: 100.0%;"><b>Awabakal Nature Reserve</b><br>It will be in the bush, so pls have proper walking shoes for the walk. We can park on the road around Ivy Street.<br></div>`)[0];
-                popup_ff2342e9c04b2f063655bb1be9a9ca4b.setContent(html_8249a1487ca4f1d8c33f28a2f5ba6d60);
+                var html_fcb77c2351d56342f7857482b344c2b1 = $(`<div id="html_fcb77c2351d56342f7857482b344c2b1" style="width: 100.0%; height: 100.0%;"><b>Awabakal Nature Reserve</b><br><a href='https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Map Link</a><br>It will be in the bush, so pls have proper walking shoes for the walk. We can park on the road around Ivy Street.<br></div>`)[0];
+                popup_d26a982c55206fbd2294ccb750b25825.setContent(html_fcb77c2351d56342f7857482b344c2b1);
             
         
 
-        marker_f1a4c5536c8b7549f6b7a1085e3167f6.bindPopup(popup_ff2342e9c04b2f063655bb1be9a9ca4b)
+        marker_8f8d04bbd3081ed96b9594c625560283.bindPopup(popup_d26a982c55206fbd2294ccb750b25825)
         ;
 
         
     
     
-            marker_f1a4c5536c8b7549f6b7a1085e3167f6.bindTooltip(
+            marker_8f8d04bbd3081ed96b9594c625560283.bindTooltip(
                 `<div>
                      Awabakal Nature Reserve
                  </div>`,
@@ -104,69 +109,34 @@
             );
         
     
-            var marker_a3c55f0fbe47cde7a1142f712836e2f0 = L.marker(
-                [-32.94047053, 151.7695674],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_485946a40caf84c69b594af8c8528fdb = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
-            );
-            marker_a3c55f0fbe47cde7a1142f712836e2f0.setIcon(icon_485946a40caf84c69b594af8c8528fdb);
-        
-    
-        var popup_5d0eb1a05b9c5bf69d5dace3804648b4 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_fb1b12971b04779dcdd7387c4b30bbc9 = $(`<div id="html_fb1b12971b04779dcdd7387c4b30bbc9" style="width: 100.0%; height: 100.0%;"><b>Bar Beach</b><br><br></div>`)[0];
-                popup_5d0eb1a05b9c5bf69d5dace3804648b4.setContent(html_fb1b12971b04779dcdd7387c4b30bbc9);
-            
-        
-
-        marker_a3c55f0fbe47cde7a1142f712836e2f0.bindPopup(popup_5d0eb1a05b9c5bf69d5dace3804648b4)
-        ;
-
-        
-    
-    
-            marker_a3c55f0fbe47cde7a1142f712836e2f0.bindTooltip(
-                `<div>
-                     Bar Beach
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_6b51d9ab967cc046f8aaeb97c7c40e22 = L.marker(
+            var marker_e01972930262f8e02757f896ef0c8cd8 = L.marker(
                 [-32.93190146, 151.7043623],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_b35e5663b349d1c5ae4baced08c77f1a = L.AwesomeMarkers.icon(
+            var icon_a12b7bbd7f68ead97e9ea00cb7b9a6ad = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_6b51d9ab967cc046f8aaeb97c7c40e22.setIcon(icon_b35e5663b349d1c5ae4baced08c77f1a);
+            marker_e01972930262f8e02757f896ef0c8cd8.setIcon(icon_a12b7bbd7f68ead97e9ea00cb7b9a6ad);
         
     
-        var popup_100657fdede09f67e7dbb98caa9876eb = L.popup({"maxWidth": "100%"});
+        var popup_c97572959a110904ba837e69b892fea8 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_64d5d8b118427a14fd9213d165607212 = $(`<div id="html_64d5d8b118427a14fd9213d165607212" style="width: 100.0%; height: 100.0%;"><b>Blackbutt/Richely Reserve</b><br><br></div>`)[0];
-                popup_100657fdede09f67e7dbb98caa9876eb.setContent(html_64d5d8b118427a14fd9213d165607212);
+                var html_8736330e21b9b45e3fb237b30949f68a = $(`<div id="html_8736330e21b9b45e3fb237b30949f68a" style="width: 100.0%; height: 100.0%;"><b>Blackbutt/Richely Reserve</b><br><a href='https://www.google.com/maps/place/32°55'55.6%22S+151°42'15.6%22E/@-32.932124,151.7043207,17.04z/data=!4m4!3m3!8m2!3d-32.932112!4d151.704321?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_c97572959a110904ba837e69b892fea8.setContent(html_8736330e21b9b45e3fb237b30949f68a);
             
         
 
-        marker_6b51d9ab967cc046f8aaeb97c7c40e22.bindPopup(popup_100657fdede09f67e7dbb98caa9876eb)
+        marker_e01972930262f8e02757f896ef0c8cd8.bindPopup(popup_c97572959a110904ba837e69b892fea8)
         ;
 
         
     
     
-            marker_6b51d9ab967cc046f8aaeb97c7c40e22.bindTooltip(
+            marker_e01972930262f8e02757f896ef0c8cd8.bindTooltip(
                 `<div>
                      Blackbutt/Richely Reserve
                  </div>`,
@@ -174,244 +144,69 @@
             );
         
     
-            var marker_107f5fb59c6ff3e86614d9388381a3fa = L.marker(
-                [-33.08061148, 151.656147],
+            var marker_40812fbc0f717d109bb3d0989c1602f4 = L.marker(
+                [-32.90674076, 151.6840206],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_b16295174308815e0d590eacfa977870 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_107f5fb59c6ff3e86614d9388381a3fa.setIcon(icon_b16295174308815e0d590eacfa977870);
-        
-    
-        var popup_884ea52ecbc36b7a69f215b2285e4e52 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_b30b2f142df4f55388d1a21ceb45b198 = $(`<div id="html_b30b2f142df4f55388d1a21ceb45b198" style="width: 100.0%; height: 100.0%;"><b>Blacksmiths Playground</b><br><br></div>`)[0];
-                popup_884ea52ecbc36b7a69f215b2285e4e52.setContent(html_b30b2f142df4f55388d1a21ceb45b198);
-            
-        
-
-        marker_107f5fb59c6ff3e86614d9388381a3fa.bindPopup(popup_884ea52ecbc36b7a69f215b2285e4e52)
-        ;
-
-        
-    
-    
-            marker_107f5fb59c6ff3e86614d9388381a3fa.bindTooltip(
-                `<div>
-                     Blacksmiths Playground
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_f45db4b85cc5e603b81946fc4a0395aa = L.marker(
-                [-32.88399493, 151.6212706],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_58be3ff855ed9c9676d430c0ce0ef896 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
-            );
-            marker_f45db4b85cc5e603b81946fc4a0395aa.setIcon(icon_58be3ff855ed9c9676d430c0ce0ef896);
-        
-    
-        var popup_fda8cd94c44b9641ab6850fe852e0a33 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_12d9523f3ed667ea82572b03b7f10bc2 = $(`<div id="html_12d9523f3ed667ea82572b03b7f10bc2" style="width: 100.0%; height: 100.0%;"><b>Blue Gums Hills</b><br>The walk is on gravel in the bushes with slight inclines. It will take about an hour to complete the walk. Please wear proper shoes and have mosquito repellent for the walk.<br></div>`)[0];
-                popup_fda8cd94c44b9641ab6850fe852e0a33.setContent(html_12d9523f3ed667ea82572b03b7f10bc2);
-            
-        
-
-        marker_f45db4b85cc5e603b81946fc4a0395aa.bindPopup(popup_fda8cd94c44b9641ab6850fe852e0a33)
-        ;
-
-        
-    
-    
-            marker_f45db4b85cc5e603b81946fc4a0395aa.bindTooltip(
-                `<div>
-                     Blue Gums Hills
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_804dd70d9a1e5003d59f66eb48f07e3c = L.marker(
-                [-32.91642674, 151.7610844],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_4f3bc1f8a9aabe0005cf940591d77664 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
-            );
-            marker_804dd70d9a1e5003d59f66eb48f07e3c.setIcon(icon_4f3bc1f8a9aabe0005cf940591d77664);
-        
-    
-        var popup_f8c1b3023f0480f59849164eb95bb04d = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_3337ef80510d51281eee05e5ee5e9a01 = $(`<div id="html_3337ef80510d51281eee05e5ee5e9a01" style="width: 100.0%; height: 100.0%;"><b>Carrington Boat Ramp</b><br>We can either go upstream of Throsby Creek around Maryville or downstream to Honeysuckle. The walk is flat on paved walkway.<br></div>`)[0];
-                popup_f8c1b3023f0480f59849164eb95bb04d.setContent(html_3337ef80510d51281eee05e5ee5e9a01);
-            
-        
-
-        marker_804dd70d9a1e5003d59f66eb48f07e3c.bindPopup(popup_f8c1b3023f0480f59849164eb95bb04d)
-        ;
-
-        
-    
-    
-            marker_804dd70d9a1e5003d59f66eb48f07e3c.bindTooltip(
-                `<div>
-                     Carrington Boat Ramp
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_88d3a02564704e47e5f2e9baa91f7ce1 = L.marker(
-                [-33.10947441, 151.6465794],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_6f87a2b53c79860b4e53a76915067fbe = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
-            );
-            marker_88d3a02564704e47e5f2e9baa91f7ce1.setIcon(icon_6f87a2b53c79860b4e53a76915067fbe);
-        
-    
-        var popup_35ff503dfd289c488185722ee2b88d01 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_766cad4640b07949e550f4826d3eedfe = $(`<div id="html_766cad4640b07949e550f4826d3eedfe" style="width: 100.0%; height: 100.0%;"><b>Caves Beach</b><br><br></div>`)[0];
-                popup_35ff503dfd289c488185722ee2b88d01.setContent(html_766cad4640b07949e550f4826d3eedfe);
-            
-        
-
-        marker_88d3a02564704e47e5f2e9baa91f7ce1.bindPopup(popup_35ff503dfd289c488185722ee2b88d01)
-        ;
-
-        
-    
-    
-            marker_88d3a02564704e47e5f2e9baa91f7ce1.bindTooltip(
-                `<div>
-                     Caves Beach
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_9525b2dbd9ab4a6b4d6c4cf5879c735a = L.marker(
-                [-32.9979984, 151.6377425],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_4efa6dc52210c23784786af1664622aa = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_9525b2dbd9ab4a6b4d6c4cf5879c735a.setIcon(icon_4efa6dc52210c23784786af1664622aa);
-        
-    
-        var popup_5165e6552d2ca99a140ddef534525fe9 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_b4477c5cdedcd9ee80df4d6db3ceecc9 = $(`<div id="html_b4477c5cdedcd9ee80df4d6db3ceecc9" style="width: 100.0%; height: 100.0%;"><b>Croundace Bay Park</b><br><br></div>`)[0];
-                popup_5165e6552d2ca99a140ddef534525fe9.setContent(html_b4477c5cdedcd9ee80df4d6db3ceecc9);
-            
-        
-
-        marker_9525b2dbd9ab4a6b4d6c4cf5879c735a.bindPopup(popup_5165e6552d2ca99a140ddef534525fe9)
-        ;
-
-        
-    
-    
-            marker_9525b2dbd9ab4a6b4d6c4cf5879c735a.bindTooltip(
-                `<div>
-                     Croundace Bay Park
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_124c415d9ef6a18915acf4ab08c05867 = L.marker(
-                [-32.98938257, 151.6363871],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_af734e27b1a085cc09ac4335ebc38caa = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
-            );
-            marker_124c415d9ef6a18915acf4ab08c05867.setIcon(icon_af734e27b1a085cc09ac4335ebc38caa);
-        
-    
-        var popup_f675719461200fdfccd1742f41bafa15 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_700a10307c8345bc7a6f242c16664b86 = $(`<div id="html_700a10307c8345bc7a6f242c16664b86" style="width: 100.0%; height: 100.0%;"><b>Elebana Park</b><br>Elebana Boat ramp<br></div>`)[0];
-                popup_f675719461200fdfccd1742f41bafa15.setContent(html_700a10307c8345bc7a6f242c16664b86);
-            
-        
-
-        marker_124c415d9ef6a18915acf4ab08c05867.bindPopup(popup_f675719461200fdfccd1742f41bafa15)
-        ;
-
-        
-    
-    
-            marker_124c415d9ef6a18915acf4ab08c05867.bindTooltip(
-                `<div>
-                     Elebana Park
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_01062733eb23ed92c3a83619c4f10907 = L.marker(
-                [-32.8626379, 151.8058781],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_4715a07b30a82149f469a167b7aa65cb = L.AwesomeMarkers.icon(
+            var icon_091affdeeff14d0dec3a46351dec1fcb = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_01062733eb23ed92c3a83619c4f10907.setIcon(icon_4715a07b30a82149f469a167b7aa65cb);
+            marker_40812fbc0f717d109bb3d0989c1602f4.setIcon(icon_091affdeeff14d0dec3a46351dec1fcb);
         
     
-        var popup_e9cbf30077907ce8366090dab93c3527 = L.popup({"maxWidth": "100%"});
+        var popup_4ad7ff8ff1de5fce04931fa250aaf00f = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_cf0599b464e5c26b1cca6c44d686d3cf = $(`<div id="html_cf0599b464e5c26b1cca6c44d686d3cf" style="width: 100.0%; height: 100.0%;"><b>Fern Bay</b><br><br></div>`)[0];
-                popup_e9cbf30077907ce8366090dab93c3527.setContent(html_cf0599b464e5c26b1cca6c44d686d3cf);
+                var html_f9f8346f0a8d6eb62ea73d2613f99169 = $(`<div id="html_f9f8346f0a8d6eb62ea73d2613f99169" style="width: 100.0%; height: 100.0%;"><b>Brickworks Park</b><br><a href='https://www.google.com/maps/place/Brickworks+Park/@-32.9070777,151.6824769,17.64z/data=!4m6!3m5!1s0x6b733e3a5fbdf1b5:0xf017d68f9f2cef0!8m2!3d-32.9068781!4d151.6840288!16s%2Fg%2F1tsykbzv?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_4ad7ff8ff1de5fce04931fa250aaf00f.setContent(html_f9f8346f0a8d6eb62ea73d2613f99169);
             
         
 
-        marker_01062733eb23ed92c3a83619c4f10907.bindPopup(popup_e9cbf30077907ce8366090dab93c3527)
+        marker_40812fbc0f717d109bb3d0989c1602f4.bindPopup(popup_4ad7ff8ff1de5fce04931fa250aaf00f)
         ;
 
         
     
     
-            marker_01062733eb23ed92c3a83619c4f10907.bindTooltip(
+            marker_40812fbc0f717d109bb3d0989c1602f4.bindTooltip(
+                `<div>
+                     Brickworks Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e43091abc1c13bc61188852fa03d6d1 = L.marker(
+                [-32.8626379, 151.8058781],
+                {}
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
+        
+    
+            var icon_244632db0f471dc0e56e6caf62dd4c8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4e43091abc1c13bc61188852fa03d6d1.setIcon(icon_244632db0f471dc0e56e6caf62dd4c8b);
+        
+    
+        var popup_c72ba9f1dbe46cd9b2e5669ecec0adce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9acd35fa181d14a9efb1822f17ae4d0d = $(`<div id="html_9acd35fa181d14a9efb1822f17ae4d0d" style="width: 100.0%; height: 100.0%;"><b>Fern Bay</b><br><a href='https://www.google.com/maps/place/Fern+Bay+Forest+Walk+Car+Park/@-32.8627866,151.805921,17z/data=!3m1!4b1!4m6!3m5!1s0x6b736d66f2f153c7:0xe04d17d81dba5ea2!8m2!3d-32.8627866!4d151.805921!16s%2Fg%2F11s7dkd332?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_c72ba9f1dbe46cd9b2e5669ecec0adce.setContent(html_9acd35fa181d14a9efb1822f17ae4d0d);
+            
+        
+
+        marker_4e43091abc1c13bc61188852fa03d6d1.bindPopup(popup_c72ba9f1dbe46cd9b2e5669ecec0adce)
+        ;
+
+        
+    
+    
+            marker_4e43091abc1c13bc61188852fa03d6d1.bindTooltip(
                 `<div>
                      Fern Bay
                  </div>`,
@@ -419,34 +214,34 @@
             );
         
     
-            var marker_07568fc03178c2c2f87ce84743c2d2eb = L.marker(
+            var marker_457f5b7c07afb6a0ffa489aff42c685c = L.marker(
                 [-32.93855176, 151.7167741],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_12a2aa8aa7cdb3bbdc1313dce8d116c8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_efe2e0e33af4302a40f990a0f99cc933 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_07568fc03178c2c2f87ce84743c2d2eb.setIcon(icon_12a2aa8aa7cdb3bbdc1313dce8d116c8);
+            marker_457f5b7c07afb6a0ffa489aff42c685c.setIcon(icon_efe2e0e33af4302a40f990a0f99cc933);
         
     
-        var popup_75d4da01543e097256d4926b3afc8dec = L.popup({"maxWidth": "100%"});
+        var popup_b90f4ff007e9059a451d71f2e2907996 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_5ae43111579024334783944c2e308e32 = $(`<div id="html_5ae43111579024334783944c2e308e32" style="width: 100.0%; height: 100.0%;"><b>Fernleigh Cafe</b><br>We can park near the above mentioned cafe. The walk is on paved walkways with a slight slope, it will take about an hour to finish the walk.<br></div>`)[0];
-                popup_75d4da01543e097256d4926b3afc8dec.setContent(html_5ae43111579024334783944c2e308e32);
+                var html_385434828b02c8f3663f970f26539068 = $(`<div id="html_385434828b02c8f3663f970f26539068" style="width: 100.0%; height: 100.0%;"><b>Fernleigh Cafe</b><br><a href='Fernleigh Cafe' target='_blank'>Google Map Link</a><br>We can park near the above mentioned cafe. The walk is on paved walkways with a slight slope, it will take about an hour to finish the walk.<br></div>`)[0];
+                popup_b90f4ff007e9059a451d71f2e2907996.setContent(html_385434828b02c8f3663f970f26539068);
             
         
 
-        marker_07568fc03178c2c2f87ce84743c2d2eb.bindPopup(popup_75d4da01543e097256d4926b3afc8dec)
+        marker_457f5b7c07afb6a0ffa489aff42c685c.bindPopup(popup_b90f4ff007e9059a451d71f2e2907996)
         ;
 
         
     
     
-            marker_07568fc03178c2c2f87ce84743c2d2eb.bindTooltip(
+            marker_457f5b7c07afb6a0ffa489aff42c685c.bindTooltip(
                 `<div>
                      Fernleigh Cafe
                  </div>`,
@@ -454,34 +249,34 @@
             );
         
     
-            var marker_29ca55327a115013d8fc7b28764914bf = L.marker(
+            var marker_a633f6ab6dc475d621da8e7242de6015 = L.marker(
                 [-33.01358455, 151.6287538],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_af93e000794f48d3d1473fb14dfad8b6 = L.AwesomeMarkers.icon(
+            var icon_075e1b7323c26726caa69e492e1f2343 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_29ca55327a115013d8fc7b28764914bf.setIcon(icon_af93e000794f48d3d1473fb14dfad8b6);
+            marker_a633f6ab6dc475d621da8e7242de6015.setIcon(icon_075e1b7323c26726caa69e492e1f2343);
         
     
-        var popup_bdacd6ee59d2298263f050572796a4de = L.popup({"maxWidth": "100%"});
+        var popup_60c94a85f741a93350b3ea599a13b3e5 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_40badde02d8384bf1da6d8a05377dc7f = $(`<div id="html_40badde02d8384bf1da6d8a05377dc7f" style="width: 100.0%; height: 100.0%;"><b>Green Point</b><br>This is a 5 km loop<br></div>`)[0];
-                popup_bdacd6ee59d2298263f050572796a4de.setContent(html_40badde02d8384bf1da6d8a05377dc7f);
+                var html_b1f69e23c3efa4d7b3f60d8ac847ac41 = $(`<div id="html_b1f69e23c3efa4d7b3f60d8ac847ac41" style="width: 100.0%; height: 100.0%;"><b>Green Point</b><br><a href='https://www.google.com/maps?q=134+Dilkera+Ave,+Valentine+NSW+2280&ftid=0x6b732349c06e0e19:0xe3c03eb15da5a60d&entry=gps&lucs=,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447,94213316&g_ep=CAISDTYuMTIzLjAuNzEzODAYACDXggMqYyw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0Nyw5NDIxMzMxNkICQVU%3D&g_st=ifm' target='_blank'>Google Map Link</a><br>This is a 5 km loop<br></div>`)[0];
+                popup_60c94a85f741a93350b3ea599a13b3e5.setContent(html_b1f69e23c3efa4d7b3f60d8ac847ac41);
             
         
 
-        marker_29ca55327a115013d8fc7b28764914bf.bindPopup(popup_bdacd6ee59d2298263f050572796a4de)
+        marker_a633f6ab6dc475d621da8e7242de6015.bindPopup(popup_60c94a85f741a93350b3ea599a13b3e5)
         ;
 
         
     
     
-            marker_29ca55327a115013d8fc7b28764914bf.bindTooltip(
+            marker_a633f6ab6dc475d621da8e7242de6015.bindTooltip(
                 `<div>
                      Green Point
                  </div>`,
@@ -489,34 +284,34 @@
             );
         
     
-            var marker_6b619cc587db29b9960b03698599c73e = L.marker(
+            var marker_468a551509c17ed5b1dccc58038bad05 = L.marker(
                 [-32.95303927, 151.746542],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_20e022e998eede95a02d2fbc1767dd49 = L.AwesomeMarkers.icon(
+            var icon_e332f615990cd6e5a677520372408398 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_6b619cc587db29b9960b03698599c73e.setIcon(icon_20e022e998eede95a02d2fbc1767dd49);
+            marker_468a551509c17ed5b1dccc58038bad05.setIcon(icon_e332f615990cd6e5a677520372408398);
         
     
-        var popup_48ec617243d15c9d0a3523cf53e80fcf = L.popup({"maxWidth": "100%"});
+        var popup_7e432498d780baf0121f0c144115bb0d = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_bf860b82b928620a01b9d0b5e02cab97 = $(`<div id="html_bf860b82b928620a01b9d0b5e02cab97" style="width: 100.0%; height: 100.0%;"><b>Hickson Street Lookout</b><br><br></div>`)[0];
-                popup_48ec617243d15c9d0a3523cf53e80fcf.setContent(html_bf860b82b928620a01b9d0b5e02cab97);
+                var html_7be15a0a49467f66784587026cfedf74 = $(`<div id="html_7be15a0a49467f66784587026cfedf74" style="width: 100.0%; height: 100.0%;"><b>Hickson Street Lookout</b><br><a href='https://www.google.com/maps/place/Hickson+Street+Lookout/@-32.9531743,151.746488,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7315d54bfbc527:0xdda9d29f3b2f085d!8m2!3d-32.9531743!4d151.746488!16s%2Fg%2F11b_25x7fp?hl=en-AU&entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_7e432498d780baf0121f0c144115bb0d.setContent(html_7be15a0a49467f66784587026cfedf74);
             
         
 
-        marker_6b619cc587db29b9960b03698599c73e.bindPopup(popup_48ec617243d15c9d0a3523cf53e80fcf)
+        marker_468a551509c17ed5b1dccc58038bad05.bindPopup(popup_7e432498d780baf0121f0c144115bb0d)
         ;
 
         
     
     
-            marker_6b619cc587db29b9960b03698599c73e.bindTooltip(
+            marker_468a551509c17ed5b1dccc58038bad05.bindTooltip(
                 `<div>
                      Hickson Street Lookout
                  </div>`,
@@ -524,244 +319,34 @@
             );
         
     
-            var marker_365fbd85ea2997e4d23d27f4c3258fa8 = L.marker(
-                [-32.91300428, 151.7487202],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_63c4b4bdeb1aa04f919752110b6f8ed8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_365fbd85ea2997e4d23d27f4c3258fa8.setIcon(icon_63c4b4bdeb1aa04f919752110b6f8ed8);
-        
-    
-        var popup_dca7b71cca59459e5c4f46112bcc1b27 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f172983166dbd0b512587fb693606633 = $(`<div id="html_f172983166dbd0b512587fb693606633" style="width: 100.0%; height: 100.0%;"><b>Islington Park</b><br><br></div>`)[0];
-                popup_dca7b71cca59459e5c4f46112bcc1b27.setContent(html_f172983166dbd0b512587fb693606633);
-            
-        
-
-        marker_365fbd85ea2997e4d23d27f4c3258fa8.bindPopup(popup_dca7b71cca59459e5c4f46112bcc1b27)
-        ;
-
-        
-    
-    
-            marker_365fbd85ea2997e4d23d27f4c3258fa8.bindTooltip(
-                `<div>
-                     Islington Park
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_7c59ac85602079c19d3f9db4cb5558d4 = L.marker(
-                [-32.84612538, 151.7010464],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_1905716f1cedbc0444b95abdcf171f7a = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_7c59ac85602079c19d3f9db4cb5558d4.setIcon(icon_1905716f1cedbc0444b95abdcf171f7a);
-        
-    
-        var popup_a121055fbb59a426788783b9a616c4d0 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_cedbd125aa55d13c68acfb5613bff6cd = $(`<div id="html_cedbd125aa55d13c68acfb5613bff6cd" style="width: 100.0%; height: 100.0%;"><b>Koorangang Wetlands</b><br><br></div>`)[0];
-                popup_a121055fbb59a426788783b9a616c4d0.setContent(html_cedbd125aa55d13c68acfb5613bff6cd);
-            
-        
-
-        marker_7c59ac85602079c19d3f9db4cb5558d4.bindPopup(popup_a121055fbb59a426788783b9a616c4d0)
-        ;
-
-        
-    
-    
-            marker_7c59ac85602079c19d3f9db4cb5558d4.bindTooltip(
-                `<div>
-                     Koorangang Wetlands
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_f12a101296cde2b748662ad65cf4b721 = L.marker(
-                [-32.95692798, 151.6511448],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_c730034b60c1fe5ccc438a73d196881f = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
-            );
-            marker_f12a101296cde2b748662ad65cf4b721.setIcon(icon_c730034b60c1fe5ccc438a73d196881f);
-        
-    
-        var popup_1f46b6ac2e8d01a83ceb7d94247417c5 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_aac960c2865ea7cce2b4b98d27b395aa = $(`<div id="html_aac960c2865ea7cce2b4b98d27b395aa" style="width: 100.0%; height: 100.0%;"><b>Macquarie Hills</b><br>The walk is hilly and on unsealed paths in the bush, will take about 1h45mins for the round trip. Please wear proper walking shoes and clothes for the walk. Please take adequate water, sunscreen and mosquito repellent as needed.<br></div>`)[0];
-                popup_1f46b6ac2e8d01a83ceb7d94247417c5.setContent(html_aac960c2865ea7cce2b4b98d27b395aa);
-            
-        
-
-        marker_f12a101296cde2b748662ad65cf4b721.bindPopup(popup_1f46b6ac2e8d01a83ceb7d94247417c5)
-        ;
-
-        
-    
-    
-            marker_f12a101296cde2b748662ad65cf4b721.bindTooltip(
-                `<div>
-                     Macquarie Hills
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_84c638712fc7e98b0ce7722f7a875701 = L.marker(
-                [-32.890779, 151.539436],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_7b9e73c962af557b3b2d660d64b2d7be = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
-            );
-            marker_84c638712fc7e98b0ce7722f7a875701.setIcon(icon_7b9e73c962af557b3b2d660d64b2d7be);
-        
-    
-        var popup_6a7cf81cc54bc043f49d2d0b3861e1c6 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_64af2c3850a079f7da7d3a2522cf3fbf = $(`<div id="html_64af2c3850a079f7da7d3a2522cf3fbf" style="width: 100.0%; height: 100.0%;"><b>Mount Sugarloaf</b><br><a href='https://roryyarr.github.io/ASOC-Walks/Maps/Sugarloaf_Walk.html' target='_blank'>Route Map Link</a><br>Walk around<br></div>`)[0];
-                popup_6a7cf81cc54bc043f49d2d0b3861e1c6.setContent(html_64af2c3850a079f7da7d3a2522cf3fbf);
-            
-        
-
-        marker_84c638712fc7e98b0ce7722f7a875701.bindPopup(popup_6a7cf81cc54bc043f49d2d0b3861e1c6)
-        ;
-
-        
-    
-    
-            marker_84c638712fc7e98b0ce7722f7a875701.bindTooltip(
-                `<div>
-                     Mount Sugarloaf
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_69d12171e8b9b220ee4ccd14765544f8 = L.marker(
-                [-32.96417018, 151.6300255],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_379f5359a9b5da26673ffbfb659255f9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
-            );
-            marker_69d12171e8b9b220ee4ccd14765544f8.setIcon(icon_379f5359a9b5da26673ffbfb659255f9);
-        
-    
-        var popup_582c5bb6361af365bae1ffe558e4a67b = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_501c9b71026cf96b13f28d2bc957c212 = $(`<div id="html_501c9b71026cf96b13f28d2bc957c212" style="width: 100.0%; height: 100.0%;"><b>Munibung Hills</b><br><br></div>`)[0];
-                popup_582c5bb6361af365bae1ffe558e4a67b.setContent(html_501c9b71026cf96b13f28d2bc957c212);
-            
-        
-
-        marker_69d12171e8b9b220ee4ccd14765544f8.bindPopup(popup_582c5bb6361af365bae1ffe558e4a67b)
-        ;
-
-        
-    
-    
-            marker_69d12171e8b9b220ee4ccd14765544f8.bindTooltip(
-                `<div>
-                     Munibung Hills
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_ab377ac3751c6adc59e9223f98316e7c = L.marker(
-                [-32.92415683, 151.7912836],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_024b7556a055496c770467007c9815a6 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "ship", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
-            );
-            marker_ab377ac3751c6adc59e9223f98316e7c.setIcon(icon_024b7556a055496c770467007c9815a6);
-        
-    
-        var popup_744e6e5d058c9889318140a0673e4a1e = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_bfa5083774e7462c5dbaa41fa79862a5 = $(`<div id="html_bfa5083774e7462c5dbaa41fa79862a5" style="width: 100.0%; height: 100.0%;"><b>Nobby Breakwall</b><br><a href='https://roryyarr.github.io/ASOC-Walks/Maps/walking_routes_map.html' target='_blank'>Route Map Link</a><br>We can walk accross the breakwall with possible extentions of the lighthouse. Or we can wall to city beach.<br></div>`)[0];
-                popup_744e6e5d058c9889318140a0673e4a1e.setContent(html_bfa5083774e7462c5dbaa41fa79862a5);
-            
-        
-
-        marker_ab377ac3751c6adc59e9223f98316e7c.bindPopup(popup_744e6e5d058c9889318140a0673e4a1e)
-        ;
-
-        
-    
-    
-            marker_ab377ac3751c6adc59e9223f98316e7c.bindTooltip(
-                `<div>
-                     Nobby Breakwall
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_218d253fdd7074d9de542240f246a7e7 = L.marker(
+            var marker_00d4fff530b246333baf5464f6d5e970 = L.marker(
                 [-33.07111198, 151.6335904],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_d1159b25aad68178208c8e4036b9b977 = L.AwesomeMarkers.icon(
+            var icon_615e90548355b59a9862b86302031a22 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_218d253fdd7074d9de542240f246a7e7.setIcon(icon_d1159b25aad68178208c8e4036b9b977);
+            marker_00d4fff530b246333baf5464f6d5e970.setIcon(icon_615e90548355b59a9862b86302031a22);
         
     
-        var popup_c15ca9f1c6abd7235885ec727afdc411 = L.popup({"maxWidth": "100%"});
+        var popup_11363e96035e671a6793ce9d69497c6c = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_cacd4f0f282dbf0e95635162d77981a6 = $(`<div id="html_cacd4f0f282dbf0e95635162d77981a6" style="width: 100.0%; height: 100.0%;"><b>Pirrita island carpark and foreshore</b><br><br></div>`)[0];
-                popup_c15ca9f1c6abd7235885ec727afdc411.setContent(html_cacd4f0f282dbf0e95635162d77981a6);
+                var html_51be82b2aea690e482192478e51c86a8 = $(`<div id="html_51be82b2aea690e482192478e51c86a8" style="width: 100.0%; height: 100.0%;"><b>Pirrita island carpark and foreshore</b><br><a href='https://www.google.com/maps/place/Pirrita+island+carpark+and+foreshore/@-33.0715455,151.6331766,16.19z/data=!4m6!3m5!1s0x6b732394a90441a9:0x4c7119d9b466ee8c!8m2!3d-33.071468!4d151.6335264!16s%2Fg%2F11rw6l2xts?hl=en-AU&entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_11363e96035e671a6793ce9d69497c6c.setContent(html_51be82b2aea690e482192478e51c86a8);
             
         
 
-        marker_218d253fdd7074d9de542240f246a7e7.bindPopup(popup_c15ca9f1c6abd7235885ec727afdc411)
+        marker_00d4fff530b246333baf5464f6d5e970.bindPopup(popup_11363e96035e671a6793ce9d69497c6c)
         ;
 
         
     
     
-            marker_218d253fdd7074d9de542240f246a7e7.bindTooltip(
+            marker_00d4fff530b246333baf5464f6d5e970.bindTooltip(
                 `<div>
                      Pirrita island carpark and foreshore
                  </div>`,
@@ -769,209 +354,34 @@
             );
         
     
-            var marker_fad72e7a85cc5b50888e107da146d22e = L.marker(
-                [-32.96098092, 151.6147737],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_d769fdbf67384ccb55383ff36d864529 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
-            );
-            marker_fad72e7a85cc5b50888e107da146d22e.setIcon(icon_d769fdbf67384ccb55383ff36d864529);
-        
-    
-        var popup_26510e29072006a90f5b48e7612e238f = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f24bb9362d2752becf1ba055bb1a0958 = $(`<div id="html_f24bb9362d2752becf1ba055bb1a0958" style="width: 100.0%; height: 100.0%;"><b>Speers Point Boat Ramp</b><br><br></div>`)[0];
-                popup_26510e29072006a90f5b48e7612e238f.setContent(html_f24bb9362d2752becf1ba055bb1a0958);
-            
-        
-
-        marker_fad72e7a85cc5b50888e107da146d22e.bindPopup(popup_26510e29072006a90f5b48e7612e238f)
-        ;
-
-        
-    
-    
-            marker_fad72e7a85cc5b50888e107da146d22e.bindTooltip(
-                `<div>
-                     Speers Point Boat Ramp
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_7d2c0bed32bc4dc3f85f95697623aad4 = L.marker(
-                [-32.91879584, 151.783338],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_93c4ab30b157626163b0b076072d7e47 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "water", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
-            );
-            marker_7d2c0bed32bc4dc3f85f95697623aad4.setIcon(icon_93c4ab30b157626163b0b076072d7e47);
-        
-    
-        var popup_1c6a45b6b3cb6c735677d1ebc4e3eee8 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_f4621c2fc3c6f4aac9bacbba67787bd1 = $(`<div id="html_f4621c2fc3c6f4aac9bacbba67787bd1" style="width: 100.0%; height: 100.0%;"><b>Stockton Foreshore</b><br>We can walk to the left until we reach the breakwall.<br></div>`)[0];
-                popup_1c6a45b6b3cb6c735677d1ebc4e3eee8.setContent(html_f4621c2fc3c6f4aac9bacbba67787bd1);
-            
-        
-
-        marker_7d2c0bed32bc4dc3f85f95697623aad4.bindPopup(popup_1c6a45b6b3cb6c735677d1ebc4e3eee8)
-        ;
-
-        
-    
-    
-            marker_7d2c0bed32bc4dc3f85f95697623aad4.bindTooltip(
-                `<div>
-                     Stockton Foreshore
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_af3b7346367232eb0a6386f7350cee9f = L.marker(
-                [-33.00842556, 151.5849263],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_93d7689eed7116264fbf45339333b7bf = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "water", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-            );
-            marker_af3b7346367232eb0a6386f7350cee9f.setIcon(icon_93d7689eed7116264fbf45339333b7bf);
-        
-    
-        var popup_2c39c9886299a812eb2a8cddb288697a = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_2b370d27adfa92218aaee9d1430cd099 = $(`<div id="html_2b370d27adfa92218aaee9d1430cd099" style="width: 100.0%; height: 100.0%;"><b>Stoney Creek</b><br>We can park on the street near Toronto High School<br></div>`)[0];
-                popup_2c39c9886299a812eb2a8cddb288697a.setContent(html_2b370d27adfa92218aaee9d1430cd099);
-            
-        
-
-        marker_af3b7346367232eb0a6386f7350cee9f.bindPopup(popup_2c39c9886299a812eb2a8cddb288697a)
-        ;
-
-        
-    
-    
-            marker_af3b7346367232eb0a6386f7350cee9f.bindTooltip(
-                `<div>
-                     Stoney Creek
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_8a76c0089cf57c5fa8dcd2dd615db5a4 = L.marker(
-                [-33.07442368, 151.6372785],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_e488fd5f6560c7170aea1833bcdbb3e5 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
-            );
-            marker_8a76c0089cf57c5fa8dcd2dd615db5a4.setIcon(icon_e488fd5f6560c7170aea1833bcdbb3e5);
-        
-    
-        var popup_89e89a90cc76f92ab77cb1d14f2a0244 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_fdf761845393708916f9aed0156afbe8 = $(`<div id="html_fdf761845393708916f9aed0156afbe8" style="width: 100.0%; height: 100.0%;"><b>Swansea Beach</b><br><br></div>`)[0];
-                popup_89e89a90cc76f92ab77cb1d14f2a0244.setContent(html_fdf761845393708916f9aed0156afbe8);
-            
-        
-
-        marker_8a76c0089cf57c5fa8dcd2dd615db5a4.bindPopup(popup_89e89a90cc76f92ab77cb1d14f2a0244)
-        ;
-
-        
-    
-    
-            marker_8a76c0089cf57c5fa8dcd2dd615db5a4.bindTooltip(
-                `<div>
-                     Swansea Beach
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_a4abbfd744d0c4fc15c537f6dc56b28c = L.marker(
-                [-18.00894401, 31.05855787],
-                {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
-        
-    
-            var icon_322b1d76fc6c19b6d492acdae2a0554e = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "fire", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
-            );
-            marker_a4abbfd744d0c4fc15c537f6dc56b28c.setIcon(icon_322b1d76fc6c19b6d492acdae2a0554e);
-        
-    
-        var popup_bb68ac7e9a9b386cdb3834564936b2ca = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_7b31533ee6b19200990b7d5c1fedfcd8 = $(`<div id="html_7b31533ee6b19200990b7d5c1fedfcd8" style="width: 100.0%; height: 100.0%;"><b>TJ's House</b><br>A fun place!<br></div>`)[0];
-                popup_bb68ac7e9a9b386cdb3834564936b2ca.setContent(html_7b31533ee6b19200990b7d5c1fedfcd8);
-            
-        
-
-        marker_a4abbfd744d0c4fc15c537f6dc56b28c.bindPopup(popup_bb68ac7e9a9b386cdb3834564936b2ca)
-        ;
-
-        
-    
-    
-            marker_a4abbfd744d0c4fc15c537f6dc56b28c.bindTooltip(
-                `<div>
-                     TJ's House
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_ee5c4eef0d7ccad02ddfffbab83b797c = L.marker(
+            var marker_77d9c48f163cf5e7548c4517966e764c = L.marker(
                 [-32.90695754, 151.6626628],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_9060161d681810a216cc2b6e5937e782 = L.AwesomeMarkers.icon(
+            var icon_5cdc25f905c576e41b6daec8c96bfde3 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_ee5c4eef0d7ccad02ddfffbab83b797c.setIcon(icon_9060161d681810a216cc2b6e5937e782);
+            marker_77d9c48f163cf5e7548c4517966e764c.setIcon(icon_5cdc25f905c576e41b6daec8c96bfde3);
         
     
-        var popup_eafdb75cad2096deacaaa5231203f015 = L.popup({"maxWidth": "100%"});
+        var popup_32c49f11d677d4f576d2c46f0f4158c8 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_58037bea558598d86b036606bd5e8b72 = $(`<div id="html_58037bea558598d86b036606bd5e8b72" style="width: 100.0%; height: 100.0%;"><b>Tramway Trail</b><br><br></div>`)[0];
-                popup_eafdb75cad2096deacaaa5231203f015.setContent(html_58037bea558598d86b036606bd5e8b72);
+                var html_1613ddce9df5b350717f7d9ee886897f = $(`<div id="html_1613ddce9df5b350717f7d9ee886897f" style="width: 100.0%; height: 100.0%;"><b>Tramway Trail</b><br><a href='https://www.google.com/maps/place/Ganney+Rd,+Wallsend+NSW+2287/@-32.9074791,151.6613105,17.34z/data=!4m6!3m5!1s0x6b733e5c62405f95:0x50f063dd949802d3!8m2!3d-32.9070975!4d151.6626505!16s%2Fg%2F1thf8qxn?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_32c49f11d677d4f576d2c46f0f4158c8.setContent(html_1613ddce9df5b350717f7d9ee886897f);
             
         
 
-        marker_ee5c4eef0d7ccad02ddfffbab83b797c.bindPopup(popup_eafdb75cad2096deacaaa5231203f015)
+        marker_77d9c48f163cf5e7548c4517966e764c.bindPopup(popup_32c49f11d677d4f576d2c46f0f4158c8)
         ;
 
         
     
     
-            marker_ee5c4eef0d7ccad02ddfffbab83b797c.bindTooltip(
+            marker_77d9c48f163cf5e7548c4517966e764c.bindTooltip(
                 `<div>
                      Tramway Trail
                  </div>`,
@@ -979,34 +389,642 @@
             );
         
     
-            var marker_022421efe7393132e079ae98163173f1 = L.marker(
-                [-32.71344705, 151.5535839],
+            var marker_58a947b015208920d13f498b6f1c9446 = L.marker(
+                [-32.96217575, 151.719625],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_97e63c03f392fbff48ab6e87ce87dad2);
         
     
-            var icon_6bb004dbe613c217f7d55db623b386a7 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            var icon_79e0b9ca7414396fb76cfe7c2915c9e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
             );
-            marker_022421efe7393132e079ae98163173f1.setIcon(icon_6bb004dbe613c217f7d55db623b386a7);
+            marker_58a947b015208920d13f498b6f1c9446.setIcon(icon_79e0b9ca7414396fb76cfe7c2915c9e0);
         
     
-        var popup_0e04c37a3466f1b96c316d1ed898cf94 = L.popup({"maxWidth": "100%"});
+        var popup_48a9a51f3d3c41ef1906ca0d0993a648 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_9a201f6481faa62ccf64bbfeca752d8b = $(`<div id="html_9a201f6481faa62ccf64bbfeca752d8b" style="width: 100.0%; height: 100.0%;"><b>Walka Water Works</b><br><br></div>`)[0];
-                popup_0e04c37a3466f1b96c316d1ed898cf94.setContent(html_9a201f6481faa62ccf64bbfeca752d8b);
+                var html_28a259e63c358df14e1c4244c7c95702 = $(`<div id="html_28a259e63c358df14e1c4244c7c95702" style="width: 100.0%; height: 100.0%;"><b>Yuelarbah Trail</b><br><a href='https://www.google.com/maps/place/Yuelarbah+Trail+Carpark/@-32.9624053,151.7196143,17z/data=!3m1!4b1!4m6!3m5!1s0x6b7316146d59ee39:0xe49a09f0ac9e9943!8m2!3d-32.9624053!4d151.7196143!16s%2Fg%2F11b6swhdr0?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_48a9a51f3d3c41ef1906ca0d0993a648.setContent(html_28a259e63c358df14e1c4244c7c95702);
             
         
 
-        marker_022421efe7393132e079ae98163173f1.bindPopup(popup_0e04c37a3466f1b96c316d1ed898cf94)
+        marker_58a947b015208920d13f498b6f1c9446.bindPopup(popup_48a9a51f3d3c41ef1906ca0d0993a648)
         ;
 
         
     
     
-            marker_022421efe7393132e079ae98163173f1.bindTooltip(
+            marker_58a947b015208920d13f498b6f1c9446.bindTooltip(
+                `<div>
+                     Yuelarbah Trail
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_97e63c03f392fbff48ab6e87ce87dad2.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_66d4f1c6f6b164a3ef075927dd080e29 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_2602cc6140b68ea155a43ed1e2ea7a7c = L.marker(
+                [-32.94047053, 151.7695674],
+                {}
+            ).addTo(feature_group_66d4f1c6f6b164a3ef075927dd080e29);
+        
+    
+            var icon_c52a5e416a2fcaa8838cd526a9b00142 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
+            );
+            marker_2602cc6140b68ea155a43ed1e2ea7a7c.setIcon(icon_c52a5e416a2fcaa8838cd526a9b00142);
+        
+    
+        var popup_fbd9ebe890b727b1d00338190efbfa2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_45bed2945a6e9a2fa3751aeb2e8e5c98 = $(`<div id="html_45bed2945a6e9a2fa3751aeb2e8e5c98" style="width: 100.0%; height: 100.0%;"><b>Bar Beach</b><br><a href='https://www.google.com/maps/place/Yuelarbah+Track,+Bar+Beach+NSW+2300/@-32.9406461,151.764718,946m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x6b73143fbd4c9111:0x5017d681632e890!2sBar+Beach+NSW+2300!3b1!8m2!3d-32.9377866!4d151.7701917!16s%2Fm%2F02x66br!3m5!1s0x6b73143e338a20c5:0xbac9ffd0659c571a!8m2!3d-32.9406507!4d151.7695889!16s%2Fg%2F11m_lcwt1h?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_fbd9ebe890b727b1d00338190efbfa2f.setContent(html_45bed2945a6e9a2fa3751aeb2e8e5c98);
+            
+        
+
+        marker_2602cc6140b68ea155a43ed1e2ea7a7c.bindPopup(popup_fbd9ebe890b727b1d00338190efbfa2f)
+        ;
+
+        
+    
+    
+            marker_2602cc6140b68ea155a43ed1e2ea7a7c.bindTooltip(
+                `<div>
+                     Bar Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_553e85aef3b43e656cfe80c2872dbbd7 = L.marker(
+                [-33.10947441, 151.6465794],
+                {}
+            ).addTo(feature_group_66d4f1c6f6b164a3ef075927dd080e29);
+        
+    
+            var icon_cb7af4c88d4b4cdad409b550f35448a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
+            );
+            marker_553e85aef3b43e656cfe80c2872dbbd7.setIcon(icon_cb7af4c88d4b4cdad409b550f35448a9);
+        
+    
+        var popup_579e15f394c008032b43c11c315c8028 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92fc89f03c5b34d3dd74abb3c910ea5c = $(`<div id="html_92fc89f03c5b34d3dd74abb3c910ea5c" style="width: 100.0%; height: 100.0%;"><b>Caves Beach</b><br><a href='https://www.google.com/maps/place/Public+Toilet+Caves+Beach,+127+Caves+Beach+Rd,+Caves+Beach+NSW+2281/data=!4m2!3m1!1s0x6b7321285e8b07ab:0xd11423c7e3b0eea5?utm_source=mstt_1&entry=gps&lucs=47068615,,47075915&g_ep=CAESCjExLjEwMy4xMDEYACDXggMqEjQ3MDY4NjE1LCw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_579e15f394c008032b43c11c315c8028.setContent(html_92fc89f03c5b34d3dd74abb3c910ea5c);
+            
+        
+
+        marker_553e85aef3b43e656cfe80c2872dbbd7.bindPopup(popup_579e15f394c008032b43c11c315c8028)
+        ;
+
+        
+    
+    
+            marker_553e85aef3b43e656cfe80c2872dbbd7.bindTooltip(
+                `<div>
+                     Caves Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1815c86a052d7bacf27bc638bfaf5b0 = L.marker(
+                [-33.07442368, 151.6372785],
+                {}
+            ).addTo(feature_group_66d4f1c6f6b164a3ef075927dd080e29);
+        
+    
+            var icon_400c7dfd813d155f6ad21584240ae7a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella-beach", "iconColor": "white", "markerColor": "beige", "prefix": "fa"}
+            );
+            marker_b1815c86a052d7bacf27bc638bfaf5b0.setIcon(icon_400c7dfd813d155f6ad21584240ae7a4);
+        
+    
+        var popup_35c9f6aa0c1a217384202da6aaede334 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_686cd50368f6f858f01bde8036a4e530 = $(`<div id="html_686cd50368f6f858f01bde8036a4e530" style="width: 100.0%; height: 100.0%;"><b>Swansea Beach</b><br><a href='https://www.google.com/maps/place/-33.074590,151.637300/data=!4m6!3m5!1s0!7e2!8m2!3d-33.074590199999996!4d151.63729999999998?utm_source=mstt_1&entry=gps&lucs=47068615,,47075915&g_ep=CAESCTExLjkyLjMwMRgAINeCAyoSNDcwNjg2MTUsLDQ3MDc1OTE1QgJBVQ%3D%3D' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_35c9f6aa0c1a217384202da6aaede334.setContent(html_686cd50368f6f858f01bde8036a4e530);
+            
+        
+
+        marker_b1815c86a052d7bacf27bc638bfaf5b0.bindPopup(popup_35c9f6aa0c1a217384202da6aaede334)
+        ;
+
+        
+    
+    
+            marker_b1815c86a052d7bacf27bc638bfaf5b0.bindTooltip(
+                `<div>
+                     Swansea Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_66d4f1c6f6b164a3ef075927dd080e29.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_9b6db6fac8938e88291b4bf3e1ef86ce = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_2be6b3bb1292a042fc6924915f003636 = L.marker(
+                [-33.08061148, 151.656147],
+                {}
+            ).addTo(feature_group_9b6db6fac8938e88291b4bf3e1ef86ce);
+        
+    
+            var icon_c306b9e9a3fd556c2398abab39427e0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2be6b3bb1292a042fc6924915f003636.setIcon(icon_c306b9e9a3fd556c2398abab39427e0d);
+        
+    
+        var popup_435f28629cdd1938cfb7a6571c4668d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aef058a1c4f37e10c34674370072076a = $(`<div id="html_aef058a1c4f37e10c34674370072076a" style="width: 100.0%; height: 100.0%;"><b>Blacksmiths Playground</b><br><a href='https://www.google.com/maps/place/Blacksmiths+Playground/@-33.0808542,151.6560612,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7322337cc6a489:0xe3bc985979e22237!8m2!3d-33.0808542!4d151.6560612!16s%2Fg%2F11csrc_r65?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_435f28629cdd1938cfb7a6571c4668d3.setContent(html_aef058a1c4f37e10c34674370072076a);
+            
+        
+
+        marker_2be6b3bb1292a042fc6924915f003636.bindPopup(popup_435f28629cdd1938cfb7a6571c4668d3)
+        ;
+
+        
+    
+    
+            marker_2be6b3bb1292a042fc6924915f003636.bindTooltip(
+                `<div>
+                     Blacksmiths Playground
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_9b6db6fac8938e88291b4bf3e1ef86ce.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_f99b2087d566f6df56e3ec3de719579d = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_c14cc90bbabe0943ee494a57799a7015 = L.marker(
+                [-32.88399493, 151.6212706],
+                {}
+            ).addTo(feature_group_f99b2087d566f6df56e3ec3de719579d);
+        
+    
+            var icon_85a91080f46e384fad63a7e194270f04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_c14cc90bbabe0943ee494a57799a7015.setIcon(icon_85a91080f46e384fad63a7e194270f04);
+        
+    
+        var popup_c204307585fc063b1cf4264e138527bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb9024575ac2e93290ba9163ec9c5402 = $(`<div id="html_bb9024575ac2e93290ba9163ec9c5402" style="width: 100.0%; height: 100.0%;"><b>Blue Gums Hills</b><br><a href='https://www.google.com/maps/place/Village+Green+picnic+area+and+playground/@-32.8841526,151.6212813,17z/data=!3m1!4b1!4m6!3m5!1s0x6b733f025c37ef9d:0xe5ac2e325022b738!8m2!3d-32.8841526!4d151.6212813!16s%2Fg%2F11rx0hpx5f?entry=ttu' target='_blank'>Google Map Link</a><br>The walk is on gravel in the bushes with slight inclines. It will take about an hour to complete the walk. Please wear proper shoes and have mosquito repellent for the walk.<br></div>`)[0];
+                popup_c204307585fc063b1cf4264e138527bb.setContent(html_bb9024575ac2e93290ba9163ec9c5402);
+            
+        
+
+        marker_c14cc90bbabe0943ee494a57799a7015.bindPopup(popup_c204307585fc063b1cf4264e138527bb)
+        ;
+
+        
+    
+    
+            marker_c14cc90bbabe0943ee494a57799a7015.bindTooltip(
+                `<div>
+                     Blue Gums Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_080e59c2b08190458ef267f62c1beae7 = L.marker(
+                [-32.95692798, 151.6511448],
+                {}
+            ).addTo(feature_group_f99b2087d566f6df56e3ec3de719579d);
+        
+    
+            var icon_65ca6a8b9a512b491ae35f0871520734 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_080e59c2b08190458ef267f62c1beae7.setIcon(icon_65ca6a8b9a512b491ae35f0871520734);
+        
+    
+        var popup_00eccfea7415eb1850b5c65fa8a74d4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11e28aedd59c69e16793e7b05c86bf5b = $(`<div id="html_11e28aedd59c69e16793e7b05c86bf5b" style="width: 100.0%; height: 100.0%;"><b>Macquarie Hills</b><br><a href='https://www.google.com/maps/place/32°57'27.1%22S+151°39'04.8%22E/@-32.957514,151.651332,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-32.957514!4d151.651332?entry=ttu' target='_blank'>Google Map Link</a><br>The walk is hilly and on unsealed paths in the bush, will take about 1h45mins for the round trip. Please wear proper walking shoes and clothes for the walk. Please take adequate water, sunscreen and mosquito repellent as needed.<br></div>`)[0];
+                popup_00eccfea7415eb1850b5c65fa8a74d4c.setContent(html_11e28aedd59c69e16793e7b05c86bf5b);
+            
+        
+
+        marker_080e59c2b08190458ef267f62c1beae7.bindPopup(popup_00eccfea7415eb1850b5c65fa8a74d4c)
+        ;
+
+        
+    
+    
+            marker_080e59c2b08190458ef267f62c1beae7.bindTooltip(
+                `<div>
+                     Macquarie Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55f17b593e0a08dd44e2a9d67f10cfbd = L.marker(
+                [-32.890779, 151.539436],
+                {}
+            ).addTo(feature_group_f99b2087d566f6df56e3ec3de719579d);
+        
+    
+            var icon_93d3b16a643833ae3a6352c20d8c7514 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_55f17b593e0a08dd44e2a9d67f10cfbd.setIcon(icon_93d3b16a643833ae3a6352c20d8c7514);
+        
+    
+        var popup_8d7254488fc927f39ef4c4e02b95343a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e082f45cae5bf38db5bdb688f0d59ee7 = $(`<div id="html_e082f45cae5bf38db5bdb688f0d59ee7" style="width: 100.0%; height: 100.0%;"><b>Mount Sugarloaf</b><br><a href='https://roryyarr.github.io/ASOC-Walks/Maps/Sugarloaf_Walk.html' target='_blank'>Route Map Link</a><br>1.5 km walk summit walk.(Around 40 minutes) Hilly and unpaved. Some sections can be challanging. <br></div>`)[0];
+                popup_8d7254488fc927f39ef4c4e02b95343a.setContent(html_e082f45cae5bf38db5bdb688f0d59ee7);
+            
+        
+
+        marker_55f17b593e0a08dd44e2a9d67f10cfbd.bindPopup(popup_8d7254488fc927f39ef4c4e02b95343a)
+        ;
+
+        
+    
+    
+            marker_55f17b593e0a08dd44e2a9d67f10cfbd.bindTooltip(
+                `<div>
+                     Mount Sugarloaf
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2c5bcba4ba1037f6565aba4b6bdc449 = L.marker(
+                [-32.96417018, 151.6300255],
+                {}
+            ).addTo(feature_group_f99b2087d566f6df56e3ec3de719579d);
+        
+    
+            var icon_f7d4fadd2aff260999635031823f355f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mountain", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_a2c5bcba4ba1037f6565aba4b6bdc449.setIcon(icon_f7d4fadd2aff260999635031823f355f);
+        
+    
+        var popup_616b2ff7b19d926baf331dbef0cde60d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebb91f3690a1552447f204ee5017429a = $(`<div id="html_ebb91f3690a1552447f204ee5017429a" style="width: 100.0%; height: 100.0%;"><b>Munibung Hills</b><br><a href='https://www.google.com/maps/place/1+Quarry+Rd,+Speers+Point+NSW+2284/@-32.967287,151.6243255,14.2z/data=!4m6!3m5!1s0x6b733c600d5b8807:0x7da0689b0ea055fb!8m2!3d-32.9642413!4d151.6297225!16s%2Fg%2F11c4ljbg5c?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_616b2ff7b19d926baf331dbef0cde60d.setContent(html_ebb91f3690a1552447f204ee5017429a);
+            
+        
+
+        marker_a2c5bcba4ba1037f6565aba4b6bdc449.bindPopup(popup_616b2ff7b19d926baf331dbef0cde60d)
+        ;
+
+        
+    
+    
+            marker_a2c5bcba4ba1037f6565aba4b6bdc449.bindTooltip(
+                `<div>
+                     Munibung Hills
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_f99b2087d566f6df56e3ec3de719579d.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_ed211f1cb13a7197e39eb61f2cdff5bf = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_03d7533585289dcf8b7ba810284c85e4 = L.marker(
+                [-32.91642674, 151.7610844],
+                {}
+            ).addTo(feature_group_ed211f1cb13a7197e39eb61f2cdff5bf);
+        
+    
+            var icon_5599549d59577f3cac1c45364660e455 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_03d7533585289dcf8b7ba810284c85e4.setIcon(icon_5599549d59577f3cac1c45364660e455);
+        
+    
+        var popup_486ce57aa8444ec29e8b23ae7bce333b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8eb6446577627cf55257547824b5522 = $(`<div id="html_b8eb6446577627cf55257547824b5522" style="width: 100.0%; height: 100.0%;"><b>Carrington Boat Ramp</b><br><a href='https://www.google.com/maps/place/Carrington+Boat+Ramp,+Tully+St,+Carrington+NSW+2294/data=!4m2!3m1!1s0x6b73145844f7ae51:0xef5c81ec4e93927?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D' target='_blank'>Google Map Link</a><br>We can either go upstream of Throsby Creek around Maryville or downstream to Honeysuckle. The walk is flat on paved walkway.<br></div>`)[0];
+                popup_486ce57aa8444ec29e8b23ae7bce333b.setContent(html_b8eb6446577627cf55257547824b5522);
+            
+        
+
+        marker_03d7533585289dcf8b7ba810284c85e4.bindPopup(popup_486ce57aa8444ec29e8b23ae7bce333b)
+        ;
+
+        
+    
+    
+            marker_03d7533585289dcf8b7ba810284c85e4.bindTooltip(
+                `<div>
+                     Carrington Boat Ramp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fee22148fbdf308297ccc5a56c91ddd0 = L.marker(
+                [-32.9979984, 151.6377425],
+                {}
+            ).addTo(feature_group_ed211f1cb13a7197e39eb61f2cdff5bf);
+        
+    
+            var icon_395814329e0462e248c21f1e8f58603a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_fee22148fbdf308297ccc5a56c91ddd0.setIcon(icon_395814329e0462e248c21f1e8f58603a);
+        
+    
+        var popup_e0427648d3ecb95a041e186a89509157 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5a48a7798ec2c01d69487e1e2721a3a = $(`<div id="html_b5a48a7798ec2c01d69487e1e2721a3a" style="width: 100.0%; height: 100.0%;"><b>Croundace Bay Park</b><br><a href='https://www.google.com/maps/place/Croudace+Bay+Park/@-32.9979984,151.6377854,17z/data=!3m1!4b1!4m6!3m5!1s0x6b733cc79b4e602f:0xac13b79f6acddc6b!8m2!3d-32.9979984!4d151.6377854!16s%2Fg%2F11dxf0lbzl?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_e0427648d3ecb95a041e186a89509157.setContent(html_b5a48a7798ec2c01d69487e1e2721a3a);
+            
+        
+
+        marker_fee22148fbdf308297ccc5a56c91ddd0.bindPopup(popup_e0427648d3ecb95a041e186a89509157)
+        ;
+
+        
+    
+    
+            marker_fee22148fbdf308297ccc5a56c91ddd0.bindTooltip(
+                `<div>
+                     Croundace Bay Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f2912991e5393e52a3531feef748e65 = L.marker(
+                [-32.98938257, 151.6363871],
+                {}
+            ).addTo(feature_group_ed211f1cb13a7197e39eb61f2cdff5bf);
+        
+    
+            var icon_6077b307f5202501b2ddba01794331cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_4f2912991e5393e52a3531feef748e65.setIcon(icon_6077b307f5202501b2ddba01794331cf);
+        
+    
+        var popup_f90c8e99564134205954ffdd80d0b3c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b747499df4183a4132354172330e302a = $(`<div id="html_b747499df4183a4132354172330e302a" style="width: 100.0%; height: 100.0%;"><b>Elebana Park</b><br><a href='https://www.google.com/maps/place/Lions+Park/@-32.98911,151.6346886,17.26z/data=!4m14!1m7!3m6!1s0x6b7323475f570447:0xf1ebe11175d69940!2sGreen+Point!8m2!3d-33.0215867!4d151.6304169!16s%2Fg%2F11cjgd86tc!3m5!1s0x6b733cc21e5963cd:0x39f503798d6ddc75!8m2!3d-32.9889518!4d151.6364334!16s%2Fg%2F11c5sd783s?entry=ttu' target='_blank'>Google Map Link</a><br>Elebana Boat ramp<br></div>`)[0];
+                popup_f90c8e99564134205954ffdd80d0b3c0.setContent(html_b747499df4183a4132354172330e302a);
+            
+        
+
+        marker_4f2912991e5393e52a3531feef748e65.bindPopup(popup_f90c8e99564134205954ffdd80d0b3c0)
+        ;
+
+        
+    
+    
+            marker_4f2912991e5393e52a3531feef748e65.bindTooltip(
+                `<div>
+                     Elebana Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27be6da307d6788b430819ccb3c352fd = L.marker(
+                [-32.96098092, 151.6147737],
+                {}
+            ).addTo(feature_group_ed211f1cb13a7197e39eb61f2cdff5bf);
+        
+    
+            var icon_800af81f030b3dfa4481e37d9b54d3db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "sailboat", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_27be6da307d6788b430819ccb3c352fd.setIcon(icon_800af81f030b3dfa4481e37d9b54d3db);
+        
+    
+        var popup_6cf7ac52b88e388e0b4ab0e0951dffbe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60dd5b314865f4fc48332e6dd4d7c049 = $(`<div id="html_60dd5b314865f4fc48332e6dd4d7c049" style="width: 100.0%; height: 100.0%;"><b>Speers Point Boat Ramp</b><br><a href='https://www.google.com/maps/place/Speers+Point+Boat+Ramp/@-32.96135,151.6146879,16z/data=!3m1!4b1!4m6!3m5!1s0x6b733c7d8c2f9275:0xcf051f4312b52cbb!8m2!3d-32.96135!4d151.6146879!16s%2Fg%2F11csr440vv?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_6cf7ac52b88e388e0b4ab0e0951dffbe.setContent(html_60dd5b314865f4fc48332e6dd4d7c049);
+            
+        
+
+        marker_27be6da307d6788b430819ccb3c352fd.bindPopup(popup_6cf7ac52b88e388e0b4ab0e0951dffbe)
+        ;
+
+        
+    
+    
+            marker_27be6da307d6788b430819ccb3c352fd.bindTooltip(
+                `<div>
+                     Speers Point Boat Ramp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_ed211f1cb13a7197e39eb61f2cdff5bf.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_369426bc4837a8488606fdacfa16c246 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_c8743313927425138c9940804e9c1cc0 = L.marker(
+                [-32.91300428, 151.7487202],
+                {}
+            ).addTo(feature_group_369426bc4837a8488606fdacfa16c246);
+        
+    
+            var icon_e783934a063ff45edb362d65f23eb4bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "water", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c8743313927425138c9940804e9c1cc0.setIcon(icon_e783934a063ff45edb362d65f23eb4bd);
+        
+    
+        var popup_e3795cfccf1ee36339734a5105d9af26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac8845d2a7fbeeac6e3d3b9e04efb897 = $(`<div id="html_ac8845d2a7fbeeac6e3d3b9e04efb897" style="width: 100.0%; height: 100.0%;"><b>Islington Park</b><br><a href='https://www.google.com/maps/place/Islington+Park+Cricket+Ground,+63+Power+St,+Islington+NSW+2296/data=!4m2!3m1!1s0x6b7314553fba44e5:0x4df60ded56ec74c7?utm_source=mstt_1&entry=gps&g_ep=CAESCTExLjc4LjMwMRgAINeCAyoAQgJBVQ%3D%3D' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_e3795cfccf1ee36339734a5105d9af26.setContent(html_ac8845d2a7fbeeac6e3d3b9e04efb897);
+            
+        
+
+        marker_c8743313927425138c9940804e9c1cc0.bindPopup(popup_e3795cfccf1ee36339734a5105d9af26)
+        ;
+
+        
+    
+    
+            marker_c8743313927425138c9940804e9c1cc0.bindTooltip(
+                `<div>
+                     Islington Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dfe29436e9bb8409ba581f353939f5a6 = L.marker(
+                [-33.00842556, 151.5849263],
+                {}
+            ).addTo(feature_group_369426bc4837a8488606fdacfa16c246);
+        
+    
+            var icon_04aa6735998539a0c53a8a7e20862032 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "water", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_dfe29436e9bb8409ba581f353939f5a6.setIcon(icon_04aa6735998539a0c53a8a7e20862032);
+        
+    
+        var popup_5e44a6029347400eb8dbf907c120f5e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68687bece58c68703797483ba9618f04 = $(`<div id="html_68687bece58c68703797483ba9618f04" style="width: 100.0%; height: 100.0%;"><b>Stoney Creek</b><br><a href='https://www.google.com/maps/place/33°00'31.0%22S+151°35'05.8%22E/@-33.008601,151.584937,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-33.008601!4d151.584937?entry=ttu' target='_blank'>Google Map Link</a><br>We can park on the street near Toronto High School<br></div>`)[0];
+                popup_5e44a6029347400eb8dbf907c120f5e2.setContent(html_68687bece58c68703797483ba9618f04);
+            
+        
+
+        marker_dfe29436e9bb8409ba581f353939f5a6.bindPopup(popup_5e44a6029347400eb8dbf907c120f5e2)
+        ;
+
+        
+    
+    
+            marker_dfe29436e9bb8409ba581f353939f5a6.bindTooltip(
+                `<div>
+                     Stoney Creek
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_369426bc4837a8488606fdacfa16c246.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_bca1d09104e52fef16236e6cecd5e441 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_013784bac6e387d7ae09d102cf0f1454 = L.marker(
+                [-32.84612538, 151.7010464],
+                {}
+            ).addTo(feature_group_bca1d09104e52fef16236e6cecd5e441);
+        
+    
+            var icon_9b42bf45723cdf5594210ddb17217dd0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plant-wilt", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_013784bac6e387d7ae09d102cf0f1454.setIcon(icon_9b42bf45723cdf5594210ddb17217dd0);
+        
+    
+        var popup_5d4f3a6ee9a36da299b1765a8a829e28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b746dfe2c23074f269ec7cf398a1f00 = $(`<div id="html_7b746dfe2c23074f269ec7cf398a1f00" style="width: 100.0%; height: 100.0%;"><b>Koorangang Wetlands</b><br><a href='https://www.google.com/maps/place/Kooragang+Wetland+Rehabilitation+Project,+Schoolhouse+Rd,+Kooragang+NSW+2322/data=!4m2!3m1!1s0x6b736aa7844ab18d:0xbc656751c2f84dfc?utm_source=mstt_1&entry=gps&lucs=47068615&g_ep=CAESCTExLjgyLjMwMRgAINeCAyoINDcwNjg2MTVCAkFV' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_5d4f3a6ee9a36da299b1765a8a829e28.setContent(html_7b746dfe2c23074f269ec7cf398a1f00);
+            
+        
+
+        marker_013784bac6e387d7ae09d102cf0f1454.bindPopup(popup_5d4f3a6ee9a36da299b1765a8a829e28)
+        ;
+
+        
+    
+    
+            marker_013784bac6e387d7ae09d102cf0f1454.bindTooltip(
+                `<div>
+                     Koorangang Wetlands
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_06edb40b5b92e58aac0480fdb0c09cbc = L.marker(
+                [-32.71344705, 151.5535839],
+                {}
+            ).addTo(feature_group_bca1d09104e52fef16236e6cecd5e441);
+        
+    
+            var icon_1034e39b89f6273a5e33d1c02f5de070 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plant-wilt", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_06edb40b5b92e58aac0480fdb0c09cbc.setIcon(icon_1034e39b89f6273a5e33d1c02f5de070);
+        
+    
+        var popup_06d4ffb481adce1059c246c40c29995d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15fe1abc6bb07e11fa375876a73d64d4 = $(`<div id="html_15fe1abc6bb07e11fa375876a73d64d4" style="width: 100.0%; height: 100.0%;"><b>Walka Water Works</b><br><a href='https://www.google.com/maps/place/Walka+Water+Works,+S+Willards+Ln,+Oakhampton+Heights+NSW+2320/data=!4m2!3m1!1s0x6b7345b6b123d155:0xbe65523f767a37c7?utm_source=mstt_1&entry=gps&g_ep=CAESCjExLjgxLjEzMDEYACCIJyoAQgJBVQ%3D%3D' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_06d4ffb481adce1059c246c40c29995d.setContent(html_15fe1abc6bb07e11fa375876a73d64d4);
+            
+        
+
+        marker_06edb40b5b92e58aac0480fdb0c09cbc.bindPopup(popup_06d4ffb481adce1059c246c40c29995d)
+        ;
+
+        
+    
+    
+            marker_06edb40b5b92e58aac0480fdb0c09cbc.bindTooltip(
                 `<div>
                      Walka Water Works
                  </div>`,
@@ -1014,39 +1032,178 @@
             );
         
     
-            var marker_7f55cadad7c9330ba06b6bf0f9ceecc9 = L.marker(
-                [-32.96217575, 151.719625],
+            var marker_c7c68d6a27c3e45d56413d9a61a2f7dd = L.marker(
+                [-32.88756634, 151.697963],
                 {}
-            ).addTo(map_2c236e1ef19f2ab74a8bb24d1fc5b7c5);
+            ).addTo(feature_group_bca1d09104e52fef16236e6cecd5e441);
         
     
-            var icon_9459aa0c941407d6a078560bb261d1a1 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            var icon_ea7c3aecd8eb1826ea2386883a2b60ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plant-wilt", "iconColor": "white", "markerColor": "lightgreen", "prefix": "fa"}
             );
-            marker_7f55cadad7c9330ba06b6bf0f9ceecc9.setIcon(icon_9459aa0c941407d6a078560bb261d1a1);
+            marker_c7c68d6a27c3e45d56413d9a61a2f7dd.setIcon(icon_ea7c3aecd8eb1826ea2386883a2b60ff);
         
     
-        var popup_ae5b7dd8497d19ab807d110e5c8b94d7 = L.popup({"maxWidth": "100%"});
+        var popup_3475e8264d5a9ef3dadd05691c59771d = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_c5977d2cbe51332bd0b8aa2a37ff9957 = $(`<div id="html_c5977d2cbe51332bd0b8aa2a37ff9957" style="width: 100.0%; height: 100.0%;"><b>Yuelarbah Trail</b><br><br></div>`)[0];
-                popup_ae5b7dd8497d19ab807d110e5c8b94d7.setContent(html_c5977d2cbe51332bd0b8aa2a37ff9957);
+                var html_601bfa6a128ad5940f2f394ff7537cf2 = $(`<div id="html_601bfa6a128ad5940f2f394ff7537cf2" style="width: 100.0%; height: 100.0%;"><b>Uni-Golf Course Walk</b><br><a href='https://www.google.com/maps/place/Shortland+Waters+Golf+Club/@-32.8885733,151.6986885,17.33z/data=!4m14!1m7!3m6!1s0x6b733e3a5fbdf1b5:0xf017d68f9f2cef0!2sBrickworks+Park!8m2!3d-32.9068781!4d151.6840288!16s%2Fg%2F1tsykbzv!3m5!1s0x6b73156190c83163:0xf017d68f9f001a0!8m2!3d-32.8877503!4d151.6979437!16s%2Fg%2F1td6sdb0?entry=ttu' target='_blank'>Google Map Link</a><br><br></div>`)[0];
+                popup_3475e8264d5a9ef3dadd05691c59771d.setContent(html_601bfa6a128ad5940f2f394ff7537cf2);
             
         
 
-        marker_7f55cadad7c9330ba06b6bf0f9ceecc9.bindPopup(popup_ae5b7dd8497d19ab807d110e5c8b94d7)
+        marker_c7c68d6a27c3e45d56413d9a61a2f7dd.bindPopup(popup_3475e8264d5a9ef3dadd05691c59771d)
         ;
 
         
     
     
-            marker_7f55cadad7c9330ba06b6bf0f9ceecc9.bindTooltip(
+            marker_c7c68d6a27c3e45d56413d9a61a2f7dd.bindTooltip(
                 `<div>
-                     Yuelarbah Trail
+                     Uni-Golf Course Walk
                  </div>`,
                 {"sticky": true}
             );
+        
+    
+            feature_group_bca1d09104e52fef16236e6cecd5e441.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var feature_group_dbaf578d91c13ab3b11c74157193f61e = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_e07e2753b75e7247448f3abbacb31d2c = L.marker(
+                [-32.92415683, 151.7912836],
+                {}
+            ).addTo(feature_group_dbaf578d91c13ab3b11c74157193f61e);
+        
+    
+            var icon_9091351833aac9f2bca0da6e52a3b597 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ship", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_e07e2753b75e7247448f3abbacb31d2c.setIcon(icon_9091351833aac9f2bca0da6e52a3b597);
+        
+    
+        var popup_64397e134b03408c5199319f8807da3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91a21470accfc247ec8b01672844adfc = $(`<div id="html_91a21470accfc247ec8b01672844adfc" style="width: 100.0%; height: 100.0%;"><b>Nobby Breakwall</b><br><a href='https://roryyarr.github.io/ASOC-Walks/Maps/walking_routes_map.html' target='_blank'>Route Map Link</a><br>We can walk accross the breakwall with possible extentions of the lighthouse. Or we can wall to city beach.<br></div>`)[0];
+                popup_64397e134b03408c5199319f8807da3c.setContent(html_91a21470accfc247ec8b01672844adfc);
+            
+        
+
+        marker_e07e2753b75e7247448f3abbacb31d2c.bindPopup(popup_64397e134b03408c5199319f8807da3c)
+        ;
+
+        
+    
+    
+            marker_e07e2753b75e7247448f3abbacb31d2c.bindTooltip(
+                `<div>
+                     Nobby Breakwall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fda0f2c378fbfe73e35da4d3b874f368 = L.marker(
+                [-32.91879584, 151.783338],
+                {}
+            ).addTo(feature_group_dbaf578d91c13ab3b11c74157193f61e);
+        
+    
+            var icon_379fa1d9088d68ddddd1db29dbed2802 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ferry", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_fda0f2c378fbfe73e35da4d3b874f368.setIcon(icon_379fa1d9088d68ddddd1db29dbed2802);
+        
+    
+        var popup_8effc5515870cf941209eb3c9fe9a160 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6869b199a64cd8010dc63d435a2edc4 = $(`<div id="html_b6869b199a64cd8010dc63d435a2edc4" style="width: 100.0%; height: 100.0%;"><b>Stockton Foreshore</b><br><a href='https://www.google.com/maps/place/Car+Park/@-32.9191859,151.7830461,19.63z/data=!4m6!3m5!1s0x6b731536f34ee44d:0x62aa05ab0e20218a!8m2!3d-32.91882!4d151.7832969!16s%2Fg%2F11fm17jly_?entry=ttu' target='_blank'>Google Map Link</a><br>We can walk to the left until we reach the breakwall.<br></div>`)[0];
+                popup_8effc5515870cf941209eb3c9fe9a160.setContent(html_b6869b199a64cd8010dc63d435a2edc4);
+            
+        
+
+        marker_fda0f2c378fbfe73e35da4d3b874f368.bindPopup(popup_8effc5515870cf941209eb3c9fe9a160)
+        ;
+
+        
+    
+    
+            marker_fda0f2c378fbfe73e35da4d3b874f368.bindTooltip(
+                `<div>
+                     Stockton Foreshore
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c46c83f932819b953d363db72ea3dc0 = L.marker(
+                [-18.00894401, 31.05855787],
+                {}
+            ).addTo(feature_group_dbaf578d91c13ab3b11c74157193f61e);
+        
+    
+            var icon_834d4cd3dff882d76a4a50e35c40e5dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fire", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_4c46c83f932819b953d363db72ea3dc0.setIcon(icon_834d4cd3dff882d76a4a50e35c40e5dd);
+        
+    
+        var popup_29b403cbf718d33c446b8613cb83a2c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c8c4a108f1df35f11c82e9ad2ca317f = $(`<div id="html_2c8c4a108f1df35f11c82e9ad2ca317f" style="width: 100.0%; height: 100.0%;"><b>TJ's House</b><br><a href='https://www.google.com/maps/place/Chipo+Rd,+Chitungwiza,+Zimbabwe/@-18.0091787,31.0559937,17z/data=!3m1!4b1!4m6!3m5!1s0x193199c0451377c9:0xf14dfb8982fea11!8m2!3d-18.0091787!4d31.0585686!16s%2Fg%2F1hd_c2nvg?entry=ttu' target='_blank'>Google Map Link</a><br>A fun place!<br></div>`)[0];
+                popup_29b403cbf718d33c446b8613cb83a2c0.setContent(html_2c8c4a108f1df35f11c82e9ad2ca317f);
+            
+        
+
+        marker_4c46c83f932819b953d363db72ea3dc0.bindPopup(popup_29b403cbf718d33c446b8613cb83a2c0)
+        ;
+
+        
+    
+    
+            marker_4c46c83f932819b953d363db72ea3dc0.bindTooltip(
+                `<div>
+                     TJ's House
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_dbaf578d91c13ab3b11c74157193f61e.addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+        
+    
+            var layer_control_719f9e9fa512869687a666d20933b0a3_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_ee759108cb4e73a86ddf9a2d631d78ab,
+                },
+                overlays :  {
+                    "green" : feature_group_97e63c03f392fbff48ab6e87ce87dad2,
+                    "beige" : feature_group_66d4f1c6f6b164a3ef075927dd080e29,
+                    "red" : feature_group_9b6db6fac8938e88291b4bf3e1ef86ce,
+                    "darkgreen" : feature_group_f99b2087d566f6df56e3ec3de719579d,
+                    "pink" : feature_group_ed211f1cb13a7197e39eb61f2cdff5bf,
+                    "blue" : feature_group_369426bc4837a8488606fdacfa16c246,
+                    "lightgreen" : feature_group_bca1d09104e52fef16236e6cecd5e441,
+                    "black" : feature_group_dbaf578d91c13ab3b11c74157193f61e,
+                },
+            };
+            let layer_control_719f9e9fa512869687a666d20933b0a3 = L.control.layers(
+                layer_control_719f9e9fa512869687a666d20933b0a3_layers.base_layers,
+                layer_control_719f9e9fa512869687a666d20933b0a3_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_cb9a9b6468b4a094f1d504093e2ac4d5);
+
         
 </script>
 </html>
