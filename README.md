@@ -67,6 +67,9 @@ Make sure you have the required libraries installed. You can install these libra
 - pip install gpxpy
 - pip install pdf2image pillow
 
+# Usage
+[ASOC_walk_locations_map.html](https://roryyarr.github.io/ASOC-Walks/Maps/ASOC_walk_locations_map.html)
+
 ## Google Sheet Structure
 - **Name**: The name of the location.
 - **Latitude**: The latitude of the location.
