@@ -2,15 +2,12 @@ import folium
 import pandas as pd
 
 # Google Sheets URL
-
-
 sheet_url = "https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/export?format=csv&gid=0"
 
 # Read the data into a DataFrame
 df = pd.read_csv(sheet_url)
-df
 
-
+# Gets varibles from google sheets
 names = df['Name'].tolist()
 locations = df[['Latitude', 'Longitude']].values.tolist()
 links = df['Google_Link'].tolist()
@@ -20,7 +17,7 @@ descriptions = df['Description'].tolist()
 icons = df['Icon'].tolist()
 colours = df['Colour'].tolist()
 
-# Create a map centered around the first location
+# Create a map centered around the newcastle region
 m = folium.Map(location=(-32.9, 151.79), zoom_start=11)
 
 # Create a dictionary to hold feature groups based on color
@@ -37,20 +34,27 @@ for name, loc, link, route, address, desc, icon, colour in zip(names, locations,
     #route = "" if pd.isna(route) else route
     len = "" if pd.isna(len) else len
 
-    custom_icon = folium.Icon(color = colour, icon=icon, prefix='fa')
+    # Defines point icon
+    if icon == 'asoc':
+            custom_icon_path = "Pictures/ASOC-Logo-orange.png"
+            custom_icon = folium.CustomIcon(custom_icon_path, icon_size=(70, 32))
+        else:
+            custom_icon = folium.Icon(color=colour, icon=icon, prefix='fa')
 
+    # Adds link as either google map pin of route map if it exists in the google sheets. 
     if pd.isna(route):
-        route_link = f"<a href='{link}' target='_blank'>Google Map Link</a><br>"
+        marker_link = f"<a href='{link}' target='_blank'>Google Map Link</a><br>"
     else:
-        route_link = f"<a href='{route}' target='_blank'>Route Map Link</a><br>"
+        marker_link = f"<a href='{route}' target='_blank'>Route Map Link</a><br>"
 
-    # Create a feature group for the color if it doesn't exist
+    # Create a feature group for the colour if it doesn't exist
     if colour not in feature_groups:
         feature_groups[colour] = folium.FeatureGroup(name=colour)
 
+    # Adds marker for the point to the feature group based on colour
     folium.Marker(
         location=loc,
-        popup = f"<b>{name}</b><br>{route_link}{desc}<br>",
+        popup = f"<b>{name}</b><br>{marker_link}{desc}<br>",
         tooltip=name,
         icon = custom_icon
     ).add_to(feature_groups[colour])
