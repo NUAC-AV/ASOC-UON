@@ -61,16 +61,18 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 - **Route_Link**: A link to the route map for that location.
 - **Icon**: The icon to use for the marker.
 - **Colour**: The color of the marker.
-|  Icon  |  Colour  |  Discription  |
-| :----: | :------: | :-----------: |
-| `water` | `blue` | Used for river and lakes.(Exluding Saltwater.) |
-| `leaf-wilt` | `lightgreen` | Used for wtlands. |
-| tree | green | Used for forrests and parks. |
-| umbrella-beach | beigh | For beaches and other sandy enviroments | 
-| Mountain | darkgreen | For hilly and mountainous walks. |
-| sailboat | pink | For Boat ramps | 
-| Ferry and Ship | black | Used for other habour/coastal walks. | 
-| Flag | red | Other walks not listed | 
+
+|   Icon          |    Colour    |        Description                                     |
+|:---------------:|:------------:|:------------------------------------------------------:|
+| `water`         | `blue`       | Used for rivers and lakes (excluding saltwater).       |
+| `leaf-wilt`     | `lightgreen` | Used for wetlands.                                     |
+| `tree`          | `green`      | Used for forests and parks.                            |
+| `umbrella-beach`| `beige`      | For beaches and other sandy environments.              |
+| `Mountain`      | `darkgreen`  | For hilly and mountainous walks.                       |
+| `sailboat`      | `pink`       | For boat ramps.                                        |
+| `Ferry` and `Ship`| `black`    | Used for other harbour/coastal walks.                  |
+| `Flag`          | `red`        | Other walks not listed.                                |
+
 
 
 #### Odd styling
