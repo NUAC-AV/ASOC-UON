@@ -59,23 +59,38 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 - **Address**: The address of the location.
 - **Description**: A description of the location or any additional notes.
 - **Route_Link**: A link to the route map for that location.
-**Icon**: The icon to use for the marker.
+- **Icon**: The icon to use for the marker.
+- **Colour**: The color of the marker.
+|  Icon  |  Colour  |  Discription  |
+| :----: | :------: | :-----------: |
+| `water` | `blue` | Used for river and lakes.(Exluding Saltwater.) |
+| `leaf-wilt` | `lightgreen` | Used for wtlands. |
+| tree | green | Used for forrests and parks. |
+| umbrella-beach | beigh | For beaches and other sandy enviroments | 
+| Mountain | darkgreen | For hilly and mountainous walks. |
+| sailboat | pink | For Boat ramps | 
+| Ferry and Ship | black | Used for other habour/coastal walks. | 
+| Flag | red | Other walks not listed | 
+
+
+#### Odd styling
 - **Tree**: Forested area
   - *`Mountain`*: Hills or mountainous region
   - *`Leaf-wilt`*: Wetlands
   - *`Ship`*: Maritime area with large vessels
   - *`Ferry`*: Ferry routes or terminals
   - *`Sailboat`*: Boat ramps
-  - *`umbrella-beach`*
+  - *`umbrella-beach`*: Beaches
   - *`Water`*: Bodies of water such as lakes or rivers
-  - *`Flag`*: Other points of interest
+  - *`Flag`*: Other locations
 **Colour**: The color of the marker.
-  - *`blue`:* 
-  - *`beigh`:* Sandy areas
-  - *`green`:*
-  - *`darkgreen`:*
-  - *`pink`:*
-  - *`black`:*
+  - *`blue`*: Rivers or lakes 
+  - *`beigh`*: Sandy areas
+  - *`lightgreen`: Wetlands
+  - *`green`:* Trees and forrests
+  - *`darkgreen`*: Mountains and hills
+  - *`pink`:* For boat ramps
+  - *`black`:* For other locations
 
 
 ### Folder Structure
