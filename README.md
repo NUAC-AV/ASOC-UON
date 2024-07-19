@@ -72,7 +72,7 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 | ![umbrella-beach icon](Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.         |
 | ![mountain icon](Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
 | ![sailboat icon](Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                                   |
-| ![ferry icon](Icons/ferry.svg), ![ship icon](icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.         |
+| ![ferry icon](Icons/ferry.svg), ![ship icon](Icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.         |
 | ![flag icon](Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                           |
 
 #### Odd styling
