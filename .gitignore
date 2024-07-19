@@ -10,3 +10,6 @@
 
 fontawesome-free-6.6.0-desktop
 fontawesome_free_6.6.0_desktop
+
+# Remove caches
+__pycache__
