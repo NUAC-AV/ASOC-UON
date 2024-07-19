@@ -65,13 +65,13 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 | Icon Symbol                                      | Icon Name        | Colour                                           | Description                                       |
 |:------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
 | ![water icon](Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
-| ![leaf-wilt icon](Icons/leaf-wilt.svg)           | `leaf-wilt`      | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
+| ![plant-wilt icon](Icons/plant-wilt.svg)           | `plant-wilt`      | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
 | ![tree icon](Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                       |
 | ![umbrella-beach icon](Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.         |
-| ![mountain icon](Icons/mountain.svg)             | `Mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
+| ![mountain icon](Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
 | ![sailboat icon](Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                                   |
 | ![ferry icon](Icons/ferry.svg), ![ship icon](icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.         |
-| ![flag icon](Icons/flag.svg)                     | `Flag`           | <span style="color:red">red</span>               | Other walks not listed.                           |
+| ![flag icon](Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                           |
 
 #### Odd styling
 - **Tree**: Forested area
