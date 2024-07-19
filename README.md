@@ -60,20 +60,18 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 - **Description**: A description of the location or any additional notes.
 - **Route_Link**: A link to the route map for that location.
 - **Icon**: The icon to use for the marker.
-- **Colour**: The color of the marker.
+- **Colour**: The colour of the marker.
 
-|   Icon          |    Colour    |        Description                                     |
-|:---------------:|:------------:|:------------------------------------------------------:|
-| `water`         | `blue`       | Used for rivers and lakes (excluding saltwater).       |
-| `leaf-wilt`     | `lightgreen` | Used for wetlands.                                     |
-| `tree`          | `green`      | Used for forests and parks.                            |
-| `umbrella-beach`| `beige`      | For beaches and other sandy environments.              |
-| `Mountain`      | `darkgreen`  | For hilly and mountainous walks.                       |
-| `sailboat`      | `pink`       | For boat ramps.                                        |
-| `Ferry` and `Ship`| `black`    | Used for other harbour/coastal walks.                  |
-| `Flag`          | `red`        | Other walks not listed.                                |
-
-
+| Icon Symbol                                      | Icon Name        | Colour                                           | Description                                       |
+|:------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
+| ![water icon](Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
+| ![leaf-wilt icon](Icons/leaf-wilt.svg)           | `leaf-wilt`      | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
+| ![tree icon](Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                       |
+| ![umbrella-beach icon](Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.         |
+| ![mountain icon](Icons/mountain.svg)             | `Mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
+| ![sailboat icon](Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                                   |
+| ![ferry icon](Icons/ferry.svg), ![ship icon](icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.         |
+| ![flag icon](Icons/flag.svg)                     | `Flag`           | <span style="color:red">red</span>               | Other walks not listed.                           |
 
 #### Odd styling
 - **Tree**: Forested area
@@ -88,7 +86,7 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 **Colour**: The color of the marker.
   - *`blue`*: Rivers or lakes 
   - *`beigh`*: Sandy areas
-  - *`lightgreen`: Wetlands
+  - *`lightgreen`*: Wetlands
   - *`green`:* Trees and forrests
   - *`darkgreen`*: Mountains and hills
   - *`pink`:* For boat ramps
