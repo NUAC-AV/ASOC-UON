@@ -37,6 +37,8 @@ This project provides Python scripts to read data from an ASOC_Walks_Database Go
 - `gpxpy` library
 - `pdf2image` library
 - `Pillow` library
+- `OSMINX` library
+- `shapely` library
 
 
 ## Setup
