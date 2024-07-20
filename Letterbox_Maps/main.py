@@ -7,7 +7,7 @@ places = ["Birmingham Gardens, Newcastle, Australia",
           ""]
 """
 
-places = [
+Newcastle = [
     "Birmingham Gardens, Newcastle, Australia",
     "Shortland, Newcastle, Australia",
     "Jesmond, Newcastle, Australia",
@@ -43,7 +43,10 @@ places = [
 ]
 
 output_directory = "Letterbox_Maps/GeoJSON"
-filename = "All_Newcastle.geojson"
 
-converter = StreetMapConverter(places)
-converter.process(output_directory=output_directory, filename=filename)
+
+for suburb in Newcastle:
+    filename = f{suburb}.geojson"
+
+    converter = StreetMapConverter(places)
+    converter.process(output_directory=output_directory, filename=filename)
