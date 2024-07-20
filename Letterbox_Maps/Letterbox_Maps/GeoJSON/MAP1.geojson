@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "osmid": "168092309", "highway": "service", "oneway": false, "reversed": "1", "length": 7.746, "name": null, "maxspeed": null, "lanes": null, "junction": null, "width": null, "service": null, "access": null, "bridge": null, "ref": null }, "geometry": { "type": "LineString", "coordinates": [ [ 151.681855399999989, -32.895483 ], [ 151.681869799999987, -32.8955516 ] ] } },
-{ "type": "Feature", "properties": { "osmid": "1108467910", "highway": "secondary", "oneway": false, "reversed": "1", "length": 42.036, "name": "Sandgate Road", "maxspeed": "60", "lanes": null, "junction": null, "width": null, "service": null, "access": null, "bridge": null, "ref": null }, "geometry": { "type": "LineString", "coordinates": [ [ 151.681855399999989, -32.895483 ], [ 151.68190580000001, -32.8954658 ], [ 151.6819562, -32.8954453 ], [ 151.682016299999987, -32.8954201 ], [ 151.682061299999987, -32.8953985 ], [ 151.6821266, -32.895361 ], [ 151.6821904, -32.8953217 ], [ 151.682238399999989, -32.895288 ] ] } }
-]
-}
