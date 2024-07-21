@@ -13,3 +13,7 @@ fontawesome_free_6.6.0_desktop
 
 # Remove caches
 __pycache__
+
+# Remove oversized files
+all_suburbs_map.html
+All_Newcasstle.geojson
