@@ -67,13 +67,14 @@ Here are some example usages of the maps:
 - Create an interactive map from the database
 - Add markers for each location with popups containing relevant information
 - Save the map as an HTML file
-- 
+- Add GPX routes from a folder and group them on the same level as regions in the tree structure
 
 
 
 ## Requirements
 - Python 3.x
 - `pandas` library
+- `geopandas` libary
 - `folium` library
 - `gpxpy` library
 - `pdf2image` library
@@ -124,26 +125,28 @@ This project uses a google sheet google sheet for storing church, caregroup and 
 
 ### Folder Structure
 - **GPX_Files**: Contains all GPX files
-  - **Church_Locations**: Contains GPX file for Church Locations.
-  - **Letterbox_Routes**: Contains GPX files of completed Letterbox routes.
-  - **Sabbath_Walks**: Contains GPX files for Sabbath walks.
-  - **GPX_Studio.md**: Details how to produce GPX file using GPX Studio.
+  - *[Church_Locations](GPX_Files/Church_Locations)*: Contains GPX file for Church Locations.
+  - *[Letterbox_Routes](GPX_Files/Letterbox_Routes)*: Contains GPX files of completed Letterbox routes.
+  - *[Sabbath_Walks](GPX_Files/Sabbath_Walks)*: Contains GPX files for Sabbath walks.
+  - *[GPX_Studio.md](GPX_Files/GPX_Studio.md)*: Details how to produce GPX file using GPX Studio.
 - **Icons**: Contains Icon SVG files for README.
 - **Map_Generating_Codes**: Contains the code for generating maps.
-  - **Create_Routes**:Creates a route.
-  - **Letterbox**: Creates the letterbox maps.
-  - **Misc**: 
-  - **Route_Code**: 
-  - **README.md**: 
-  - **Update_Walks.py**: Updates the map of ASOC walks
+  - *[Create_Routes](Map_Generating_Codes/Create_Routes)*: Creates a route.
+  - *[Letterbox](Map_Generating_Codes/Letterbox)*: Creates the letterbox maps.
+  - *[Misc](Map_Generating_Codes/Misc)*
+  - *[Route_Code](Map_Generating_Codes/Route_Code)*
+  - *[README.md](Map_Generating_Codes/README.md)*
+  - *[Update_Walks.py](Map_Generating_Codes/Update_Walks.py)*: Updates the map of ASOC walks
 - **Maps**: Contains the HTML files for the maps.
-  - **Church_Locations**: Contains maps for church and caregroup locations.
-  - **Letterbox**: Contains maps used for letterboxing.
-  - **Misc**: Other maps.
-  - **Sabbath_Walks**: Contains maps for Sabbath walks.
+  - *[Church_Locations](Maps/Church_Locations)*: Contains maps for church and caregroup locations.
+  - *[Letterbox](Maps/Letterbox)*: Contains maps used for letterboxing.
+  - *[Misc](Maps/Misc)*: Other maps.
+  - *[Sabbath_Walks](Maps/Sabbath_Walks)*: Contains maps for Sabbath walks.
 - **Pictures**: Contains all pictures except SVGs.
 - **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
 - **README.md**: Explains the project.
+
+
 
 Fix later
 - **Map_Python_Codes**: Contains Python files for mapping.
