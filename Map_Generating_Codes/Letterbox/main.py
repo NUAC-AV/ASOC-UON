@@ -13,7 +13,7 @@ map_with_tree = MapWithTreeLayerControl(base_places)
 map_with_tree.add_tree_layer_control()
 
 # Add a GPX route
-#gpx_file = "path/to/your/gpxfile.gpx"  # Replace with your GPX file path
+gpx_file = "path/to/your/gpxfile.gpx"  # Replace with your GPX file path
 #map_with_tree.add_gpx_route(gpx_file, layer_name="My GPX Route", color='blue')
 
 # Save the map to an HTML file

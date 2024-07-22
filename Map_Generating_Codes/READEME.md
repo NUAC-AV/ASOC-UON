@@ -1,14 +1,24 @@
-# Make Route Map
+# Map Generating Codes
 
 
 ## 📚 Table of Contents
 - [Overview](#overview)
+- [Subfolders](#subfolders)
 - [Files](#files)
 
 
 
 ## Overview.
+This folder contains all the python code for generating maps.
 
+
+## Subfolders and files
+- **Create_Routes**:Creates a route.
+- **Letterbox**: Creates the letterbox maps.
+- **Misc**: 
+- **Route_Code**: 
+- **README.md**: 
+- **Update_Walks.py**: Updates the map of ASOC walks
 
 ## Files
 - gpx_utils.py: reads the gpx file.
