@@ -9,16 +9,27 @@ base_places = [
 ]
 
 # Create the map with TreeLayerControl
-map_with_tree = MapWithTreeLayerControl(base_places)
-map_with_tree.add_tree_layer_control()
+map_control = MapWithTreeLayerControl(base_places)
+
 
 # Add a GPX route
-gpx_file = "path/to/your/gpxfile.gpx"  # Replace with your GPX file path
-#map_with_tree.add_gpx_route(gpx_file, layer_name="My GPX Route", color='blue')
+gpx_file = "GPX_Files/Misc/Afternoon_Run.gpx"  # Replace with your GPX file path
+map_control.add_gpx_routes("GPX_Files/Misc")
+
+
+map_control.add_tree_layer_control()
 
 # Save the map to an HTML file
-output_html = "nested_sublayers_map_with_gpx.html"
-map_with_tree.save_map(output_html)
+output_html = "Maps/Letterbox/letterbox_test_1.html"
+map_control.save_map(output_html)
 
 # Display the map in a Jupyter notebook (optional)
-map_with_tree.display_map()
+#map_with_tree.display_map()
+
+
+
+#map_control = MapWithTreeLayerControl(base_places)
+#map_control.add_gpx_route(gpx_file, layer_name="My GPX Route")
+#map_control.add_tree_layer_control()
+#map_control.save_map(output_html)
+#map_control.display_map()
