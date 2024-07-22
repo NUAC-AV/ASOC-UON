@@ -13,8 +13,10 @@ fontawesome_free_6.6.0_desktop
 
 # Remove caches
 __pycache__
-cache
+cache/
 
 # Remove oversized files
+Letterbox_GEOJSON/
 all_suburbs_map.html
 All_Newcasstle.geojson
+ASOC_Walks.ipynb

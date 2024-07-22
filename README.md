@@ -2,7 +2,9 @@
 
 ## 📚 Table of Contents
 - [Overview](#overview)
-- [Viewing Maps](#viewing-maps)
+- [Viewing Maps](#viewing-maps) 
+  - [Example Maps](#example-maps)
+  - [How To Use These Maps](#how-to-use)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Setup](#setup)
@@ -19,14 +21,18 @@
 - [Notes](#notes)
 - [License](#license)
 
+
 ## Overview
 This project provides Python scripts to create interactive HTML maps, which can be viewed in any web browser.
+Specifically, maps are created for ASOC church locations/routes, Sabbath walks and letterboxing.
+
 
 ## Viewing Maps
 The maps can be viewed through GitHub Pages. You can access them using the following link format:
 https://roryyarr.github.io/ASOC-Walks/`file-name`.html
 
 Replace `file-name` with the specific file you want to view.
+
 ### Example Maps
 
 Here are some example usages of the maps:
@@ -40,7 +46,7 @@ Here are some example usages of the maps:
    - **Link**: https://roryyarr.github.io/ASOC-Walks/Maps/Sabbath_Walks/Mount_Sugarloaf/Sugarloaf_Walk.html
 
 
-### How to Use the Maps
+### How To Use These Maps
 
 1. **Accessing the Map**:
    - Open your web browser.
@@ -65,7 +71,6 @@ Here are some example usages of the maps:
 
 
 
-
 ## Requirements
 - Python 3.x
 - `pandas` library
@@ -79,15 +84,7 @@ Here are some example usages of the maps:
 
 ## Setup
 
-
-
-## Example Google Sheet
-| Location | Latitude | Longitude | Google_Link | Address | Discription | Route_Link  | Icon | Color |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-|Awabakal Nature Reserve  | -32.99149503 | 151.7222826  | [Link](https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D)   | 13 Ivy St, Dudley NSW 2290      | It will be in the bush, so please have proper walking shoes for the walk. We can park on the road around Ivy Street. | [link](file:///Users/roryyarr/Desktop/ASOC%20Walks/Maps/ASOC_walk_locations_map.html) | tree  | green |
-| Bar Beach  | -32.94047053 | 151.7695674  | [Link](https://www.google.com/maps/place/Yuelarbah+Track,+Bar+Beach+NSW+2300/@-32.9406461,151.764718,946m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x6b73143fbd4c9111:0x5017d681632e890!2sBar+Beach+NSW+2300!3b1!8m2!3d-32.9377866!4d151.7701917!16s%2Fm%2F02x66br!3m5!1s0x6b73143e338a20c5:0xbac9ffd0659c571a!8m2!3d-32.9406507!4d151.7695889!16s%2Fg%2F11m_lcwt1h?entry=ttu) | Yuelarbah Track, Bar Beach NSW 2300 |  |  | umbrella-beach | beige |
-| ⋮  | ⋮ | ⋮ | ⋮ | ⋮ | ⋮ | ⋮  | ⋮  |
-
+This project uses a google sheet google sheet for storing church, caregroup and walk locations.
 
 ### Google Sheet Structure
 - **Name**: The name of the location.
@@ -99,6 +96,17 @@ Here are some example usages of the maps:
 - **Route_Link**: A link to the route map for that location.
 - **Icon**: The icon to use for the marker.
 - **Colour**: The colour of the marker.
+
+### Example Google Sheet
+| Location | Latitude | Longitude | Google_Link | Address | Discription | Route_Link  | Icon | Color |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+|Awabakal Nature Reserve  | -32.99149503 | 151.7222826  | [Link](https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D)   | 13 Ivy St, Dudley NSW 2290      | It will be in the bush, so please have proper walking shoes for the walk. We can park on the road around Ivy Street. | [link](file:///Users/roryyarr/Desktop/ASOC%20Walks/Maps/ASOC_walk_locations_map.html) | tree  | green |
+| Bar Beach  | -32.94047053 | 151.7695674  | [Link](https://www.google.com/maps/place/Yuelarbah+Track,+Bar+Beach+NSW+2300/@-32.9406461,151.764718,946m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x6b73143fbd4c9111:0x5017d681632e890!2sBar+Beach+NSW+2300!3b1!8m2!3d-32.9377866!4d151.7701917!16s%2Fm%2F02x66br!3m5!1s0x6b73143e338a20c5:0xbac9ffd0659c571a!8m2!3d-32.9406507!4d151.7695889!16s%2Fg%2F11m_lcwt1h?entry=ttu) | Yuelarbah Track, Bar Beach NSW 2300 |  |  | umbrella-beach | beige |
+| ⋮  | ⋮ | ⋮ | ⋮ | ⋮ | ⋮ | ⋮  | ⋮  |
+
+
+
+### Map Icon Symbols
 
 | Icon Symbol                                      | Icon Name        | Colour                                           | Description                                       |
 |:------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
@@ -197,6 +205,7 @@ If you would like to contribute to the maps, follow these steps:
    git add .
    git commit -m "Add README.md"
    git push origin main
+
 
 ## License
 This project is licensed under the MIT License.
