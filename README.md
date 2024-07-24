@@ -37,7 +37,8 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
 The maps can be viewed through GitHub Pages. You can access them using the following link format:
 https://roryyarr.github.io/ASOC-Walks/`file-name`.html
 
-Replace `file-name` with the specific file you want to view.
+Replace `file-name` with the specific file you want to view. 
+Note: replace spaces(" ") with "%20". 
 
 ### Example Maps
 
@@ -128,7 +129,7 @@ This project uses a google sheet google sheet for storing church, caregroup and 
 | Icon Symbol                                      | Icon Name        | Colour                                           | Description                                       |
 |:------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
 | ![water icon](Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
-| ![plant-wilt icon](Icons/plant-wilt.svg)           | `plant-wilt`      | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
+| ![plant-wilt icon](Icons/plant-wilt.svg)         | `plant-wilt`     | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
 | ![tree icon](Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                       |
 | ![umbrella-beach icon](Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.         |
 | ![mountain icon](Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
@@ -194,35 +195,37 @@ Make sure you have the required libraries installed. You can install these libra
 
 
 
-<!-- Usage -->
 ## Usage
 
-The maps can be viewed through GitHub Pages. You can access them using the following link format:
-https://roryyarr.github.io/ASOC-Walks/`file-name`.html
+`shh
+clone the repo, then exacute the following codes.
 
-Replace `file-name` with the specific file you want to view.
+### Updating Sabbath Walks map
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Pull latest GitHub repo.
+2. Ensure the google sheets is correctly formated.
+3. Run the Update_Walks.py file
+4. Commit changes
+5. push changes to the remote repo.
 
+### Creating Route map
 
-### Explanation
-1. **Table of Contents**: Provides an overview of the sections in the README.
-2. **Overview**: Brief description of the project.
-3. **Features**: Key features of the project.
-4. **Requirements**: Necessary libraries and Python version.
-5. **Setup**: Folder structure and instructions to install required libraries.
-6. **Usage**: Steps to clone the repository, run the script, and view the map.
-7. **Google Sheet Structure**: Example structure for the Google Sheet used in the project.
-8. **Notes**: Additional notes about accessibility and configuration.
-9. **License**: Licensing information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. 
+2. 
+3. 
 
 
-### Running the Scripts
+### Updating Letterbox Map
+ 
+ 1. Pull latest
+ 2. Add all gpx files to GPX_Files/Letterbox_Routes folder.
+ 3. Run Update_Letterbox_Map.py file.
+ 3. Track gpx files: 
+ 4. Commit changes: commit -m "A
 
-1. **Save the README**: Save the `README.md` file in the root of your repository.
-2. **Push the Repository**:
+
+
+
 
 
 <!-- ROADMAP -->
@@ -247,10 +250,12 @@ If you would like to contribute to the maps, follow these steps:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Contact
 `Rory Yarr`
