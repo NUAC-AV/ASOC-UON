@@ -19,7 +19,9 @@
 - [Google Sheet Structure](#google-sheet-structure)
   - [Example Google Sheet](#example-google-sheet)
 - [Notes](#notes)
+- [Citations](#citations)
 - [License](#license)
+
 
 
 ## Overview
@@ -39,11 +41,11 @@ Here are some example usages of the maps:
 
 1. **Main ASOC Walk Locations Map**:
    - **Description**: This map shows the main locations for the ASOC walks.
-   - **Link**: https://roryyarr.github.io/ASOC-Walks/Maps/Misc/ASOC_walk_locations_map.html
+   - **Link**: https://roryyarr.github.io/ASOC_UON/Maps/Misc/ASOC_walk_locations_map.html
 
 2. **Mount Sugarloaf Map**:
    - **Description**: This map highlights the route for the mount Sugarloaf walk.
-   - **Link**: https://roryyarr.github.io/ASOC-Walks/Maps/Sabbath_Walks/Mount_Sugarloaf/Sugarloaf_Walk.html
+   - **Link**: https://roryyarr.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount_Sugarloaf/Sugarloaf_Walk.html
 
 
 ### How To Use These Maps
@@ -210,6 +212,11 @@ If you would like to contribute to the maps, follow these steps:
    git push origin main
 
 
+## Citations
+**OSMnx**: Boeing, G. 2017. "OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks." Computers, Environment and Urban Systems, 65, 126-139. https://doi.org/10.1016/j.compenvurbsys.2017.05.004
+
+
 ## License
 This project is licensed under the MIT License.
+
 
