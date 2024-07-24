@@ -1,10 +1,12 @@
-# Interactive Map from Google Sheets
+<a id="readme-top"></a>
+# ASOC UON
+
 
 ## 📚 Table of Contents
 - [Overview](#overview)
 - [Viewing Maps](#viewing-maps) 
   - [Example Maps](#example-maps)
-  - [How To Use These Maps](#how-to-use)
+  - [How To Use Maps](#how-to-use)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Setup](#setup)
@@ -19,14 +21,16 @@
 - [Google Sheet Structure](#google-sheet-structure)
   - [Example Google Sheet](#example-google-sheet)
 - [Notes](#notes)
-- [Citations](#citations)
 - [License](#license)
+- [Acknowledgments](#cknowledgments)
 
 
 
 ## Overview
 This project provides Python scripts to create interactive HTML maps, which can be viewed in any web browser.
 Specifically, maps are created for ASOC church locations/routes, Sabbath walks and letterboxing.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Viewing Maps
@@ -48,7 +52,7 @@ Here are some example usages of the maps:
    - **Link**:  https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount%20Sugarloaf/Sugarloaf_Walk.html
 
 
-### How To Use These Maps
+### How To Use Maps
 
 1. **Accessing the Map**:
    - Open your web browser.
@@ -61,15 +65,20 @@ Here are some example usages of the maps:
    - *Filter*: Click on layer symbol in top right corner, allowing you to toggle on or off the different coloured icons.
 
 
-   [Google Sheets Document](https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/edit?fbclid=IwZXh0bgNhZW0CMTAAAR3rcnaz2qedGxf1LaI0fz7X7gUQiZrvZTjs3x-MfPTNZODKO8ykz3piWDI_aem_mtzQRofiQxsPinF7C6uSHg&gid=0#gid=0)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Features
-- Read data from "ASOC_Walks_Database"
+- Creates Interactive Sabbath Walk Maps:
+  - Using the following sheet as a backend: [Google Sheets Document](https://docs.google.com/spreadsheets/d/1mGR_xugxcg3Pc3e1KLzggZn6XfnSJOuHncZ64hOo8M4/edit?fbclid=IwZXh0bgNhZW0CMTAAAR3rcnaz2qedGxf1LaI0fz7X7gUQiZrvZTjs3x-MfPTNZODKO8ykz3piWDI_aem_mtzQRofiQxsPinF7C6uSHg&gid=0#gid=0)
+  - Reads data from the google sheets.
+  - Plots 
 - Create an interactive map from the database
 - Add markers for each location with popups containing relevant information
 - Save the map as an HTML file
 - Add GPX routes from a folder and group them on the same level as regions in the tree structure
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -84,7 +93,10 @@ Here are some example usages of the maps:
 - `OSMINX` library
 - `shapely` library
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- Setup -->
 ## Setup
 
 This project uses a google sheet google sheet for storing church, caregroup and walk locations.
@@ -99,6 +111,8 @@ This project uses a google sheet google sheet for storing church, caregroup and 
 - **Route_Link**: A link to the route map for that location.
 - **Icon**: The icon to use for the marker.
 - **Colour**: The colour of the marker.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Example Google Sheet
 | Location | Latitude | Longitude | Google_Link | Address | Discription | Route_Link  | Icon | Color |
@@ -156,6 +170,8 @@ Fix later
   - *`Create_Routes_map.py`*: Creates a map for a route.
   - *`Create_Route_UI.py`*: Script for creating routes with a user interface.
 
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Icon Colors and Symbols
 The available colors for icons are: `black`, `beige`, `lightblue`, `gray`, `blue`, `darkred`, `lightgreen`, `purple`, `red`, `green`, `lightred`, `white`, `darkblue`, `darkpurple`, `cadetblue`, `orange`, `pink`, `lightgray`, `darkgreen`.
@@ -163,6 +179,8 @@ The available colors for icons are: `black`, `beige`, `lightblue`, `gray`, `blue
 More details can be found [here](https://www.kaggle.com/code/aungdev/colors-available-for-marker-icons-in-folium).
 
 Icons can be chosen from [Font Awesome](https://fontawesome.com/search?o=r&m=free). Additionally, PNG files can be used as icons.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Install Required Libraries
@@ -172,7 +190,11 @@ Make sure you have the required libraries installed. You can install these libra
 - pip install gpxpy
 - pip install pdf2image pillow
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+<!-- Usage -->
 ## Usage
 
 The maps can be viewed through GitHub Pages. You can access them using the following link format:
@@ -180,14 +202,7 @@ https://roryyarr.github.io/ASOC-Walks/`file-name`.html
 
 Replace `file-name` with the specific file you want to view.
 
-
-## Contributing to the Maps
-
-If you would like to contribute to the maps, follow these steps:
-
-1. **Clone the Repository**:
-   ```sh
-   git clone https://github.com/roryyarr/ASOC-Walks.git
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Explanation
@@ -201,22 +216,50 @@ If you would like to contribute to the maps, follow these steps:
 8. **Notes**: Additional notes about accessibility and configuration.
 9. **License**: Licensing information.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Running the Script
+
+### Running the Scripts
 
 1. **Save the README**: Save the `README.md` file in the root of your repository.
 2. **Push the Repository**:
-   ```sh
-   git add .
-   git commit -m "Add README.md"
-   git push origin main
 
 
-## Citations
-**OSMnx**: Boeing, G. 2017. "OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks." Computers, Environment and Urban Systems, 65, 126-139. https://doi.org/10.1016/j.compenvurbsys.2017.05.004
+<!-- ROADMAP -->
+## Roadmap
 
+- [x] Add Changelog
+- [x] Add back to top links
+- [ ] Add route maps for all walks
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contributing to the Maps
+
+If you would like to contribute to the maps, follow these steps:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/name-of-changes`)
+3. Commit your Changes (`git commit -m 'Add name-of-changes'`)
+4. Push to the Branch (`git push origin feature/name-of-changes`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
-This project is licensed under the MIT License.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+`Rory Yarr`
+- **Email**: roryyarrcoder@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/rory-yarr-3a5833211/
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+- **OSMnx**: Boeing, G. 2017. "OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks." Computers, Environment and Urban Systems, 65, 126-139. https://doi.org/10.1016/j.compenvurbsys.2017.05.004
 
 
