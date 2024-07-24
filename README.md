@@ -41,11 +41,11 @@ Here are some example usages of the maps:
 
 1. **Main ASOC Walk Locations Map**:
    - **Description**: This map shows the main locations for the ASOC walks.
-   - **Link**: https://roryyarr.github.io/ASOC_UON/Maps/Misc/ASOC_walk_locations_map.html
+   - **Link**: https://nuac-av.github.io/ASOC-UON//ASOC_UON/Maps/Misc/ASOC_walk_locations_map.html
 
 2. **Mount Sugarloaf Map**:
    - **Description**: This map highlights the route for the mount Sugarloaf walk.
-   - **Link**: https://roryyarr.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount_Sugarloaf/Sugarloaf_Walk.html
+   - **Link**:  https://nuac-av.github.io/ASOC-UON/ASOC-UON/Maps/Sabbath_Walks/Mount_Sugarloaf/Sugarloaf_Walk.html
 
 
 ### How To Use These Maps
