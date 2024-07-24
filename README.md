@@ -30,7 +30,32 @@
 This project provides Python scripts to create interactive HTML maps, which can be viewed in any web browser.
 Specifically, maps are created for ASOC church locations/routes, Sabbath walks and letterboxing.
 
+### Repo Structure
+- **GPX_Files**: Contains all GPX files
+  - *[Church_Locations](GPX_Files/Church_Locations/)*: Contains GPX files for Church Locations.
+  - *[Letterbox_Routes](GPX_Files/Letterbox_Routes/)*: Contains GPX files of completed Letterbox routes.
+  - *[Misc](GPX_Files/Misc/)*: Contains any other gpx files
+  - *[Sabbath_Walks](GPX_Files/Sabbath_Walks)*: Contains GPX files for Sabbath walks.
+  - *[GPX_Studio.md](GPX_Files/GPX_Studio.md)*: Details how to produce GPX file using GPX Studio.
+- **Map_Generating_Codes**: Contains the code for generating maps.
+  - *[Create_Routes](Map_Generating_Codes/Create_Routes/)*: Creates a route.
+  - *[Letterbox](Map_Generating_Codes/Letterbox/)*: Creates the letterbox maps.
+  - *[Misc](Map_Generating_Codes/Misc/)*: Other codes.
+  - *[Route_Code](Map_Generating_Codes/Route_Code/)*
+  - *[README.md](Map_Generating_Codes/README.md/)*
+  - *[Update_Walks.py](Map_Generating_Codes/Update_Walks.py/)*: Updates the map of ASOC walks
+- **Maps**: Contains the HTML files for the maps.
+  - *[Church_Locations](Maps/Church_Locations/)*: Contains maps for church and caregroup locations.
+  - *[Letterbox](Maps/Letterbo/)*: Contains maps used for letterboxing.
+  - *[Misc](Maps/Misc/)*: Other maps.
+  - *[Sabbath_Walks](Maps/Sabbath_Walks/)*: Contains maps for Sabbath walks.
+- **Images**: Contains all images used in this repo.
+  - *[Icons](Images/Icons/)*: Contains Font Arewsome Icons 
+- **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
+- **README.md**: Explains the project.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Viewing Maps
@@ -100,7 +125,7 @@ Here are some example usages of the maps:
 <!-- Setup -->
 ## Setup
 
-This project uses a google sheet google sheet for storing church, caregroup and walk locations.
+The Sabbath Walk, Caregroup and Church locations are stored in a google sheet. With the following structure.
 
 ### Google Sheet Structure
 - **Name**: The name of the location.
@@ -118,7 +143,7 @@ This project uses a google sheet google sheet for storing church, caregroup and 
 ### Example Google Sheet
 | Location | Latitude | Longitude | Google_Link | Address | Discription | Route_Link  | Icon | Color |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-|Awabakal Nature Reserve  | -32.99149503 | 151.7222826  | [Link](https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D)   | 13 Ivy St, Dudley NSW 2290      | It will be in the bush, so please have proper walking shoes for the walk. We can park on the road around Ivy Street. | [link](file:///Users/roryyarr/Desktop/ASOC%20Walks/Maps/ASOC_walk_locations_map.html) | tree  | green |
+|Awabakal Nature Reserve  | -32.99149503 | 151.7222826  | [Link](https://www.google.com/maps/place/13+Ivy+St,+Dudley+NSW+2290/data=!4m6!3m5!1s0x6b7317ca43cdc65d:0x6eedd6577b803386!7e2!8m2!3d-32.9917425!4d151.7222826?utm_source=mstt_1&entry=gps&lucs=,47075915&g_ep=CAESCjExLjEwOS4xMDEYACDXggMqCSw0NzA3NTkxNUICQVU%3D)   | 13 Ivy St, Dudley NSW 2290      | It will be in the bush, so please have proper walking shoes for the walk. We can park on the road around Ivy Street. | [Link](https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount%20Sugarloaf/Sugarloaf_Walk.html) | tree  | green |
 | Bar Beach  | -32.94047053 | 151.7695674  | [Link](https://www.google.com/maps/place/Yuelarbah+Track,+Bar+Beach+NSW+2300/@-32.9406461,151.764718,946m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x6b73143fbd4c9111:0x5017d681632e890!2sBar+Beach+NSW+2300!3b1!8m2!3d-32.9377866!4d151.7701917!16s%2Fm%2F02x66br!3m5!1s0x6b73143e338a20c5:0xbac9ffd0659c571a!8m2!3d-32.9406507!4d151.7695889!16s%2Fg%2F11m_lcwt1h?entry=ttu) | Yuelarbah Track, Bar Beach NSW 2300 |  |  | umbrella-beach | beige |
 | ⋮  | ⋮ | ⋮ | ⋮ | ⋮ | ⋮ | ⋮  | ⋮  |
 
@@ -126,52 +151,18 @@ This project uses a google sheet google sheet for storing church, caregroup and 
 
 ### Map Icon Symbols
 
-| Icon Symbol                                      | Icon Name        | Colour                                           | Description                                       |
-|:------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
-| ![water icon](Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
-| ![plant-wilt icon](Icons/plant-wilt.svg)         | `plant-wilt`     | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                                |
-| ![tree icon](Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                       |
-| ![umbrella-beach icon](Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.         |
-| ![mountain icon](Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.                  |
-| ![sailboat icon](Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                                   |
-| ![ferry icon](Icons/ferry.svg), ![ship icon](Icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.         |
-| ![flag icon](Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                           |
+| Icon Symbol                                             | Icon Name        | Colour                                           | Description                   |
+|:-------------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
+| ![water icon](Images/Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
+| ![plant-wilt icon](Images/Icons/plant-wilt.svg)         | `plant-wilt`     | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                     |
+| ![tree icon](Images/Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                        |
+| ![umbrella-beach icon](Images/Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.           |
+| ![mountain icon](Images/Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.            |
+| ![sailboat icon](Images/Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                        |
+| ![ferry icon](Images/Icons/ferry.svg), ![ship icon](Images/Icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.  |
+| ![flag icon](Images/Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                       |
 
-
-
-
-### Folder Structure
-- **GPX_Files**: Contains all GPX files
-  - *[Church_Locations](GPX_Files/Church_Locations)*: Contains GPX file for Church Locations.
-  - *[Letterbox_Routes](GPX_Files/Letterbox_Routes)*: Contains GPX files of completed Letterbox routes.
-  - *[Sabbath_Walks](GPX_Files/Sabbath_Walks)*: Contains GPX files for Sabbath walks.
-  - *[GPX_Studio.md](GPX_Files/GPX_Studio.md)*: Details how to produce GPX file using GPX Studio.
-- **Icons**: Contains Icon SVG files for README.
-- **Map_Generating_Codes**: Contains the code for generating maps.
-  - *[Create_Routes](Map_Generating_Codes/Create_Routes)*: Creates a route.
-  - *[Letterbox](Map_Generating_Codes/Letterbox)*: Creates the letterbox maps.
-  - *[Misc](Map_Generating_Codes/Misc)*
-  - *[Route_Code](Map_Generating_Codes/Route_Code)*
-  - *[README.md](Map_Generating_Codes/README.md)*
-  - *[Update_Walks.py](Map_Generating_Codes/Update_Walks.py)*: Updates the map of ASOC walks
-- **Maps**: Contains the HTML files for the maps.
-  - *[Church_Locations](Maps/Church_Locations)*: Contains maps for church and caregroup locations.
-  - *[Letterbox](Maps/Letterbox)*: Contains maps used for letterboxing.
-  - *[Misc](Maps/Misc)*: Other maps.
-  - *[Sabbath_Walks](Maps/Sabbath_Walks)*: Contains maps for Sabbath walks.
-- **Pictures**: Contains all pictures except SVGs.
-- **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
-- **README.md**: Explains the project.
-
-
-
-Fix later
-- **Map_Python_Codes**: Contains Python files for mapping.
-  - *`Update_Walks_file.py`*: Updates the ASOC_walk_locations_map.html file with the current Google Sheets data.
-  - *`Create_Routes_map.py`*: Creates a map for a route.
-  - *`Create_Route_UI.py`*: Script for creating routes with a user interface.
-
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Icon Colors and Symbols
