@@ -2,35 +2,63 @@
 # ASOC UON
 
 
-## 📚 Table of Contents
-- [Overview](#overview)
-- [Viewing Maps](#viewing-maps) 
-  - [Example Maps](#example-maps)
-  - [How To Use Maps](#how-to-use)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Setup](#setup)
-  - [Install Required Libraries](#install-required-libraries)
-  - [Folder Structure](#folder-structure)
-  - [Icon Colors and Symbols](#icon-colors-and-symbols)
-- [Running Code](#running-code)
-- [Usage](#usage)
-  - [Clone the Repository](#clone-the-repository)
-  - [Run the Script](#run-the-script)
-  - [View the Map](#view-the-map)
-- [Google Sheet Structure](#google-sheet-structure)
-  - [Example Google Sheet](#example-google-sheet)
-- [Notes](#notes)
-- [License](#license)
-- [Acknowledgments](#cknowledgments)
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>📚 Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#project-structure">Project Structure</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#viewing-maps">Viewing Maps</a>
+      <ul>
+        <li><a href="#example-maps">Example Maps</a></li>
+        <li><a href="#how-to-use">How To Use</a></li>
+      </ul>
+    </li>
+    <li><a href="#features">Features</a></li>
+    <li>
+      <a href="#requirements">Requirements</a>
+      <ul> 
+        <li><a href="#installing-libraries">Installing Libraries</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#setup">Setup</a>
+      <ul>
+        <li><a href="#google-sheet-structure">Google Sheet Structure</a></li>
+        <li><a href="#example-google-sheet">Example Google Sheet</a></li>
+        <li><a href="#map-icon-symbols">Map Icon Symbols</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#updating-sabbath-walks-map">Updating Sabbath Walks Map</a></li>
+        <li><a href="#creating-route-map">Creating Route Map</a></li>
+        <li><a href="#updating-letterbox-map">Updating Letterbox Map</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing To The Maps</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+    
 
 
-
-## Overview
+<!-- About the Project -->
+## About The Project
 This project provides Python scripts to create interactive HTML maps, which can be viewed in any web browser.
 Specifically, maps are created for ASOC church locations/routes, Sabbath walks and letterboxing.
 
-### Repo Structure
+### Project Structure
 - **GPX_Files**: Contains all GPX files
   - *[Church_Locations](GPX_Files/Church_Locations/)*: Contains GPX files for Church Locations.
   - *[Letterbox_Routes](GPX_Files/Letterbox_Routes/)*: Contains GPX files of completed Letterbox routes.
@@ -52,7 +80,9 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
 - **Images**: Contains all images used in this repo.
   - *[Icons](Images/Icons/)*: Contains Font Arewsome Icons 
 - **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
-- **README.md**: Explains the project.
+- **CHANGELOG.md**: Records changes between versions.
+- **LICENSE**: Explains the licensing of this project.
+- **README.md**: Explains this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +108,7 @@ Here are some example usages of the maps:
    - **Link**:  https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount%20Sugarloaf/Sugarloaf_Walk.html
 
 
-### How To Use Maps
+### How To Use
 
 1. **Accessing the Map**:
    - Open your web browser.
@@ -110,14 +140,50 @@ Here are some example usages of the maps:
 
 ## Requirements
 - Python 3.x
+- `numpy` library
 - `pandas` library
 - `geopandas` libary
 - `folium` library
 - `gpxpy` library
 - `pdf2image` library
 - `Pillow` library
-- `OSMINX` library
+- `OSMnx` library
 - `shapely` library
+
+### Installing Libraries
+Make sure you have the libraries installed. You can install these libraries using `pip install library-name`
+<details>
+  <summary>📚 Commands for downloading libraries</summary>
+  <ol>
+    <ol>
+      <pre><code>pip install numpy</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install pandas</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install geopandas</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install folium</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install gpxpy</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install pdf2image</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install pillow</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install osmnx</code></pre>
+    </ol>
+    <ol>
+      <pre><code>pip install shapely</code></pre>
+    </ol>
+  </ol>
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,32 +241,44 @@ Icons can be chosen from [Font Awesome](https://fontawesome.com/search?o=r&m=fre
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Install Required Libraries
-Make sure you have the required libraries installed. You can install these libraries using `pip`:
-- pip install folium
-- pip install pandas
-- pip install gpxpy
-- pip install pdf2image pillow
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## Usage
 
-`shh
 clone the repo, then exacute the following codes.
+```shh
+git clone https://github.com/NUAC-AV/ASOC-UON.git
+```
 
-### Updating Sabbath Walks map
+### Updating Sabbath Walks Map
 
-1. Pull latest GitHub repo.
-2. Ensure the google sheets is correctly formated.
-3. Run the Update_Walks.py file
-4. Commit changes
-5. push changes to the remote repo.
+<ol>
+  <li> 
+    <details>
+      <summary>Pull latest GitHub repository</summary>
+      <pre><code>git pull origin</code></pre>
+    </details>
+  </li>
+  <li> Ensure the Google Sheets is correctly formatted. </li>
+  <li> Run the Update_Walks.py file. </li>
+  <li>
+    <details>
+      <summary>Commit changes</summary>
+      <pre><code>git commit -m "Update Sabbath Walks Map."</code></pre>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Push changes to the remote repo</summary>
+      <pre><code>git push origin main</code></pre>
+    </details>
+  </li>
+</ol>
 
-### Creating Route map
 
+
+### Creating Route Map
+
+To be updated.
 1. 
 2. 
 3. 
@@ -208,15 +286,40 @@ clone the repo, then exacute the following codes.
 
 ### Updating Letterbox Map
  
- 1. Pull latest
- 2. Add all gpx files to GPX_Files/Letterbox_Routes folder.
- 3. Run Update_Letterbox_Map.py file.
- 3. Track gpx files: 
- 4. Commit changes: commit -m "A
+<ol>
+  <li>
+    <details>
+      <summary>Pull latest:</summary>
+      <pre><code>git pull origin</code></pre>
+    </details>
+  </li>
+  <li>
+    Add all gpx files to GPX_Files/Letterbox_Routes folder.
+  </li>
+  <li>
+    Run Update_Letterbox_Map.py file.
+  </li>
+  <li>
+    <details>
+      <summary>Track gpx files:</summary>
+      <pre><code>git add .</code></pre>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Commit changes:</summary>
+      <pre><code>git commit -m "📮 Update letterbox map</code></pre>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Push changes:</summary>
+      <pre><code>git push origin main</code></pre>
+    </details>
+  </li> 
+</ol>
 
-
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ROADMAP -->
@@ -225,11 +328,12 @@ clone the repo, then exacute the following codes.
 - [x] Add Changelog
 - [x] Add back to top links
 - [ ] Add route maps for all walks
+- [ ] Redesign create_route_map codes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Contributing to the Maps
+## Contributing To The Maps
 
 If you would like to contribute to the maps, follow these steps:
 
