@@ -4,7 +4,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>📚 Table of Contents</summary>
+  <summary><h2>📚 Table of Contents</h2></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -58,31 +58,52 @@
 This project provides Python scripts to create interactive HTML maps, which can be viewed in any web browser.
 Specifically, maps are created for ASOC church locations/routes, Sabbath walks and letterboxing.
 
-### Project Structure
-- **GPX_Files**: Contains all GPX files
-  - *[Church_Locations](GPX_Files/Church_Locations/)*: Contains GPX files for Church Locations.
-  - *[Letterbox_Routes](GPX_Files/Letterbox_Routes/)*: Contains GPX files of completed Letterbox routes.
-  - *[Misc](GPX_Files/Misc/)*: Contains any other gpx files
-  - *[Sabbath_Walks](GPX_Files/Sabbath_Walks)*: Contains GPX files for Sabbath walks.
-  - *[GPX_Studio.md](GPX_Files/GPX_Studio.md)*: Details how to produce GPX file using GPX Studio.
-- **Map_Generating_Codes**: Contains the code for generating maps.
-  - *[Create_Routes](Map_Generating_Codes/Create_Routes/)*: Creates a route.
-  - *[Letterbox](Map_Generating_Codes/Letterbox/)*: Creates the letterbox maps.
-  - *[Misc](Map_Generating_Codes/Misc/)*: Other codes.
-  - *[Route_Code](Map_Generating_Codes/Route_Code/)*
-  - *[README.md](Map_Generating_Codes/README.md/)*
-  - *[Update_Walks.py](Map_Generating_Codes/Update_Walks.py/)*: Updates the map of ASOC walks
-- **Maps**: Contains the HTML files for the maps.
-  - *[Church_Locations](Maps/Church_Locations/)*: Contains maps for church and caregroup locations.
-  - *[Letterbox](Maps/Letterbo/)*: Contains maps used for letterboxing.
-  - *[Misc](Maps/Misc/)*: Other maps.
-  - *[Sabbath_Walks](Maps/Sabbath_Walks/)*: Contains maps for Sabbath walks.
-- **Images**: Contains all images used in this repo.
-  - *[Icons](Images/Icons/)*: Contains Font Arewsome Icons 
-- **ASOC_Walks.ipynb**: Jupyter notebook for code testing.
-- **CHANGELOG.md**: Records changes between versions.
-- **LICENSE**: Explains the licensing of this project.
-- **README.md**: Explains this project.
+<details>
+  <summary><h3><a name="project-structure">📚 Project Structure</a></h3></summary>
+  <ul>
+    <li>
+      <strong>GPX_Files</strong>: Contains all GPX files
+      <ul>
+        <li><em><a href="GPX_Files/Church_Locations/">Church_Locations</a></em>: Contains GPX files for Church Locations.</li>
+        <li><em><a href="GPX_Files/Letterbox_Routes/">Letterbox_Routes</a></em>: Contains GPX files of completed Letterbox routes.</li>
+        <li><em><a href="GPX_Files/Misc/">Misc</a></em>: Contains any other GPX files.</li>
+        <li><em><a href="GPX_Files/Sabbath_Walks">Sabbath_Walks</a></em>: Contains GPX files for Sabbath walks.</li>
+        <li><em><a href="GPX_Files/GPX_Studio.md">GPX_Studio.md</a></em>: Details how to produce GPX file using GPX Studio.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Map_Generating_Codes</strong>: Contains the code for generating maps.
+      <ul>
+        <li><em><a href="Map_Generating_Codes/Create_Routes/">Create_Routes</a></em>: Creates a route.</li>
+        <li><em><a href="Map_Generating_Codes/Letterbox/">Letterbox</a></em>: Creates the letterbox maps.</li>
+        <li><em><a href="Map_Generating_Codes/Misc/">Misc</a></em>: Other codes.</li>
+        <li><em><a href="Map_Generating_Codes/Route_Code/">Route_Code</a></em></li>
+        <li><em><a href="Map_Generating_Codes/README.md/">README.md</a></em></li>
+        <li><em><a href="Map_Generating_Codes/Update_Walks.py/">Update_Walks.py</a></em>: Updates the map of ASOC walks.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Maps</strong>: Contains the HTML files for the maps.
+      <ul>
+        <li><em><a href="Maps/Church_Locations/">Church_Locations</a></em>: Contains maps for church and caregroup locations.</li>
+        <li><em><a href="Maps/Letterbox/">Letterbox</a></em>: Contains maps used for letterboxing.</li>
+        <li><em><a href="Maps/Misc/">Misc</a></em>: Other maps.</li>
+        <li><em><a href="Maps/Sabbath_Walks/">Sabbath_Walks</a></em>: Contains maps for Sabbath walks.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Images</strong>: Contains all images used in this repo.
+      <ul>
+        <li><em><a href="Images/Icons/">Icons</a></em>: Contains Font Awesome Icons.</li>
+      </ul>
+    </li>
+    <li><em><a href="ASOC_Walks.ipynb">ASOC_Walks.ipynb</a></em>: Jupyter notebook for code testing.</li>
+    <li><em><a href="CHANGELOG.md">CHANGELOG.md</a></em>: Records changes between versions.</li>
+    <li><em><a href="LICENSE">LICENSE</a></em>: Explains the licensing of this project.</li>
+    <li><em><a href="README.md">README.md</a></em>: Explains this project.</li>
+  </ul>
+</details>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -347,7 +368,7 @@ If you would like to contribute to the maps, follow these steps:
 
 
 ## License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
