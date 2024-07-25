@@ -22,3 +22,14 @@
     - Create_suburbs.py
     - Update_Letterbox_Map.py
 Added checkboxes for major features on roadmap
+
+## v1.1.1-alpha
+
+
+## v1.2.0-alpha
+
+### Added or Changed
+- Redesigned Route creation code.
+    - Added [GPXParser](Map_Generating_Codes/Create_Routes/gpx_parser.py): Reads gpx files and outputs data in a dictionary.
+    - Added [GPXPlotter](Map_Generating_Codes/Create_Routes/gpx_plotter.py): Defines ploting functions
+    - Added [plot_routes](Map_Generating_Codes/Create_Routes/plot_routes.py): 

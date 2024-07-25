@@ -1,4 +1,4 @@
-from gpx_utils import parse_gpx_files
+from Map_Generating_Codes.Create_Routes.gpx_parser import parse_gpx_files
 from route_map import RouteMap
 
 def main():
