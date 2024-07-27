@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_53a537d19e5e27d2e9c3adb96f0549bf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_53a537d19e5e27d2e9c3adb96f0549bf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_53a537d19e5e27d2e9c3adb96f0549bf = L.map(
+                "map_53a537d19e5e27d2e9c3adb96f0549bf",
+                {
+                    center: [-32.91134441129698, 151.75132916735055],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_68a7b5d5cd6e8850a6f13d8247ae031d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_68a7b5d5cd6e8850a6f13d8247ae031d.addTo(map_53a537d19e5e27d2e9c3adb96f0549bf);
+        
+    
+            var feature_group_f451f76d7413a64c4e30af7c169c6d5e = L.featureGroup(
+                {}
+            );
+        
+    
+            var poly_line_8c320e1737f34f99bd03805246f73281 = L.polyline(
+                [[-32.91414363999956, 151.74877457147124], [-32.914052885946575, 151.74865887837205], [-32.91396213180054, 151.74854318527287], [-32.91394302565268, 151.7484540446883], [-32.913923919500704, 151.7483649041037], [-32.91389207590489, 151.74828714316823], [-32.913860232297615, 151.74820938223274], [-32.91383475740356, 151.74813920773], [-32.913809282502186, 151.7480690332272], [-32.91376470140711, 151.7480235146308], [-32.9137201202896, 151.7479779960344], [-32.91367394696564, 151.7479438570871], [-32.9136277736176, 151.7479097181398], [-32.91357682368836, 151.7478774758007], [-32.913527, 151.747842], [-32.913325, 151.747851], [-32.913199, 151.747864], [-32.913078, 151.747913], [-32.91296, 151.747951], [-32.912862, 151.74803], [-32.912768, 151.748117], [-32.912707, 151.748186], [-32.912655, 151.748264], [-32.912614, 151.748352], [-32.912561, 151.748517], [-32.912511, 151.748602], [-32.912448, 151.748667], [-32.91173, 151.748821], [-32.911691, 151.748823], [-32.911695, 151.748865], [-32.911711, 151.749043], [-32.911692, 151.74943], [-32.911603, 151.749698], [-32.91145, 151.749934], [-32.911081, 151.750084], [-32.910608, 151.750246], [-32.910144, 151.750492], [-32.90973, 151.750899], [-32.909379, 151.751318], [-32.909173, 151.751472], [-32.909128, 151.751572], [-32.908759, 151.752378], [-32.908678, 151.752585], [-32.908346, 151.753552], [-32.908368, 151.75363], [-32.908298, 151.754524], [-32.908268, 151.754965], [-32.908076, 151.75769], [-32.908065, 151.757973], [-32.90807, 151.758698], [-32.908078, 151.75886], [-32.908155, 151.759338], [-32.908179, 151.759673], [-32.90821, 151.759733], [-32.908253, 151.759723], [-32.90832, 151.759701], [-32.908744, 151.759567], [-32.908819, 151.759546], [-32.908822, 151.759469], [-32.908681, 151.758895], [-32.908644, 151.758395], [-32.908838, 151.755724], [-32.908873, 151.755253], [-32.908941, 151.754357], [-32.90897, 151.753982], [-32.909067, 151.753461], [-32.909236, 151.753076], [-32.909568, 151.752443], [-32.909741, 151.752143], [-32.90997, 151.751745], [-32.910056, 151.751642], [-32.910125, 151.751479], [-32.910475, 151.75117], [-32.910902, 151.750962], [-32.911623, 151.750723], [-32.911866, 151.750565], [-32.912024, 151.750436], [-32.912146, 151.750297], [-32.912295, 151.750057], [-32.912363, 151.749873], [-32.912388, 151.749772], [-32.912419, 151.749539], [-32.91250699999999, 151.749167], [-32.9126279416966, 151.74921165497486], [-32.91274888322797, 151.74925630994974], [-32.91281257123062, 151.7492942421134], [-32.91287625918745, 151.74933217427704], [-32.913022741314265, 151.74940045217164], [-32.91316922319868, 151.74946873006624], [-32.91323609528271, 151.74947631649894], [-32.91330296731623, 151.74948390293167], [-32.913427158101605, 151.74945735041715], [-32.91355134871274, 151.74943079790262], [-32.91367872351752, 151.7493094149789], [-32.91380609813902, 151.7491880320552], [-32.913970888783616, 151.74898699158774], [-32.914135679121436, 151.74878595112034]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(feature_group_f451f76d7413a64c4e30af7c169c6d5e);
+        
+    
+            feature_group_f451f76d7413a64c4e30af7c169c6d5e.addTo(map_53a537d19e5e27d2e9c3adb96f0549bf);
+        
+    
+            var feature_group_54aac1003bcfbd8c969d991426898384 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_3973cdb34fc3cbece2675eb7983b0376 = L.marker(
+                [-32.91414363999956, 151.74877457147124],
+                {}
+            ).addTo(feature_group_54aac1003bcfbd8c969d991426898384);
+        
+    
+        var popup_9a0d8fd06cb004df67b74c9e179d973c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab7eada6707d21482ad91580b16d5a47 = $(`<div id="html_ab7eada6707d21482ad91580b16d5a47" style="width: 100.0%; height: 100.0%;"><b>Throsby Creek Walk<b><br><a href='https://www.google.com/maps/place/Islington+Park+Cricket+Ground,+63+Power+St,+Islington+NSW+2296/data=!4m2!3m1!1s0x6b7314553fba44e5:0x4df60ded56ec74c7?utm_source=mstt_1&entry=gps&g_ep=CAESCTExLjc4LjMwMRgAINeCAyoAQgJBVQ%3D%3D' target='_blank'>Google Map Link</a><br>3 km walk with posible 1 km extention through Tighes Hill Dog Park.</div>`)[0];
+                popup_9a0d8fd06cb004df67b74c9e179d973c.setContent(html_ab7eada6707d21482ad91580b16d5a47);
+            
+        
+
+        marker_3973cdb34fc3cbece2675eb7983b0376.bindPopup(popup_9a0d8fd06cb004df67b74c9e179d973c)
+        ;
+
+        
+    
+    
+            marker_3973cdb34fc3cbece2675eb7983b0376.bindTooltip(
+                `<div>
+                     Islington Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_54aac1003bcfbd8c969d991426898384.addTo(map_53a537d19e5e27d2e9c3adb96f0549bf);
+        
+    
+            var layer_control_339f2e4fa4b10dd8e41b493fda280000_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_68a7b5d5cd6e8850a6f13d8247ae031d,
+                },
+                overlays :  {
+                    "Throsby Creek Walk" : feature_group_f451f76d7413a64c4e30af7c169c6d5e,
+                    "Throsby Creek Walk Markers" : feature_group_54aac1003bcfbd8c969d991426898384,
+                },
+            };
+            let layer_control_339f2e4fa4b10dd8e41b493fda280000 = L.control.layers(
+                layer_control_339f2e4fa4b10dd8e41b493fda280000_layers.base_layers,
+                layer_control_339f2e4fa4b10dd8e41b493fda280000_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_53a537d19e5e27d2e9c3adb96f0549bf);
+
+        
+</script>
+</html>

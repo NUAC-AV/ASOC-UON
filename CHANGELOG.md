@@ -32,4 +32,7 @@ Added checkboxes for major features on roadmap
 - Redesigned Route creation code.
     - Added [GPXParser](Map_Generating_Codes/Create_Routes/gpx_parser.py): Reads gpx files and outputs data in a dictionary.
     - Added [GPXPlotter](Map_Generating_Codes/Create_Routes/gpx_plotter.py): Defines ploting functions
-    - Added [plot_routes](Map_Generating_Codes/Create_Routes/plot_routes.py): 
+    - Added [plot_routes](Map_Generating_Codes/Create_Routes/plot_routes.py): Test case of route plotting.
+    - Added folder `Sabbath_Walks` to Create_Routes with subfolders for each walk location. 
+    - Added documentation for `Create_Routes`.
+- Added Islington Park Walk to Maps/Sabbath_Walks.

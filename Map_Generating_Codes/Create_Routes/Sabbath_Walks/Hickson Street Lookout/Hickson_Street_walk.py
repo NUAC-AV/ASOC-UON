@@ -8,7 +8,7 @@ from gpx_parser import GPXParser
 from gpx_plotter import GPXPlotter
 
 
-folder_paths = ['GPX_Files/Sabbath_Walks/Islington Park']
+folder_paths = ['GPX_Files/Sabbath_Walks/Hickson Street Lookout']
 parser = GPXParser(folder_paths=folder_paths)
 
 
@@ -19,11 +19,11 @@ routes = parser.parse_all_files()
 plotter = GPXPlotter(routes)
 
 # Create the folium map and add the routes
-plotter.create_route_map(zoom=17)
+plotter.create_route_map(zoom=18)
 plotter.add_routes_to_map()
-link = "https://www.google.com/maps/place/Islington+Park+Cricket+Ground,+63+Power+St,+Islington+NSW+2296/data=!4m2!3m1!1s0x6b7314553fba44e5:0x4df60ded56ec74c7?utm_source=mstt_1&entry=gps&g_ep=CAESCTExLjc4LjMwMRgAINeCAyoAQgJBVQ%3D%3D"
-desc = "3 km walk with posible 1 km extention through Tighes Hill Dog Park."
-plotter.add_start_marker("Islington Park", link, desc)
+link = "https://www.google.com/maps/place/Hickson+Street+Lookout/@-32.9531743,151.746488,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7315d54bfbc527:0xdda9d29f3b2f085d!8m2!3d-32.9531743!4d151.746488!16s%2Fg%2F11b_25x7fp?hl=en-AU&entry=ttu"
+desc = "Short 1 km walk, but very steep."
+plotter.add_start_marker("Hickson Street", link, desc)
 
 # Save the map to an HTML file
-plotter.save_route_map('Maps/Sabbath_Walks/Islington Park/Test.html')
+plotter.save_route_map('Maps/Sabbath_Walks/Hickson Street Lookout/routes_map.html')

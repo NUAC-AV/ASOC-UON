@@ -289,7 +289,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
   </li>
   <li>
     <details>
-      <summary>Push changes to the remote repo</summary>
+      <summary>Push changes to the ASOC-UON repository.</summary>
       <pre><code>git push origin main</code></pre>
     </details>
   </li>
@@ -299,10 +299,24 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
 
 ### Creating Route Map
 
-To be updated.
-1. 
-2. 
-3. 
+
+<ol>
+  <li>
+    <details>
+      <summary>Pull the latest changes from the ASOC-UON GitHub repository.</summary>
+      <pre><code>git pull origin main</code></pre>
+    </details>
+  </li>
+  <li> 
+    Create the route map in the appropriate subfolder of `Sabbath_Walks` based on the [plot_routes_example.py](Map_Generating_Codes/Create_Routes/plot_routes_example.py) script.
+  </li>
+  <li>
+    <details>
+      <summary>Push the changes to the ASOC-UON GitHub repository.</summary>
+      <pre><code>git push origin main</code></pre>
+    </details>
+  </li>
+</ol>
 
 
 ### Updating Letterbox Map
