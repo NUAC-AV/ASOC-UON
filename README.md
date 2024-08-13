@@ -103,6 +103,8 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
     <li><em><a href="README.md">README.md</a></em>: Explains this project.</li>
   </ul>
 </details>
+  
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -111,7 +113,7 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
 
 ## Viewing Maps
 The maps can be viewed through GitHub Pages. You can access them using the following link format:
-https://roryyarr.github.io/ASOC-Walks/`file-name`.html
+https://nuac-av.github.io/ASOC-UON/`file-name`.html
 
 Replace `file-name` with the specific file you want to view. 
 Note: replace spaces(" ") with "%20". 
@@ -141,6 +143,40 @@ Here are some example usages of the maps:
    - *Markers*: Click on markers to get more information about each location.
    - *Filter*: Click on layer symbol in top right corner, allowing you to toggle on or off the different coloured icons.
 
+
+
+<details>
+  <summary><h3><a name="other-maps"> 🗺️ Other Maps</a></h3></summary>
+  <ul>
+    <li>Church_Locations
+      <ul>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Church_Locations/ES_Building.html">ES_Building.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Church_Locations/Library_Church.html">Library_Church.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Church_Locations/Library_Test.html">Library_Test.html</a></li>
+      </ul>
+    </li>
+    <li>Letterbox
+      <ul>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_1.html">letterbox_test_1.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_2.html">letterbox_test_2.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_3.html">letterbox_test_3.html</a></li>
+      </ul>
+    </li>
+    <li>Misc
+      <ul>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Misc/ASOC_walk_locations_map.html">ASOC_walk_locations_map.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Misc/routes_map.html">routes_map.html</a></li>
+      </ul>
+    </li>
+    <li>Sabbath_Walks
+      <ul>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Hickson_Street_Lookout.html">Hickson_Street_Lookout.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Islington_Park.html">Islington_Park.html</a></li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount_Sugarloaf.html">Mount_Sugarloaf.html</a></li>
+      </ul>
+    </li>
+  </ul>
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -364,6 +400,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
 - [x] Add back to top links
 - [ ] Add route maps for all walks
 - [ ] Redesign create_route_map codes
+- [x] Create letterbox map
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
