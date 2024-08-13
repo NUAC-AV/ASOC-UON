@@ -1,3 +1,7 @@
+# Importing necessary libraries
+import colorsys
+import matplotlib.colors as mcolors
+import numpy as np
 import folium
 import os
 import osmnx as ox
@@ -12,13 +16,46 @@ class MapWithTreeLayerControl:
         self.zoom_start = zoom_start
         self.regions = self._geocode_places()
         self.map = folium.Map(location=self.map_location, zoom_start=self.zoom_start)
-        self.colours = [
-            'black', 'gray', 'blue', 'darkred', 'purple', 'red',
-            'green', 'white', 'darkblue', 'darkpurple', 'cadetblue', 'orange',
-            'pink', 'darkgreen'
+        # self.colours = [
+        #     'black', 'gray', 'blue', 'darkred', 'purple', 'red',
+        #     'green', 'white', 'darkblue', 'darkpurple', 'cadetblue', 'orange',
+        #     'pink', 'darkgreen'
+        # ]
+        # self.base_colors = [
+        #     'blue', 'red', 'green', 'purple', 'orange', 'pink', 'brown'
+        # ]
+        self.base_colors = [
+            '#1f77b4',  # blue
+            '#ff7f0e',  # orange
+            '#2ca02c',  # green
+            '#d62728',  # red
+            '#9467bd',  # purple
+            '#8c564b',  # brown
+            '#e377c2',  # pink
         ]
-        self.overlay_tree = {"label": "Regions and Suburbs", "select_all_checkbox": "Un/select all", "collapsed": True, "children": []}
+        self.overlay_tree = {
+            "label": "<strong>Regions and Suburbs</strong>",  # or "<b>Regions and Suburbs</b>"
+            "select_all_checkbox": "Un/select all",
+            "collapsed": True,
+            "children": []
+        }
         self.gpx_layers = []
+
+
+    def _adjust_brightness(self, color, factor):
+        """ Adjusts brightness of a given color by the provided factor. """
+        color = np.array(mcolors.to_rgb(color))
+        adjusted_color = np.clip(color * factor, 0, 1)
+        return mcolors.to_hex(adjusted_color)
+    
+    def _adjust_hue(self, color, hue_factor):
+        """ Adjusts the hue of a given color to its complementary color. """
+        color = np.array(mcolors.to_rgb(color))
+        h, l, s = colorsys.rgb_to_hls(*color)
+        new_h = (h + 0.5 * hue_factor) % 1.0
+        adjusted_color = colorsys.hls_to_rgb(new_h, l, s)
+        return mcolors.to_hex(adjusted_color)
+    
 
 
     def _geocode_places(self):
@@ -32,21 +69,43 @@ class MapWithTreeLayerControl:
 
     def _add_layers(self):
         for i, (base_group, region) in enumerate(zip(self.base_places, self.regions)):
-            region_label = f"Region {i+1}"
+            # Get the base color for this region
+            base_color = self.base_colors[i % len(self.base_colors)]
+
+            # Create a bold and colored region label
+            region_label = f'<strong><span style="color: {base_color};">Region {i+1}</span></strong>'
             region_children = []
+
+            # Get the base color for this region
+            base_color = self.base_colors[i % len(self.base_colors)]
 
             for j, (suburb_name, (index, row)) in enumerate(zip(base_group, region.iterrows())):
                 suburb_short_name = suburb_name.split(',')[0]  # Extract only the suburb name
                 suburb_layer = folium.FeatureGroup(name=suburb_short_name, show=False)
 
+                # Adjust brightness of base color for each suburb
+                # shade = self._adjust_brightness(base_color, 1 - (j / len(base_group))*2)
+                # Adjust both hue and brightness for each suburb
+                hue_factor = (j / max(len(base_group) - 1, 1)) * 0.2  # Small hue adjustment
+                brightness_factor = 0.7 + (j / max(len(base_group) - 1, 1)) * 0.5
+                shade = self._adjust_hue(base_color, hue_factor)
+                shade = self._adjust_brightness(shade, brightness_factor)
+
                 folium.GeoJson(
                     row['geometry'],
-                    style_function=lambda x, color=self.colours[j % len(self.colours)]: {'color': color},
+                    #style_function=lambda x, color=self.colours[j % len(self.colours)]: {'color': color},
+                    style_function=lambda x, color=shade: {'color': color},
                     name=suburb_short_name
                 ).add_to(suburb_layer)
 
+
+
                 suburb_layer.add_to(self.map)
-                region_children.append({"label": suburb_short_name, "layer": suburb_layer, "collapsed": True})
+                region_children.append({
+                    "label": f'<span style="color: {shade};">{suburb_short_name}</span>',
+                    "layer": suburb_layer,
+                    "collapsed": True
+                })
 
             self.overlay_tree["children"].append({"label": region_label, "select_all_checkbox": True, "collapsed": True, "children": region_children})
     
@@ -76,6 +135,7 @@ class MapWithTreeLayerControl:
                 layer_name = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
                 self.add_gpx_route(gpx_file_path, layer_name, color)
 
+    
     
     def add_tree_layer_control(self):
         self._add_layers()

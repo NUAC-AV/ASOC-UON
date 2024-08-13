@@ -9,15 +9,15 @@ base_places = [
     ["Barnsley", "Cameron Park", "Edgeworth", "Killingworth", "West Wallsend", "Holmesville"],
     ["Argenton",  "Cardiff Heights", "Glendale", "New Lambton Heights", "Rankin Park"],
     ["Adamstown", "Adamstown Heights", "Garden Suburb", "Kotara", "Kotara South"],
-    ["Bar Beach", "Hamilton", "Hamilton South", "Merewether", "Merewether Heights", "The Junction"],
-    ["Cooks Hill", "Newcastle", "Newcastle East", "Newcastle West", "The Hill"],
-    ["Stockton", "Fern Bay"],
-    ["Boolaroo", "Cardiff", "Hillsborough" "Lakelands", "Macquarie Hills", "Speers Point"],
-    ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
+    # ["Bar Beach", "Hamilton", "Hamilton South", "Merewether", "Merewether Heights", "The Junction"],
+    # ["Cooks Hill", "Newcastle", "Newcastle East", "Newcastle West", "The Hill"],
+    # ["Stockton", "Fern Bay"],
+    # ["Boolaroo", "Cardiff", "Hillsborough", "Lakelands", "Macquarie Hills", "Speers Point"],
+    # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
 ]
 
 # Create the map with TreeLayerControl
-map_control = MapWithTreeLayerControl(base_places[0])
+map_control = MapWithTreeLayerControl(base_places)
 
 
 # Add a GPX route
@@ -27,7 +27,8 @@ map_control.add_gpx_routes("GPX_Files/Misc")
 
 map_control.add_tree_layer_control()
 
+
 # Save the map to an HTML file
-output_html = "Maps/Letterbox/letterbox_test_2.html"
+output_html = f"Maps/Letterbox/letterbox_test_2.html"
 map_control.save_map(output_html)
 
