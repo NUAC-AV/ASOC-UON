@@ -265,7 +265,7 @@ Icons can be chosen from [Font Awesome](https://fontawesome.com/search?o=r&m=fre
 
 ## Usage
 
-clone the repo, then exacute the following codes.
+clone the repo, then execute the following codes.
 ```shh
 git clone https://github.com/NUAC-AV/ASOC-UON.git
 ```
