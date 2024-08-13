@@ -42,7 +42,7 @@ class MapWithTreeLayerControl:
                 {
                     "label": "<strong>Completed Streets</strong>",
                     "select_all_checkbox": True,
-                    "collapsed": False,
+                    "collapsed": True,
                     "children": self.gpx_layers  # Add GPX layers here
                 }
             ]
@@ -124,7 +124,7 @@ class MapWithTreeLayerControl:
         route_layer.add_to(self.map)
         
         # Add GPX route to the GPX layers list
-        self.gpx_layers.append({"label": layer_name, "layer": route_layer, "collapsed": True})
+        self.gpx_layers.append({"label": layer_name, "layer": route_layer, "collapsed": False})
 
     def add_gpx_routes(self, folder_path, color='black'):
         for filename in os.listdir(folder_path):
@@ -160,6 +160,9 @@ class MapWithTreeLayerControl:
 
     def add_tree_layer_control(self):
         self._add_layers()  # Populate the "Regions and Suburbs" section
+
+        # Replace "Maps" label with the ASOC logo image
+        self.overlay_tree["label"] = '<img src="../../Images/ASOC-Logo-orange.png" alt="ASOC Logo" style="width: 65px; height: 30px; vertical-align: middle;">'
 
         # Create the TreeLayerControl for both sections
         tree_control = TreeLayerControl(
