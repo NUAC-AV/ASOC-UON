@@ -11,18 +11,18 @@ class CustomCSS:
         .leaflet-control-layers {
             font-size: 16px;  /* Increase font size */
             padding: 10px;    /* Add padding around the control */
-            width: 300px;     /* Increase width of the control */
+            width: 350px;     /* Increase width of the control */
         }
         .leaflet-control-layers-toggle {
-            width: 40px;  /* Adjust the toggle button width */
-            height: 40px; /* Adjust the toggle button height */
-            background-size: 40px 40px; /* Adjust background icon size */
+            width: 50px;  /* Adjust the toggle button width */
+            height: 50px; /* Adjust the toggle button height */
+            background-size: 80px 80px; /* Adjust background icon size */
             background-image: url('Images/ASOC-Logo-orange.png');  /* Use your custom image */
             background-repeat: no-repeat;
             background-position: center;
         }
         .leaflet-control-layers-overlays label {
-            font-size: 16px;  /* Increase font size of labels */
+            font-size: 18px;  /* Increase font size of labels */
             padding: 5px 10px;  /* Add padding to labels */
         }
         </style>

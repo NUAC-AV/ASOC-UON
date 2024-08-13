@@ -30,7 +30,7 @@ class MapWithTreeLayerControl:
             "collapsed": False,
             "children": [
                 {
-                    "label": "<strong>Regions and Suburbs</strong>",
+                    "label": '<strong style="font-size: 19pt;">Regions and Suburbs</strong>',
                     "select_all_checkbox": True,
                     "collapsed": True,
                     "children": []  # Will be populated by LayerManager
@@ -44,7 +44,7 @@ class MapWithTreeLayerControl:
 
     def add_tree_layer_control(self):
         # Replace "Maps" label with the ASOC logo image
-        self.overlay_tree["label"] = '<img src="../../Images/ASOC-Logo-orange.png" alt="ASOC Logo" style="width: 65px; height: 30px; vertical-align: middle;">'
+        self.overlay_tree["label"] = '<img src="../../Images/ASOC-Logo-orange.png" alt="ASOC Logo" style="width: 177px; height: 82px; vertical-align: middle;">'
 
         # Create the TreeLayerControl for the sections
         tree_control = TreeLayerControl(

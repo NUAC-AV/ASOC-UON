@@ -28,7 +28,7 @@ gpx_handler.add_gpx_routes("GPX_Files/Misc")
 
 # Integrate the GPX layers into the MapWithTreeLayerControl
 map_control.overlay_tree["children"].append({
-    "label": "<strong>Completed streets</strong>",
+    "label": '<strong style="font-size: 19pt;">Completed Streets</strong>',
     "select_all_checkbox": True,
     "collapsed": True,
     "children": gpx_handler.get_gpx_layers()
@@ -39,5 +39,5 @@ map_control.add_tree_layer_control()
 
 
 # Save the map to an HTML file
-output_html = f"Maps/Letterbox/letterbox_test_3.html"
+output_html = f"Maps/Letterbox/letterbox_test_4.html"
 map_control.save_map(output_html)

@@ -15,7 +15,7 @@ class LayerManager:
             base_color = self.base_colors[i % len(self.base_colors)]
 
             # Create a bold and colored region label
-            region_label = f'<strong><span style="color: {base_color};">Region {i+1}</span></strong>'
+            region_label = f'<strong><span style="color: {base_color}; font-size: 17px;;">Region {i+1}</span></strong>'
             region_children = []
 
             for j, (suburb_name, (index, row)) in enumerate(zip(base_group, region.iterrows())):
@@ -36,7 +36,7 @@ class LayerManager:
 
                 suburb_layer.add_to(self.map)
                 region_children.append({
-                    "label": f'<span style="color: {shade};">{suburb_short_name}</span>',
+                    "label": f'<span style="color: {shade}; font-size: 15px;">{suburb_short_name}</span>',
                     "layer": suburb_layer,
                     "collapsed": True
                 })
