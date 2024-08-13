@@ -30,7 +30,7 @@ class MapWithTreeLayerControl:
             "collapsed": False,
             "children": [
                 {
-                    "label": '<strong style="font-size: 19pt;">Regions and Suburbs</strong>',
+                    "label": '<strong style="font-size: 18pt;">Regions and Suburbs</strong>',
                     "select_all_checkbox": True,
                     "collapsed": True,
                     "children": []  # Will be populated by LayerManager

@@ -15,7 +15,7 @@ class LayerManager:
             base_color = self.base_colors[i % len(self.base_colors)]
 
             # Create a bold and colored region label
-            region_label = f'<strong><span style="color: {base_color}; font-size: 17px;;">Region {i+1}</span></strong>'
+            region_label = f'<strong><span style="color: {base_color}; font-size: 18px;;">Region {i+1}</span></strong>'
             region_children = []
 
             for j, (suburb_name, (index, row)) in enumerate(zip(base_group, region.iterrows())):

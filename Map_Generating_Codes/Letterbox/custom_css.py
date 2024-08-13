@@ -25,6 +25,18 @@ class CustomCSS:
             font-size: 18px;  /* Increase font size of labels */
             padding: 5px 10px;  /* Add padding to labels */
         }
+        /* Increase the size of checkboxes */
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            transform: scale(1.5); /* Adjust the scale factor as needed */
+            transform-origin: top left;
+            transform: scale(1.5); /* Adjust the scale factor as needed */
+            transform-origin: top left;
+            margin-right: 15px; /* Add space between the checkbox and text */
+            margin-top: 4px;    /* Add a small margin above the checkbox */
+            margin-bottom: 4px; /* Add a small margin below the checkbox */
+        }
         </style>
         """
         self.map.get_root().html.add_child(Element(custom_css))
