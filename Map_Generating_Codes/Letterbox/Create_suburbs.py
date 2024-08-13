@@ -8,6 +8,10 @@ import osmnx as ox
 import gpxpy
 from folium.plugins import TreeLayerControl
 
+from gpx_handler import GPXHandler  # Import the GPXHandler class
+from custom_css import CustomCSS  # Import the CustomCSS class
+
+
 
 class MapWithTreeLayerControl:
     def __init__(self, base_places, map_location=(-32.9, 151.79), zoom_start=12):
@@ -25,7 +29,10 @@ class MapWithTreeLayerControl:
             '#8c564b',  # brown
             '#e377c2',  # pink
         ]
-        self.gpx_layers = []
+        #self.gpx_layers = []
+
+        # Initialize GPXHandler with the map object
+        self.gpx_handler = GPXHandler(self.map)
 
         # Initialize the overlay tree structure
         self.overlay_tree = {
@@ -43,7 +50,8 @@ class MapWithTreeLayerControl:
                     "label": "<strong>Completed Streets</strong>",
                     "select_all_checkbox": True,
                     "collapsed": True,
-                    "children": self.gpx_layers  # Add GPX layers here
+                    #"children": self.gpx_layers  # Add GPX layers here
+                    "children": self.gpx_handler.get_gpx_layers()  # Retrieve GPX layers from the GPXHandler class
                 }
             ]
         }
@@ -110,53 +118,29 @@ class MapWithTreeLayerControl:
                 "children": region_children
             })
 
-    def add_gpx_route(self, gpx_file, layer_name="GPX Route", color='blue'):
-        with open(gpx_file, 'r') as f:
-            gpx = gpxpy.parse(f)
+    # def add_gpx_route(self, gpx_file, layer_name="GPX Route", color='blue'):
+    #     with open(gpx_file, 'r') as f:
+    #         gpx = gpxpy.parse(f)
 
-        route_layer = folium.FeatureGroup(name=layer_name, show=False)
+    #     route_layer = folium.FeatureGroup(name=layer_name, show=False)
 
-        for track in gpx.tracks:
-            for segment in track.segments:
-                points = [(point.latitude, point.longitude) for point in segment.points]
-                folium.PolyLine(points, color=color, weight=2.5, opacity=1).add_to(route_layer)
+    #     for track in gpx.tracks:
+    #         for segment in track.segments:
+    #             points = [(point.latitude, point.longitude) for point in segment.points]
+    #             folium.PolyLine(points, color=color, weight=2.5, opacity=1).add_to(route_layer)
 
-        route_layer.add_to(self.map)
+    #     route_layer.add_to(self.map)
         
-        # Add GPX route to the GPX layers list
-        self.gpx_layers.append({"label": layer_name, "layer": route_layer, "collapsed": False})
+    #     # Add GPX route to the GPX layers list
+    #     self.gpx_layers.append({"label": layer_name, "layer": route_layer, "collapsed": False})
 
-    def add_gpx_routes(self, folder_path, color='black'):
-        for filename in os.listdir(folder_path):
-            if filename.endswith(".gpx"):
-                gpx_file_path = os.path.join(folder_path, filename)
-                layer_name = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
-                self.add_gpx_route(gpx_file_path, layer_name, color)
+    # def add_gpx_routes(self, folder_path, color='black'):
+    #     for filename in os.listdir(folder_path):
+    #         if filename.endswith(".gpx"):
+    #             gpx_file_path = os.path.join(folder_path, filename)
+    #             layer_name = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
+    #             self.add_gpx_route(gpx_file_path, layer_name, color)
 
-    def _add_custom_css(self):
-        custom_css = """
-        <style>
-        /* Increase the size of the layer control */
-        .leaflet-control-layers {
-            font-size: 16px;  /* Increase font size */
-            padding: 10px;    /* Add padding around the control */
-            width: 300px;     /* Increase width of the control */
-        }
-        .leaflet-control-layers-toggle {
-            width: 40px;  /* Adjust the toggle button width */
-            height: 40px; /* Adjust the toggle button height */
-            background-size: 40px 40px; /* Adjust background icon size */
-            background-image: url('Images/ASOC-Logo-orange.png');  /* Use your custom image */
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .leaflet-control-layers-overlays label {
-            font-size: 16px;  /* Increase font size of labels */
-            padding: 5px 10px;  /* Add padding to labels */
-        }
-        </style>
-        """
-        self.map.get_root().html.add_child(Element(custom_css))
 
     def add_tree_layer_control(self):
         self._add_layers()  # Populate the "Regions and Suburbs" section
@@ -179,7 +163,11 @@ class MapWithTreeLayerControl:
         )
         tree_control.add_to(self.map)
 
-        self._add_custom_css()
+        #self._add_custom_css()
+        # Apply custom CSS from the separate class
+        css = CustomCSS(self.map)
+        css.add_css()
+
 
     def save_map(self, output_html):
         self.map.save(output_html)
