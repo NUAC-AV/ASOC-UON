@@ -29,10 +29,11 @@ gpx_handler = GPXHandler(map_control.map)
 gpx_handler.add_gpx_routes("GPX_Files/Misc")
 
 
+# Integrate the GPX layers into the MapWithTreeLayerControl
 map_control.overlay_tree["children"].append({
     "label": "Completed streets",
     "select_all_checkbox": True,
-    "collapsed": False,
+    "collapsed": True,
     "children": gpx_handler.get_gpx_layers()
 })
 
