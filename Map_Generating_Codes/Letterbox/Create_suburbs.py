@@ -146,6 +146,9 @@ class MapWithTreeLayerControl:
             width: 40px;  /* Adjust the toggle button width */
             height: 40px; /* Adjust the toggle button height */
             background-size: 40px 40px; /* Adjust background icon size */
+            background-image: url('Images/ASOC-Logo-orange.png');  /* Use your custom image */
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .leaflet-control-layers-overlays label {
             font-size: 16px;  /* Increase font size of labels */
