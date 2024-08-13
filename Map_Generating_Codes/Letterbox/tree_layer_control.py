@@ -5,6 +5,7 @@ from folium.plugins import TreeLayerControl
 from custom_css import CustomCSS  # Import the CustomCSS class
 from layer_manager import LayerManager  # Import the LayerManager class
 from map_utils import MapUtils  # Import the MapUtils class
+from gpx_handler import GPXHandler  # Import the GPXHandler class
 
 class MapWithTreeLayerControl:
     def __init__(self, base_places, map_location=(-32.9, 151.79), zoom_start=12):
