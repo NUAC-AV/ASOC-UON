@@ -36,6 +36,11 @@ class CustomCSS:
             margin-right: 15px; /* Add space between the checkbox and text */
             margin-top: 4px;    /* Add a small margin above the checkbox */
             margin-bottom: 4px; /* Add a small margin below the checkbox */
+            /* Increase the font size of the open and closed symbols */
+        }
+        /* Increase the font size of the open and closed symbols */
+        .leaflet-control-layers-list .leaflet-control-layers-selector:before {
+            font-size: 75px; /* Adjust this value to increase symbol size */
         }
         </style>
         """
