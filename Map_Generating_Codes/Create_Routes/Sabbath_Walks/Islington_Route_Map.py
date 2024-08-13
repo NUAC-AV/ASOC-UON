@@ -26,4 +26,4 @@ desc = "3 km walk with posible 1 km extention through Tighes Hill Dog Park."
 plotter.add_start_marker("Islington Park", link, desc)
 
 # Save the map to an HTML file
-plotter.save_route_map('Maps/Sabbath_Walks/Islington Park/Test.html')
+plotter.save_route_map('Maps/Sabbath_Walks/Islington_Park.html')

@@ -17,7 +17,7 @@ base_places = [
 ]
 
 # Create the map with TreeLayerControl
-map_control = MapWithTreeLayerControl(base_places)
+map_control = MapWithTreeLayerControl(base_places[0])
 
 
 # Add a GPX route
@@ -28,6 +28,6 @@ map_control.add_gpx_routes("GPX_Files/Misc")
 map_control.add_tree_layer_control()
 
 # Save the map to an HTML file
-output_html = "Maps/Letterbox/letterbox_test_1.html"
+output_html = "Maps/Letterbox/letterbox_test_2.html"
 map_control.save_map(output_html)
 

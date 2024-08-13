@@ -19,11 +19,11 @@ routes = parser.parse_all_files()
 plotter = GPXPlotter(routes)
 
 # Create the folium map and add the routes
-plotter.create_route_map(zoom=18)
+plotter.create_route_map(zoom=17)
 plotter.add_routes_to_map()
 link = "https://www.google.com/maps/place/Hickson+Street+Lookout/@-32.9531743,151.746488,16z/data=!3m1!4b1!4m6!3m5!1s0x6b7315d54bfbc527:0xdda9d29f3b2f085d!8m2!3d-32.9531743!4d151.746488!16s%2Fg%2F11b_25x7fp?hl=en-AU&entry=ttu"
 desc = "Short 1 km walk, but very steep."
 plotter.add_start_marker("Hickson Street", link, desc)
 
 # Save the map to an HTML file
-plotter.save_route_map('Maps/Sabbath_Walks/Hickson Street Lookout/routes_map.html')
+plotter.save_route_map('Maps/Sabbath_Walks/Hickson_Street_Lookout.html')

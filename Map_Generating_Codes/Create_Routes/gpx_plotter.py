@@ -31,16 +31,26 @@ class GPXPlotter:
 
     def add_routes_to_map(self):
         """
-        Adds routes to the folium map.
+        Adds route polylines to the folium map using feature groups.
+        Each route is colored differently.
         """
         if self.route_map is None:
             self.create_route_map()
 
-        for route_name, route in self.routes.items():
-            feature_group = folium.FeatureGroup(name=route_name)
-            folium.PolyLine(route, color='blue', weight=2.5, opacity=1).add_to(feature_group)
+        # List of colors to iterate through
+        colors = ['blue', 'green', 'red', 'purple', 'orange', 'darkred', 
+                  'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue', 
+                  'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen', 
+                  'gray', 'black', 'lightgray']
+
+        for idx, (route_name, route) in enumerate(self.routes.items()):
+            color = colors[idx % len(colors)]  # Cycle through the list of colors
+            feature_group = folium.FeatureGroup(name=f'<span style="color: {color};">{route_name}</span>')
+            folium.PolyLine(route, color=color, weight=2.5, opacity=1).add_to(feature_group)
             feature_group.add_to(self.route_map)
 
+
+    
     def add_start_marker(self, name, link, desc):
         """
         Adds start marker.
@@ -52,16 +62,14 @@ class GPXPlotter:
         if self.route_map is None:
             self.create_route_map()
 
-        # Define the link
+        # Define the link and icon
         marker_link = f"<a href='{link}' target='_blank'>Google Map Link</a>"
 
         for route_name, route in self.routes.items():
-            feature_group = folium.FeatureGroup(name=f'{route_name} Markers')
             folium.Marker(route[0],
-                          popup=f'<b>{route_name}<b><br>{marker_link}<br>{desc}',
-                          tooltip=name).add_to(feature_group)
-            #folium.Marker(route[-1], popup=f'{route_name} End').add_to(feature_group)
-            feature_group.add_to(self.route_map)
+                          icon = folium.Icon(color='purple', icon='square-parking', prefix='fa'),
+                          popup=f'<b>{route_name}</b><br>{marker_link}<br>{desc}',
+                          tooltip=name).add_to(self.route_map)
 
         
     def add_markers_to_map(self):
