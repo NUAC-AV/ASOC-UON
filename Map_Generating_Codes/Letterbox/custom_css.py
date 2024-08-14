@@ -1,4 +1,5 @@
 from folium import Element
+from font_manager import FontManager
 
 class CustomCSS:
     def __init__(self, map_object):
@@ -80,17 +81,17 @@ class CustomCSS:
         if len(html_lines) >= 5:
             html_lines = html_lines[:-5]
 
-        # Add the new content, including the captured map_add_line
+        # # Generate the replacement lines using the FontManager
         replacement_lines = [
             "{",
-            "    \"closedSymbol\": \"<span style='font-size: 18px; color: blue;'>&#x25A1;</span>\",",
-            "    \"collapseAll\": \"<span style='font-size: 14px; color: blue;'>Collapse all</span>\",",
-            "    \"expandAll\": \"<span style='font-size: 14px; color: green;'>Expand all</span>\",",
-            "    \"labelIsSelector\": \"both\",",
-            "    \"namedToggle\": false,",
-            "    \"openedSymbol\": \"<span style='font-size: 18px; color: green;'>&#x25A0;</span>\",",
-            "    \"selectorBack\": false,",
-            "    \"spaceSymbol\": \"&nbsp;\"",
+            f"    \"closedSymbol\": \"{FontManager.get_closed_symbol(symbol='&#x25A1;', color='blue')}\",",
+            f"    \"collapseAll\": \"{FontManager.get_collapse_all_label(color='blue')}\",",
+            f"    \"expandAll\": \"{FontManager.get_expand_all_label(color='green')}\",",
+            f"    \"labelIsSelector\": \"both\",",
+            f"    \"namedToggle\": false,",
+            f"    \"openedSymbol\": \"{FontManager.get_opened_symbol(symbol='&#x25A0;', color='green')}\",",
+            f"    \"selectorBack\": false,",
+            f"    \"spaceSymbol\": \"&nbsp;\"",
             "}",
             map_add_line,  # Reinsert the captured map add line without extra spaces
             "</script>",

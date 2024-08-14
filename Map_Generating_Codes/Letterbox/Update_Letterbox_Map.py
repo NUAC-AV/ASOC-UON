@@ -38,7 +38,7 @@ map_control.overlay_tree["children"].append({
 map_control.add_tree_layer_control()
 
 # Save the map to an HTML file
-output_html = "Maps/Letterbox/letterbox_test_9.html"
+output_html = "Maps/Letterbox/letterbox_test_10.html"
 map_control.save_map(output_html)
 
 # Create an instance of CustomCSS and apply post-processing

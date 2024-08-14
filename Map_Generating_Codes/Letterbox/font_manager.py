@@ -5,8 +5,8 @@ class FontManager:
     end_strong = '</strong>'
     end_span_strong = '</span></strong>'
     
-    collapse_all_label = '<span style="font-size: 14px; color: {color};">Collapse all</span>'
-    expand_all_label = '<span style="font-size: 14px; color: {color};">Expand all</span>'
+    collapse_all_label = "<span style='font-size: 14px; color: {color};'>Collapse all</span>"
+    expand_all_label = "<span style='font-size: 14px; color: {color};'>Expand all</span>"
     
     @staticmethod
     def get_header_font(text, color='black'):
@@ -21,12 +21,12 @@ class FontManager:
         return f'{FontManager.label_font.format(color=color)}{text}{FontManager.end_span_strong}'
     
     @staticmethod
-    def get_closed_symbol(symbol='&#9654;', color='black', size='18px'):
-        return f'<span style="font-size: {size}; color: {color};">{symbol}</span>'
+    def get_closed_symbol(symbol='&#x25A1;', color='black', size='18px'):
+        return f"<span style='font-size: {size}; color: {color};'>{symbol}</span>"
     
     @staticmethod
-    def get_opened_symbol(symbol='&#9662;', color='black', size='18px'):
-        return f'<span style="font-size: {size}; color: {color};">{symbol}</span>'
+    def get_opened_symbol(symbol='&#x25A0;', color='black', size='18px'):
+        return f"<span style='font-size: {size}; color: {color};'>{symbol}</span>"
     
     @staticmethod
     def get_collapse_all_label(color='black'):
