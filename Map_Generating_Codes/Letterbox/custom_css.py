@@ -44,27 +44,6 @@ class CustomCSS:
         
         self.map.get_root().html.add_child(Element(custom_css))
 
-    def remove_end_lines(self):
-        """Remove the last five lines of the HTML content and update the map."""
-        html_obj = self.map.get_root().html
-
-        # Extract the HTML content as a string
-        html_content = str(html_obj.render())
-
-        # Split the HTML content into lines
-        html_lines = html_content.splitlines()
-
-        # Remove the last five lines
-        html_lines = html_lines[:-5]
-
-        # Join the remaining lines back into a single string
-        updated_html_content = "\n".join(html_lines)
-
-        # Replace the HTML content in the map object
-        html_obj._children.clear()
-        html_obj.add_child(Element(updated_html_content))
-
-
     def post_process_html(self, filename):
         """Post-process the HTML file by removing the last five lines and adding the correct content."""
         # Read the HTML file into a string
