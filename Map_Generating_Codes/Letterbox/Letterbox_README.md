@@ -8,11 +8,11 @@ The Letterbox project is designed to generate interactive maps with custom layer
 
 - [Letterbox](../Letterbox/)
     - [custom_css.py](../Letterbox/custom_css.py)
+    - [font_manager.py](../Letterbox/font_manager.py)
     - [gpx_handler.py](../Letterbox/gpx_handler.py)
     - [layer_manager.py](../Letterbox/layer_manager.py)
     - [map_utils.py](../Letterbox/map_utils.py)
     - [tree_layer_control.py](../Letterbox/tree_layer_control.py)
-    - [font_manager.py](../Letterbox/font_manager.py)
     - [Update_Letterbox_map.py](../Letterbox/Update_Letterbox_map.py)
 
 ## Files
