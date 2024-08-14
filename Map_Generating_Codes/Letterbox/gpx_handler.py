@@ -2,6 +2,8 @@ import os
 import folium
 import gpxpy
 
+from font_manager import FontManager
+
 class GPXHandler:
     def __init__(self, map_object):
         self.map = map_object
@@ -21,7 +23,11 @@ class GPXHandler:
         route_layer.add_to(self.map)
         
         # Add GPX route to the GPX layers list
-        self.gpx_layers.append({"label": layer_name, "layer": route_layer, "collapsed": False})
+        self.gpx_layers.append({
+            "label": FontManager.get_label_font(layer_name), 
+            "layer": route_layer,
+            "collapsed": False
+        })
 
     def add_gpx_routes(self, folder_path, color='black', show=True):
         for filename in os.listdir(folder_path):

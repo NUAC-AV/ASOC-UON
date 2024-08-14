@@ -1,11 +1,11 @@
 import folium
 from folium import Element
 from folium.plugins import TreeLayerControl
-
-from custom_css import CustomCSS  # Import the CustomCSS class
-from layer_manager import LayerManager  # Import the LayerManager class
-from map_utils import MapUtils  # Import the MapUtils class
-from gpx_handler import GPXHandler  # Import the GPXHandler class
+from custom_css import CustomCSS  
+from layer_manager import LayerManager  
+from map_utils import MapUtils  
+from gpx_handler import GPXHandler  
+from font_manager import FontManager 
 
 class MapWithTreeLayerControl:
     def __init__(self, base_places, map_location=(-32.9, 151.79), zoom_start=12):
@@ -30,7 +30,7 @@ class MapWithTreeLayerControl:
             "collapsed": False,
             "children": [
                 {
-                    "label": '<strong style="font-size: 18pt;">Regions and Suburbs</strong>',
+                    "label": FontManager.get_header_font('Regions and Suburbs'),
                     "select_all_checkbox": True,
                     "collapsed": True,
                     "children": []  # Will be populated by LayerManager
@@ -50,20 +50,24 @@ class MapWithTreeLayerControl:
         tree_control = TreeLayerControl(
             base_tree=None,
             overlay_tree=self.overlay_tree,
-            closed_symbol='+',
-            opened_symbol='-',
+            closed_symbol=FontManager.get_closed_symbol(symbol='&#x25A1;', color='blue'),
+            opened_symbol=FontManager.get_opened_symbol(symbol='&#x25A0;', color='green'),
             space_symbol='&nbsp;',
             selector_back=False,
             named_toggle=False,
-            collapse_all='Collapse all',
-            expand_all='Expand all',
+            collapse_all=FontManager.get_collapse_all_label(color='blue'),
+            expand_all=FontManager.get_expand_all_label(color='green'),
             label_is_selector='both'
         )
         tree_control.add_to(self.map)
 
         # Apply custom CSS from the separate class
-        css = CustomCSS(self.map)
-        css.add_css()
+        # css = CustomCSS(self.map)
+        # css.add_css()
+        # css.remove_end_lines()
+        # #css.ammend_end_css()
+
 
     def save_map(self, output_html):
         self.map.save(output_html)
+

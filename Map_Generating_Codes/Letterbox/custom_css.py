@@ -38,10 +38,75 @@ class CustomCSS:
             margin-bottom: 4px; /* Add a small margin below the checkbox */
             /* Increase the font size of the open and closed symbols */
         }
-        /* Increase the font size of the open and closed symbols */
-        .leaflet-control-layers-list .leaflet-control-layers-selector:before {
-            font-size: 75px; /* Adjust this value to increase symbol size */
-        }
         </style>
         """
+        
         self.map.get_root().html.add_child(Element(custom_css))
+
+    def remove_end_lines(self):
+        """Remove the last five lines of the HTML content and update the map."""
+        html_obj = self.map.get_root().html
+
+        # Extract the HTML content as a string
+        html_content = str(html_obj.render())
+
+        # Split the HTML content into lines
+        html_lines = html_content.splitlines()
+
+        # Remove the last five lines
+        html_lines = html_lines[:-5]
+
+        # Join the remaining lines back into a single string
+        updated_html_content = "\n".join(html_lines)
+
+        # Replace the HTML content in the map object
+        html_obj._children.clear()
+        html_obj.add_child(Element(updated_html_content))
+
+
+    def post_process_html(self, filename):
+        """Post-process the HTML file by removing the last five lines and adding the correct content."""
+        # Read the HTML file into a string
+        with open(filename, 'r') as file:
+            html_as_string = file.read()
+
+        # Split the HTML content into lines
+        html_lines = html_as_string.splitlines()
+
+        # Capture the fourth-to-last line which contains the addTo(map_...) statement
+        map_add_line = html_lines[-4].strip() if len(html_lines) >= 4 else ""
+
+        # Remove the last five lines
+        if len(html_lines) >= 5:
+            html_lines = html_lines[:-5]
+
+        # Add the new content, including the captured map_add_line
+        replacement_lines = [
+            "{",
+            "    \"closedSymbol\": \"<span style='font-size: 18px; color: blue;'>&#x25A1;</span>\",",
+            "    \"collapseAll\": \"<span style='font-size: 14px; color: blue;'>Collapse all</span>\",",
+            "    \"expandAll\": \"<span style='font-size: 14px; color: green;'>Expand all</span>\",",
+            "    \"labelIsSelector\": \"both\",",
+            "    \"namedToggle\": false,",
+            "    \"openedSymbol\": \"<span style='font-size: 18px; color: green;'>&#x25A0;</span>\",",
+            "    \"selectorBack\": false,",
+            "    \"spaceSymbol\": \"&nbsp;\"",
+            "}",
+            map_add_line,  # Reinsert the captured map add line without extra spaces
+            "</script>",
+            "</html>"
+        ]
+
+        # Combine the remaining lines with the replacement lines
+        updated_html_lines = html_lines + replacement_lines
+
+        # Join the lines back into a single string
+        updated_html_content = "\n".join(updated_html_lines)
+
+        # Write the updated content back to the file
+        with open(filename, 'w') as file:
+            file.write(updated_html_content)
+
+        print("Post-processing completed successfully.")
+
+       

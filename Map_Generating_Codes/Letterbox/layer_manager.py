@@ -1,5 +1,7 @@
-from map_utils import MapUtils  # Import MapUtils for utility functions
 import folium
+
+from map_utils import MapUtils 
+from font_manager import FontManager
 
 class LayerManager:
     def __init__(self, map_object, base_places, base_colors, overlay_tree):
@@ -15,7 +17,7 @@ class LayerManager:
             base_color = self.base_colors[i % len(self.base_colors)]
 
             # Create a bold and colored region label
-            region_label = f'<strong><span style="color: {base_color}; font-size: 18px;;">Region {i+1}</span></strong>'
+            region_label = FontManager.get_subheader_font(f'Region {i+1}', color=base_color)
             region_children = []
 
             for j, (suburb_name, (index, row)) in enumerate(zip(base_group, region.iterrows())):
@@ -36,7 +38,7 @@ class LayerManager:
 
                 suburb_layer.add_to(self.map)
                 region_children.append({
-                    "label": f'<span style="color: {shade}; font-size: 15px;">{suburb_short_name}</span>',
+                    "label": FontManager.get_label_font(f'{suburb_short_name}', color=shade),
                     "layer": suburb_layer,
                     "collapsed": True
                 })
