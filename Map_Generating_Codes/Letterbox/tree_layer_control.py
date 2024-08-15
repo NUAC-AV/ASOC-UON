@@ -31,7 +31,7 @@ class MapWithTreeLayerControl:
                 {
                     "label": FontManager.get_header_font('Regions and Suburbs'),
                     "select_all_checkbox": True,
-                    "collapsed": False,
+                    "collapsed": True,
                     "children": []  # Will be populated by LayerManager
                 },
             ]

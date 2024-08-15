@@ -13,8 +13,8 @@ class CustomCSS:
             font-size: 16px;  /* Increase font size */
             padding: 10px;    /* Add padding around the control */
             width: 300px;     /* Increase width of the control */
-            max-height: 200px; /* Set maximum height of the control */
-            overflow-y: auto; /* Add vertical scrolling when content exceeds the height */
+            max-height: 300px; /* Reduce maximum height of the control */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .leaflet-control-layers-toggle {
             width: 50px;  /* Adjust the toggle button width */

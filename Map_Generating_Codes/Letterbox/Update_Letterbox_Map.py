@@ -14,6 +14,11 @@ class UpdateLetterboxMap:
     def create_map(self):
         # Create the map with TreeLayerControl
         self.map_control = MapWithTreeLayerControl(self.base_places)
+        # Create an instance of CustomCSS
+        css = CustomCSS(self.map_control.map)
+        # Apply custom CSS using add_css()
+        css.add_css()
+
 
     def add_gpx_routes(self):
         # Create an instance of GPXHandler and load the GPX routes
@@ -36,6 +41,7 @@ class UpdateLetterboxMap:
     def save_map(self):
         # Save the map to an HTML file
         self.map_control.save_map(self.output_html)
+
 
     def apply_custom_css(self):
         # Create an instance of CustomCSS and apply post-processing
