@@ -11,7 +11,7 @@ class MapWithTreeLayerControl:
         self.base_places = base_places
         self.map_location = map_location
         self.zoom_start = zoom_start
-        self.map = folium.Map(location=self.map_location, zoom_start=self.zoom_start)
+        self.map = folium.Map(location=self.map_location, zoom_start=self.zoom_start, zoom_control=False)
         self.base_colors = [
             '#1f77b4',  # blue
             '#ff7f0e',  # orange
