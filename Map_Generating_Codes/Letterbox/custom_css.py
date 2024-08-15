@@ -11,9 +11,9 @@ class CustomCSS:
         /* Increase the size of the layer control */
         .leaflet-control-layers {
             font-size: 16px;  /* Increase font size */
-            padding: 10px;    /* Add padding around the control */
-            width: 330px;     /* Increase width of the control */
-            max-height: 280px; /* Reduce maximum height of the control */
+            padding: 5px;    /* Add padding around the control */
+            width: 250px;     /* Increase width of the control */
+            max-height: 250px; /* Reduce maximum height of the control */
             overflow-y: auto; /* Enable vertical scrolling */
         }
         .leaflet-control-layers-toggle {
