@@ -17,8 +17,8 @@ class CustomCSS:
             overflow-y: auto; /* Enable vertical scrolling */
         }
         .leaflet-control-layers-toggle {
-            width: 50px;  /* Adjust the toggle button width */
-            height: 50px; /* Adjust the toggle button height */
+            width: 45px;  /* Adjust the toggle button width */
+            height: 45px; /* Adjust the toggle button height */
             background-size: 80px 80px; /* Adjust background icon size */
             background-image: url('Images/ASOC-Logo-orange.png');  /* Use your custom image */
             background-repeat: no-repeat;

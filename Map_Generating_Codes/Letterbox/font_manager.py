@@ -1,7 +1,7 @@
 class FontManager:
-    header_font = '<strong style="font-size: 16pt; color: {color};">'  # For larger header fonts
-    subheader_font = '<strong style="font-size: 13pt; color: {color};">'  # For subheader fonts
-    label_font = '<strong><span style="font-size: 10px; color: {color};">'  # For smaller label fonts
+    header_font = '<strong style="font-size: 14pt; color: {color};">'  # For larger header fonts
+    subheader_font = '<strong style="font-size: 14pt; color: {color};">'  # For subheader fonts
+    label_font = '<strong><span style="font-size: 14px; color: {color};">'  # For smaller label fonts
     end_strong = '</strong>'
     end_span_strong = '</span></strong>'
     
@@ -30,9 +30,9 @@ class FontManager:
 
 
     @staticmethod
-    def get_collapse_all_label(color='black'):
+    def get_collapse_all_label(color='red'):
         return FontManager.collapse_all_label.format(color=color)
     
     @staticmethod
-    def get_expand_all_label(color='black'):
+    def get_expand_all_label(color='green'):
         return FontManager.expand_all_label.format(color=color)

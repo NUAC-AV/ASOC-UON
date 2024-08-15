@@ -139,6 +139,17 @@ The Letterbox project is designed to generate interactive maps with custom layer
 **Map number.**
 - 11:  
 - 12: Used down(red) and right(green) arrows for closed and open symbols respectively.
+- 13: 
+  | header | subheader | label | 
+  | :---:  | :-------: | :---: |
+  | 16     | 14        | 12    |
+  Collaspe all text red  
+  Expand all text green
+- 14:
+  | header | subheader | label | 
+  | :---:  | :-------: | :---: |
+  | 14     | 14        | 14    |
+- 15: 
 
 ## UML Diagram
 
