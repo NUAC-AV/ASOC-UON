@@ -1,7 +1,7 @@
 class FontManager:
-    header_font = '<strong style="font-size: 18pt; color: {color};">'  # For larger header fonts
-    subheader_font = '<strong style="font-size: 16pt; color: {color};">'  # For subheader fonts
-    label_font = '<strong><span style="font-size: 18px; color: {color};">'  # For smaller label fonts
+    header_font = '<strong style="font-size: 16pt; color: {color};">'  # For larger header fonts
+    subheader_font = '<strong style="font-size: 13pt; color: {color};">'  # For subheader fonts
+    label_font = '<strong><span style="font-size: 10px; color: {color};">'  # For smaller label fonts
     end_strong = '</strong>'
     end_span_strong = '</span></strong>'
     
