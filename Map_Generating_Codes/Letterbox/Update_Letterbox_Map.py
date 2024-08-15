@@ -2,6 +2,7 @@ from tree_layer_control import MapWithTreeLayerControl
 from gpx_handler import GPXHandler  
 from font_manager import FontManager
 from custom_css import CustomCSS 
+import folium
 
 class UpdateLetterboxMap:
     def __init__(self, base_places, gpx_folder, output_html):
@@ -37,6 +38,7 @@ class UpdateLetterboxMap:
     def add_tree_layer_control(self):
         # Add the tree layer control to the map
         self.map_control.add_tree_layer_control()
+    
 
     def save_map(self):
         # Save the map to an HTML file
@@ -72,7 +74,7 @@ if __name__ == "__main__":
         # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
     ]
     gpx_folder = "GPX_Files/Misc"
-    output_html = "Maps/Letterbox/letterbox_test_16.html"
+    output_html = "Maps/Letterbox/letterbox_test_17.html"
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()
