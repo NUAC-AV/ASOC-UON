@@ -12,7 +12,9 @@ class CustomCSS:
         .leaflet-control-layers {
             font-size: 16px;  /* Increase font size */
             padding: 10px;    /* Add padding around the control */
-            width: 350px;     /* Increase width of the control */
+            width: 300px;     /* Increase width of the control */
+            max-height: 200px; /* Set maximum height of the control */
+            overflow-y: auto; /* Add vertical scrolling when content exceeds the height */
         }
         .leaflet-control-layers-toggle {
             width: 50px;  /* Adjust the toggle button width */
@@ -63,12 +65,12 @@ class CustomCSS:
         # # Generate the replacement lines using the FontManager
         replacement_lines = [
             "{",
-            f"    \"closedSymbol\": \"{FontManager.get_closed_symbol(symbol='&#x25A1;', color='blue')}\",",
-            f"    \"collapseAll\": \"{FontManager.get_collapse_all_label(color='blue')}\",",
-            f"    \"expandAll\": \"{FontManager.get_expand_all_label(color='green')}\",",
+            f"    \"closedSymbol\": \"{FontManager.get_closed_symbol()}\",",
+            f"    \"collapseAll\": \"{FontManager.get_collapse_all_label()}\",",
+            f"    \"expandAll\": \"{FontManager.get_expand_all_label()}\",",
             f"    \"labelIsSelector\": \"both\",",
             f"    \"namedToggle\": false,",
-            f"    \"openedSymbol\": \"{FontManager.get_opened_symbol(symbol='&#x25A0;', color='green')}\",",
+            f"    \"openedSymbol\": \"{FontManager.get_opened_symbol()}\",",
             f"    \"selectorBack\": false,",
             f"    \"spaceSymbol\": \"&nbsp;\"",
             "}",

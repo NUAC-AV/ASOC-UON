@@ -21,13 +21,14 @@ class FontManager:
         return f'{FontManager.label_font.format(color=color)}{text}{FontManager.end_span_strong}'
     
     @staticmethod
-    def get_closed_symbol(symbol='&#x25A1;', color='black', size='18px'):
+    def get_closed_symbol(symbol='&#x25B6;', color='red', size='22px'):  # Right Triangle
         return f"<span style='font-size: {size}; color: {color};'>{symbol}</span>"
-    
+
     @staticmethod
-    def get_opened_symbol(symbol='&#x25A0;', color='black', size='18px'):
+    def get_opened_symbol(symbol='&#x25BC;', color='green', size='22px'):  # Down Triangle
         return f"<span style='font-size: {size}; color: {color};'>{symbol}</span>"
-    
+
+
     @staticmethod
     def get_collapse_all_label(color='black'):
         return FontManager.collapse_all_label.format(color=color)

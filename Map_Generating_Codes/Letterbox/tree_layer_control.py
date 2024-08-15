@@ -1,7 +1,6 @@
 import folium
 from folium import Element
 from folium.plugins import TreeLayerControl
-from custom_css import CustomCSS  
 from layer_manager import LayerManager  
 from map_utils import MapUtils  
 from gpx_handler import GPXHandler  
@@ -32,7 +31,7 @@ class MapWithTreeLayerControl:
                 {
                     "label": FontManager.get_header_font('Regions and Suburbs'),
                     "select_all_checkbox": True,
-                    "collapsed": True,
+                    "collapsed": False,
                     "children": []  # Will be populated by LayerManager
                 },
             ]
@@ -60,12 +59,6 @@ class MapWithTreeLayerControl:
             label_is_selector='both'
         )
         tree_control.add_to(self.map)
-
-        # Apply custom CSS from the separate class
-        # css = CustomCSS(self.map)
-        # css.add_css()
-        # css.remove_end_lines()
-        # #css.ammend_end_css()
 
 
     def save_map(self, output_html):
