@@ -128,16 +128,16 @@ class MapUtils:
     @staticmethod
     def generate_recenter_code(suburb_data, map_memory_number):
         """
-        Generates the JavaScript code block to recenter the map on specific suburbs
+        Generates the JavaScript code block to recenter the map on specific suburbs and regions
         when their layers are added.
 
-        :param suburb_data: A list of suburb data dictionaries containing names, feature groups, centroids, and zoom levels.
+        :param suburb_data: A list of suburb data dictionaries containing names, feature groups, centroids, zoom levels, and regions.
         :param map_memory_number: The unique identifier for the map (e.g., map_96432543117ac5c1a2617564a0927e1b).
         :return: A string containing the JavaScript code block.
         """
         # Ensure suburb_data is a list of dictionaries
-        # if not isinstance(suburb_data, list) or not all(isinstance(suburb, dict) for suburb in suburb_data):
-        #     raise ValueError("suburb_data must be a list of dictionaries")
+        if not isinstance(suburb_data, list) or not all(isinstance(suburb, dict) for suburb in suburb_data):
+            raise ValueError("suburb_data must be a list of dictionaries")
 
         js_code = f"""
         document.addEventListener('DOMContentLoaded', function() {{
@@ -148,13 +148,15 @@ class MapUtils:
                 console.log("Overlay added: ", e.layer);  // Debug: Log the layer added
         """
 
+        regions = {}
         for suburb in suburb_data:
-            # Check that all required keys are present in each dictionary
-            if all(key in suburb for key in ("feature_group", "centroid", "zoom_level", "name")):
+            # Ensure each dictionary has the expected keys
+            if all(key in suburb for key in ("feature_group", "centroid", "zoom_level", "name", "region")):
                 suburb_name = suburb["name"]
                 feature_group_var = suburb["feature_group"]
                 latitude, longitude = suburb["centroid"]
                 zoom_level = suburb["zoom_level"]
+                region_name = suburb["region"]
 
                 # Generate the recenter block for each suburb
                 js_code += f"""
@@ -167,10 +169,32 @@ class MapUtils:
                     }});
                 }}
                 """
-            # else:
-            #     # Warn about missing keys in a specific suburb dictionary
-            #     missing_keys = [key for key in ("feature_group", "centroid", "zoom_level", "name") if key not in suburb]
-            #     print(f"Warning: Suburb {suburb.get('name', 'Unknown')} is missing keys: {missing_keys}")
+
+                # Group suburbs by region
+                if region_name not in regions:
+                    regions[region_name] = []
+                regions[region_name].append({
+                    "feature_group": feature_group_var,
+                    "centroid": (latitude, longitude),
+                    "zoom_level": zoom_level
+                })
+
+        # Generate the recenter block for each region
+        for region_name, suburbs in regions.items():
+            region_centroid = np.mean([suburb["centroid"] for suburb in suburbs], axis=0)
+            region_zoom_level = max(suburb["zoom_level"] for suburb in suburbs)
+            feature_groups = " && ".join([f"map.hasLayer({suburb['feature_group']})" for suburb in suburbs])
+
+            js_code += f"""
+            // Recenter for {region_name}
+            if ({feature_groups}) {{
+                console.log("Recenter to {region_name}");  // Debug: Log if condition is met
+                map.setView([{region_centroid[0]:.5f}, {region_centroid[1]:.5f}], {region_zoom_level}, {{
+                    animate: true,
+                    pan: {{duration: 1}}
+                }});
+            }}
+            """
 
         # Close the JavaScript block
         js_code += """
@@ -179,6 +203,7 @@ class MapUtils:
         """
 
         return js_code
+
     
 
     @staticmethod

@@ -36,7 +36,7 @@ if __name__ == "__main__":
         # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
     ]
     gpx_folder = "GPX_Files/Empty"
-    output_html = "Maps/Letterbox/letterbox_test_20.html"
+    output_html = "Maps/Letterbox/letterbox_test_21.html"
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()

@@ -8,12 +8,36 @@ class SuburbManager:
         self.location = location
         self.suburb_data = self.initialize_suburbs()
 
+    # def initialize_suburbs(self):
+    #     """ Initialize the suburb data with names, feature groups, GeoJSON, centroids, and zoom levels. """
+    #     suburb_data = []
+    #     geojson_data = MapUtils.geocode_places(self.base_places, self.location)  # Use MapUtils to geocode places
+
+    #     for base_group, geojson in zip(self.base_places, geojson_data):
+    #         for suburb_name, (index, row) in zip(base_group, geojson.iterrows()):
+    #             suburb_short_name = suburb_name.split(',')[0]  # Extract only the suburb name
+    #             geometry = row['geometry']
+    #             centroid = geometry.centroid  # Calculate the centroid of the GeoJSON
+    #             zoom_level = self.calculate_zoom_level(geometry)  # Calculate the zoom level
+
+    #             suburb_info = {
+    #                 "name": suburb_short_name,
+    #                 "geojson": geometry,
+    #                 "centroid": (centroid.y, centroid.x),  # Store the centroid as (latitude, longitude)
+    #                 "zoom_level": zoom_level,
+    #                 "feature_group": None  # Placeholder for feature group, to be populated later
+    #             }
+    #             suburb_data.append(suburb_info)
+
+    #     return suburb_data
+    
     def initialize_suburbs(self):
-        """ Initialize the suburb data with names, feature groups, GeoJSON, centroids, and zoom levels. """
+        """ Initialize the suburb data with names, feature groups, GeoJSON, centroids, zoom levels, and regions. """
         suburb_data = []
         geojson_data = MapUtils.geocode_places(self.base_places, self.location)  # Use MapUtils to geocode places
 
-        for base_group, geojson in zip(self.base_places, geojson_data):
+        for region_index, (base_group, geojson) in enumerate(zip(self.base_places, geojson_data)):
+            region_name = f"Region {region_index + 1}"  # Assign region based on sublist index
             for suburb_name, (index, row) in zip(base_group, geojson.iterrows()):
                 suburb_short_name = suburb_name.split(',')[0]  # Extract only the suburb name
                 geometry = row['geometry']
@@ -25,6 +49,7 @@ class SuburbManager:
                     "geojson": geometry,
                     "centroid": (centroid.y, centroid.x),  # Store the centroid as (latitude, longitude)
                     "zoom_level": zoom_level,
+                    "region": region_name,  # Add region information
                     "feature_group": None  # Placeholder for feature group, to be populated later
                 }
                 suburb_data.append(suburb_info)

@@ -148,6 +148,8 @@ class CreateMap:
         MapUtils.insert_recenter_code_in_html(output_html, recenter_code)
 
         print(f"Modifications applied to {output_html} successfully.")
+    
+        #print(suburb_data)
 
             
 
