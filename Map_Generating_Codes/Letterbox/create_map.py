@@ -1,15 +1,14 @@
 import folium
-from folium import Element
 from folium.plugins import TreeLayerControl
 from layer_manager import LayerManager  
 from map_utils import MapUtils  
-from gpx_handler import GPXHandler  
 from font_manager import FontManager 
-from custom_css import CustomCSS 
+from suburb_manager import SuburbManager
 
-class MapWithTreeLayerControl:
-    def __init__(self, base_places, map_location=(-32.9, 151.79), zoom_start=12):
+class CreateMap:
+    def __init__(self, base_places, gpx_folder, map_location=(-32.9, 151.79), zoom_start=12):
         self.base_places = base_places
+        self.gpx_folder = gpx_folder
         self.map_location = map_location
         self.zoom_start = zoom_start
         self.map = folium.Map(location=self.map_location, zoom_start=self.zoom_start, zoom_control=False)
@@ -38,9 +37,14 @@ class MapWithTreeLayerControl:
             ]
         }
 
-        # Initialize LayerManager to handle layer creation
+        # Initialize LayerManager to handle both suburb and GPX layer creation
         self.layer_manager = LayerManager(self.map, self.base_places, self.base_colors, self.overlay_tree)
-        self.layer_manager.add_layers()  # Add layers to the map
+        self.layer_manager.add_layers()  # Add suburb layers to the map
+        self.layer_manager.add_gpx_routes(self.gpx_folder)  # Add GPX layers to the map
+
+    def apply_custom_css(self):
+        # Apply custom CSS using MapUtils
+        MapUtils.add_css(self.map)
 
     def add_tree_layer_control(self):
         # Replace "Maps" label with the ASOC logo image
@@ -61,15 +65,15 @@ class MapWithTreeLayerControl:
         )
         tree_control.add_to(self.map)
 
+    def setup_map(self):
+        self.apply_custom_css()
+        self.add_tree_layer_control()
 
     def save_map(self, output_html):
         self.map.save(output_html)
         # Post-process the HTML file to inject additional custom JavaScript or CSS, if needed
-        css = CustomCSS(self.map)
-        css.post_process_html(output_html)
-        # # Generate the suburb data for recentering
+        MapUtils.post_process_html(output_html)
+        # If needed, generate the suburb data for recentering and add recenter JS to the HTML file
         # suburb_data = MapUtils.generate_suburb_data(self.map, self.base_places)
-        
-        # # Add recenter JavaScript to the HTML file
         # MapUtils.add_recenter_js_to_html(output_html, suburb_data)
 

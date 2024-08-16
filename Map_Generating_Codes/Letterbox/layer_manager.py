@@ -1,6 +1,7 @@
+import os
 import folium
-
-from map_utils import MapUtils 
+import gpxpy
+from map_utils import MapUtils
 from font_manager import FontManager
 
 class LayerManager:
@@ -10,6 +11,7 @@ class LayerManager:
         self.base_colors = base_colors
         self.overlay_tree = overlay_tree
         self.regions = MapUtils.geocode_places(base_places)  # Initialize regions by geocoding places
+        self.gpx_layers = []  # List to store GPX layers
 
     def add_layers(self):
         for i, (base_group, region) in enumerate(zip(self.base_places, self.regions)):
@@ -50,3 +52,33 @@ class LayerManager:
                 "collapsed": True,
                 "children": region_children
             })
+
+    def add_gpx_route(self, gpx_file, layer_name="GPX Route", color='blue', show=True):
+        with open(gpx_file, 'r') as f:
+            gpx = gpxpy.parse(f)
+
+        route_layer = folium.FeatureGroup(name=layer_name, show=show)  # `show=True` makes it visible by default
+
+        for track in gpx.tracks:
+            for segment in track.segments:
+                points = [(point.latitude, point.longitude) for point in segment.points]
+                folium.PolyLine(points, color=color, weight=2.5, opacity=1).add_to(route_layer)
+
+        route_layer.add_to(self.map)
+        
+        # Add GPX route to the GPX layers list
+        self.gpx_layers.append({
+            "label": FontManager.get_label_font(layer_name), 
+            "layer": route_layer,
+            "collapsed": False
+        })
+
+    def add_gpx_routes(self, folder_path, color='black', show=True):
+        for filename in os.listdir(folder_path):
+            if filename.endswith(".gpx"):
+                gpx_file_path = os.path.join(folder_path, filename)
+                layer_name = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
+                self.add_gpx_route(gpx_file_path, layer_name, color, show)
+
+    def get_gpx_layers(self):
+        return self.gpx_layers
