@@ -43,6 +43,27 @@ class CreateMap:
         self.layer_manager = LayerManager(self.map, self.base_places, self.base_colors, self.overlay_tree)
         self.layer_manager.add_layers()  # Add suburb layers to the map
         self.layer_manager.add_gpx_routes(self.gpx_folder)  # Add GPX layers to the map
+        # Initialize the SuburbManager and store it as an attribute
+        self.suburb_manager = SuburbManager(self.base_places)
+
+    
+    @staticmethod
+    def get_map_memory_number(html_content):
+        """
+        Extracts the map memory number (map ID) from the given HTML content.
+
+        :param html_content: The HTML content of the Folium map as a string.
+        :return: The map memory number as a string.
+        """
+        # Regex pattern to find the map ID
+        pattern = re.compile(r'id="map_([a-f0-9]+)"')
+        match = pattern.search(html_content)
+
+        if match:
+            return f"map_{match.group(1)}"
+        else:
+            raise ValueError("Map memory number not found in the HTML content.")
+
 
     def apply_custom_css(self):
         # Apply custom CSS using MapUtils
@@ -67,32 +88,66 @@ class CreateMap:
         )
         tree_control.add_to(self.map)
 
+
     def setup_map(self):
         self.apply_custom_css()
         self.add_tree_layer_control()
 
-    def save_map(self, output_html):
+    # def save_map(self, output_html):
+    #     self.map.save(output_html)
+    #     # Post-process the HTML file to inject additional custom JavaScript or CSS, if needed
+    #     MapUtils.post_process_html(output_html)
+    #     # If needed, generate the suburb data for recentering and add recenter JS to the HTML file
+    #     # suburb_data = MapUtils.generate_suburb_data(self.map, self.base_places)
+    #     # MapUtils.add_recenter_js_to_html(output_html, suburb_data)
+
+    #     # Generate and insert the recentering JavaScript
+    #     #MapUtils.generate_recenter_code(output_html, self.map_memory_number)
+    #     # In your CreateMap class, before calling generate_recenter_code:
+    #     # print("Suburb Data:", self.suburb_manager.get_suburb_info())
+    #     # print("Suburb Data Type:", type(self.suburb_manager.get_suburb_info()))
+
+    #     # Generate and insert the recentering JavaScript
+    #     self.suburb_manager.extract_suburb_data(html_content)
+    #     self.generate_recenter_js(output_html)
+
+    
+    def initialize_map(self, output_html):
+        """
+        Initialize and save the map to an HTML file.
+        """
         self.map.save(output_html)
+        print(f"Map initialized and saved to {output_html} successfully.")
+
+
+    def save_map(self, output_html):
+        """
+        Modify the saved HTML file to inject additional JavaScript and CSS.
+        """
+        # First, initialize and save the map
+        self.initialize_map(output_html)
+        
         # Post-process the HTML file to inject additional custom JavaScript or CSS, if needed
         MapUtils.post_process_html(output_html)
-        # If needed, generate the suburb data for recentering and add recenter JS to the HTML file
-        # suburb_data = MapUtils.generate_suburb_data(self.map, self.base_places)
-        # MapUtils.add_recenter_js_to_html(output_html, suburb_data)
+        
+        # Read the saved HTML file to extract the feature groups
+        with open(output_html, 'r') as file:
+            html_content = file.read()
 
-    @staticmethod
-    def get_map_memory_number(html_content):
-        """
-        Extracts the map memory number (map ID) from the given HTML content.
+        # Extract feature groups using the SuburbManager
+        self.suburb_manager.extract_suburb_data(html_content)
 
-        :param html_content: The HTML content of the Folium map as a string.
-        :return: The map memory number as a string.
-        """
-        # Regex pattern to find the map ID
-        pattern = re.compile(r'id="map_([a-f0-9]+)"')
-        match = pattern.search(html_content)
+        # Get the map memory number (ID) from the map object
+        map_memory_number = self.map.get_name()
 
-        if match:
-            return f"map_{match.group(1)}"
-        else:
-            raise ValueError("Map memory number not found in the HTML content.")
+        # Generate the recentering JavaScript code
+        suburb_data = self.suburb_manager.get_suburb_info()
+        recenter_code = MapUtils.generate_recenter_code(suburb_data, map_memory_number)
+
+        # Insert the recentering JavaScript code into the HTML file
+        MapUtils.insert_recenter_code_in_html(output_html, recenter_code)
+
+        print(f"Modifications applied to {output_html} successfully.")
+
+            
 
