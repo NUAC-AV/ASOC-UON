@@ -5,6 +5,7 @@ from layer_manager import LayerManager
 from map_utils import MapUtils  
 from gpx_handler import GPXHandler  
 from font_manager import FontManager 
+from custom_css import CustomCSS 
 
 class MapWithTreeLayerControl:
     def __init__(self, base_places, map_location=(-32.9, 151.79), zoom_start=12):
@@ -63,4 +64,8 @@ class MapWithTreeLayerControl:
 
     def save_map(self, output_html):
         self.map.save(output_html)
+        # Post-process the HTML file to inject additional custom JavaScript or CSS, if needed
+        css = CustomCSS(self.map)
+        css.add_recenter_js_to_html(output_html, self.base_places)
+        css.post_process_html(output_html)
 
