@@ -410,6 +410,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
 - [ ] Add route maps for all walks
 - [ ] Redesign create_route_map codes
 - [x] Create letterbox map
+- [ ] Make website wrapper for maps
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
