@@ -1806,6 +1806,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var map = map_96432543117ac5c1a2617564a0927e1b;  // Access the Leaflet map instance by its ID
+
+    // Event listener for overlay addition
+    map.on('overlayadd', function(e) {
+        console.log("Overlay added: ", e.layer);  // Debug: Log the layer added
+
+        // Recenter for Shortland
+        if (e.layer === feature_group_db594300a2ac02df06177ff7f1ecda75) {
+            console.log("Recenter to Shortland");  // Debug: Log if condition is met
+            map.setView([-32.890, 151.692], 13, {  // Adjust the coordinates to the appropriate center for Shortland
+                animate: true,
+                pan: {duration: 1}
+            });
+        } else {
+            console.log("Layer does not match Shortland");  // Debug: Log if no match
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var map = map_96432543117ac5c1a2617564a0927e1b;  // Access the Leaflet map instance by its ID
+
+    // Event listener for overlay addition
+    map.on('overlayadd', function(e) {
+        console.log("Overlay added: ", e.layer);  // Debug: Log the layer added
+
+        // Recenter for Adamstown Heights
+        if (e.layer === feature_group_96c98c0aee993835929550f6f0df558d) {
+            console.log("Recenter to Adamstown Heights");  // Debug: Log if condition is met
+            map.setView([-32.940, 151.725], 13, {  // Adjust the coordinates to the appropriate center for Adamstown Heights
+                animate: true,
+                pan: {duration: 1}
+            });
+        } else {
+            console.log("Layer does not match Adamstown Heights");  // Debug: Log if no match
+        }
+    });
+});
+
 </script>
 
 </html>
