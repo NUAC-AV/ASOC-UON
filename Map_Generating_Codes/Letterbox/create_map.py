@@ -1,3 +1,4 @@
+import re
 import folium
 from folium.plugins import TreeLayerControl
 from layer_manager import LayerManager  
@@ -12,6 +13,7 @@ class CreateMap:
         self.map_location = map_location
         self.zoom_start = zoom_start
         self.map = folium.Map(location=self.map_location, zoom_start=self.zoom_start, zoom_control=False)
+        self.map_memory_number = None
         self.base_colors = [
             '#1f77b4',  # blue
             '#ff7f0e',  # orange
@@ -76,4 +78,21 @@ class CreateMap:
         # If needed, generate the suburb data for recentering and add recenter JS to the HTML file
         # suburb_data = MapUtils.generate_suburb_data(self.map, self.base_places)
         # MapUtils.add_recenter_js_to_html(output_html, suburb_data)
+
+    @staticmethod
+    def get_map_memory_number(html_content):
+        """
+        Extracts the map memory number (map ID) from the given HTML content.
+
+        :param html_content: The HTML content of the Folium map as a string.
+        :return: The map memory number as a string.
+        """
+        # Regex pattern to find the map ID
+        pattern = re.compile(r'id="map_([a-f0-9]+)"')
+        match = pattern.search(html_content)
+
+        if match:
+            return f"map_{match.group(1)}"
+        else:
+            raise ValueError("Map memory number not found in the HTML content.")
 
