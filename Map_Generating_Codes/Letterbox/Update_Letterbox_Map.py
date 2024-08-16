@@ -2,7 +2,9 @@ from tree_layer_control import MapWithTreeLayerControl
 from gpx_handler import GPXHandler  
 from font_manager import FontManager
 from custom_css import CustomCSS 
+
 import folium
+import osmnx as ox
 
 class UpdateLetterboxMap:
     def __init__(self, base_places, gpx_folder, output_html):
@@ -11,6 +13,7 @@ class UpdateLetterboxMap:
         self.output_html = output_html
         self.map_control = None
         self.gpx_handler = None
+
 
     def create_map(self):
         # Create the map with TreeLayerControl
@@ -25,6 +28,7 @@ class UpdateLetterboxMap:
         # Create an instance of GPXHandler and load the GPX routes
         self.gpx_handler = GPXHandler(self.map_control.map)
         self.gpx_handler.add_gpx_routes(self.gpx_folder)
+
 
     def integrate_gpx_layers(self):
         # Integrate the GPX layers into the MapWithTreeLayerControl
@@ -45,18 +49,13 @@ class UpdateLetterboxMap:
         self.map_control.save_map(self.output_html)
 
 
-    def apply_custom_css(self):
-        # Create an instance of CustomCSS and apply post-processing
-        css = CustomCSS(self.map_control.map)
-        css.post_process_html(self.output_html)
-
     def run(self):
         self.create_map()
         self.add_gpx_routes()
         self.integrate_gpx_layers()
         self.add_tree_layer_control()
         self.save_map()
-        self.apply_custom_css()
+
 
 if __name__ == "__main__":
     base_places = [
@@ -74,7 +73,7 @@ if __name__ == "__main__":
         # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
     ]
     gpx_folder = "GPX_Files/Misc"
-    output_html = "Maps/Letterbox/letterbox_test_17.html"
+    output_html = "Maps/Letterbox/letterbox_test_18.html"
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()

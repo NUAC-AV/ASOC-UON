@@ -153,6 +153,8 @@ The Letterbox project is designed to generate interactive maps with custom layer
   width: 250, height: 250
 - 16:
   width: 3300, height: 280, removed zoom bar
+- 17:
+
 
 ## UML Diagram
 

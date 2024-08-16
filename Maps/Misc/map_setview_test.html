@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map with Layer Control and setView</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet.Control.Layers.Tree CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jjimenezshaw/Leaflet.Control.Layers.Tree@master/L.Control.Layers.Tree.css" />
+
+    <style>
+        /* Set the size of the map container */
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map" style="width: 100%; height: 500px;"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jjimenezshaw/Leaflet.Control.Layers.Tree@master/L.Control.Layers.Tree.js"></script>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+        attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
+    }).addTo(map);
+
+    var cityMarkers = L.layerGroup([
+        L.marker([51.5, -0.09]).bindPopup('City A'), 
+        L.marker([51.51, -0.1]).bindPopup('City B')
+    ]);
+
+    var villageMarkers = L.layerGroup([
+        L.marker([51.49, -0.08]).bindPopup('Village A'), 
+        L.marker([51.48, -0.07]).bindPopup('Village B')
+    ]);
+
+    var layerToView = {
+        'Cities': { layer: cityMarkers, center: [51.505, -0.09], zoom: 13 },
+        'Villages': { layer: villageMarkers, center: [51.49, -0.08], zoom: 14 }
+    };
+
+    var overlayTree = {
+        label: 'Overlays',
+        children: [
+            { 
+                label: 'Markers', 
+                children: [
+                    { label: 'Cities', layer: layerToView['Cities'].layer },
+                    { label: 'Villages', layer: layerToView['Villages'].layer }
+                ]
+            }
+        ]
+    };
+
+    var treeControl = L.control.layers.tree(null, overlayTree).addTo(map);
+
+    // Listen for 'layeradd' event
+    map.on('layeradd', function(e) {
+        for (var key in layerToView) {
+            if (layerToView[key].layer === e.layer) {
+                var view = layerToView[key];
+                map.setView(view.center, view.zoom, { animate: true });
+                break;
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

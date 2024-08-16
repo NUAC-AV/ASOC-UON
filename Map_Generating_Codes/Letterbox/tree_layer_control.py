@@ -66,6 +66,10 @@ class MapWithTreeLayerControl:
         self.map.save(output_html)
         # Post-process the HTML file to inject additional custom JavaScript or CSS, if needed
         css = CustomCSS(self.map)
-        css.add_recenter_js_to_html(output_html, self.base_places)
         css.post_process_html(output_html)
+        # # Generate the suburb data for recentering
+        # suburb_data = MapUtils.generate_suburb_data(self.map, self.base_places)
+        
+        # # Add recenter JavaScript to the HTML file
+        # MapUtils.add_recenter_js_to_html(output_html, suburb_data)
 
