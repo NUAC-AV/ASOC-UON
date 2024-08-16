@@ -1,35 +1,37 @@
 import os
 import folium
 import gpxpy
+from typing import List, Dict, Any, Union, Optional
 from map_utils import MapUtils
 from font_manager import FontManager
 
 class LayerManager:
-    def __init__(self, map_object, base_places, base_colors, overlay_tree):
-        self.map = map_object
-        self.base_places = base_places
-        self.base_colors = base_colors
-        self.overlay_tree = overlay_tree
+    def __init__(self, map_object: folium.Map, base_places: List[List[str]], base_colors: List[str], overlay_tree: Dict[str, Any]):
+        self.map: folium.Map = map_object
+        self.base_places: List[List[str]] = base_places
+        self.base_colors: List[str] = base_colors
+        self.overlay_tree: Dict[str, Any] = overlay_tree
         self.regions = MapUtils.geocode_places(base_places)  # Initialize regions by geocoding places
-        self.gpx_layers = []  # List to store GPX layers
+        self.gpx_layers: List[Dict[str, Union[str, folium.FeatureGroup]]] = []  # List to store GPX layers
 
-    def add_layers(self):
+    def add_layers(self) -> None:
+        """Add layers for each suburb within the regions to the map."""
         for i, (base_group, region) in enumerate(zip(self.base_places, self.regions)):
             # Get the base color for this region
-            base_color = self.base_colors[i % len(self.base_colors)]
+            base_color: str = self.base_colors[i % len(self.base_colors)]
 
             # Create a bold and colored region label
-            region_label = FontManager.get_subheader_font(f'Region {i+1}', color=base_color)
-            region_children = []
+            region_label: str = FontManager.get_subheader_font(f'Region {i+1}', color=base_color)
+            region_children: List[Dict[str, Any]] = []
 
             for j, (suburb_name, (index, row)) in enumerate(zip(base_group, region.iterrows())):
-                suburb_short_name = suburb_name.split(',')[0]  # Extract only the suburb name
-                suburb_layer = folium.FeatureGroup(name=suburb_short_name, show=False)
+                suburb_short_name: str = suburb_name.split(',')[0]  # Extract only the suburb name
+                suburb_layer: folium.FeatureGroup = folium.FeatureGroup(name=suburb_short_name, show=False)
 
                 # Adjust both hue and brightness for each suburb using MapUtils methods
-                hue_factor = (j / max(len(base_group) - 1, 1)) * 0.2  # Small hue adjustment
-                brightness_factor = 0.7 + (j / max(len(base_group) - 1, 1)) * 0.5
-                shade = MapUtils.adjust_hue(base_color, hue_factor)
+                hue_factor: float = (j / max(len(base_group) - 1, 1)) * 0.2  # Small hue adjustment
+                brightness_factor: float = 0.7 + (j / max(len(base_group) - 1, 1)) * 0.5
+                shade: str = MapUtils.adjust_hue(base_color, hue_factor)
                 shade = MapUtils.adjust_brightness(shade, brightness_factor)
 
                 folium.GeoJson(
@@ -53,32 +55,35 @@ class LayerManager:
                 "children": region_children
             })
 
-    def add_gpx_route(self, gpx_file, layer_name="GPX Route", color='blue', show=True):
+    def add_gpx_route(self, gpx_file: Union[str, os.PathLike], layer_name: str = "GPX Route", color: str = 'blue', show: bool = True) -> None:
+        """Add a single GPX route to the map."""
         with open(gpx_file, 'r') as f:
             gpx = gpxpy.parse(f)
 
-        route_layer = folium.FeatureGroup(name=layer_name, show=show)  # `show=True` makes it visible by default
+        route_layer: folium.FeatureGroup = folium.FeatureGroup(name=layer_name, show=show)
 
         for track in gpx.tracks:
             for segment in track.segments:
-                points = [(point.latitude, point.longitude) for point in segment.points]
+                points: List[Tuple[float, float]] = [(point.latitude, point.longitude) for point in segment.points]
                 folium.PolyLine(points, color=color, weight=2.5, opacity=1).add_to(route_layer)
 
         route_layer.add_to(self.map)
         
         # Add GPX route to the GPX layers list
         self.gpx_layers.append({
-            "label": FontManager.get_label_font(layer_name), 
+            "label": FontManager.get_label_font(layer_name),
             "layer": route_layer,
             "collapsed": False
         })
 
-    def add_gpx_routes(self, folder_path, color='black', show=True):
+    def add_gpx_routes(self, folder_path: Union[str, os.PathLike], color: str = 'black', show: bool = True) -> None:
+        """Add multiple GPX routes from a folder to the map."""
         for filename in os.listdir(folder_path):
             if filename.endswith(".gpx"):
-                gpx_file_path = os.path.join(folder_path, filename)
-                layer_name = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
+                gpx_file_path: str = os.path.join(folder_path, filename)
+                layer_name: str = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
                 self.add_gpx_route(gpx_file_path, layer_name, color, show)
 
-    def get_gpx_layers(self):
+    def get_gpx_layers(self) -> List[Dict[str, Union[str, folium.FeatureGroup]]]:
+        """Return the list of GPX layers."""
         return self.gpx_layers
