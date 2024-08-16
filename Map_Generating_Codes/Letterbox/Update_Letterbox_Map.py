@@ -1,24 +1,29 @@
+from typing import List, Optional
 from create_map import CreateMap
 
 class UpdateLetterboxMap:
-    def __init__(self, base_places, gpx_folder, output_html):
-        self.base_places = base_places
-        self.gpx_folder = gpx_folder
-        self.output_html = output_html
-        self.map_creator = None
+    def __init__(self, base_places: List[List[str]], gpx_folder: str, output_html: str):
+        self.base_places: List[List[str]] = base_places
+        self.gpx_folder: str = gpx_folder
+        self.output_html: str = output_html
+        self.map_creator: Optional[CreateMap] = None
 
-    def create_map(self):
-        # Initialize CreateMap which handles the complete setup of the map
+    def create_map(self) -> None:
+        """Initialize CreateMap which handles the complete setup of the map."""
         self.map_creator = CreateMap(self.base_places, self.gpx_folder)
         self.map_creator.setup_map()
 
-    def save_map(self):
-        self.map_creator.save_map(self.output_html)
+    def save_map(self) -> None:
+        """Save the map to the specified HTML file."""
+        if self.map_creator:
+            self.map_creator.save_map(self.output_html)
+        else:
+            raise RuntimeError("Map creator is not initialized. Call create_map() first.")
 
-    def run(self):
+    def run(self) -> None:
+        """Run the map creation and saving process."""
         self.create_map()
         self.save_map()
-
 
 if __name__ == "__main__":
     base_places = [
@@ -40,4 +45,3 @@ if __name__ == "__main__":
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()
-    
