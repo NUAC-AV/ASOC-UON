@@ -40,3 +40,4 @@ if __name__ == "__main__":
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()
+    

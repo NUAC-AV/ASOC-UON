@@ -1,17 +1,22 @@
-import numpy as np
+import os
 import math
-import matplotlib.colors as mcolors
 import colorsys
+from typing import List, Any, Union, Dict, Tuple
+
+import numpy as np
+import matplotlib.colors as mcolors
 import osmnx as ox
 from shapely.geometry import shape
 import folium
 from folium import Element
 
-from font_manager import FontManager 
+from font_manager import FontManager
 
 class MapUtils:
+    EARTH_CIRCUMFERENCE_METERS = 40_075_017  # Earth's circumference at the equator in meters
+
     @staticmethod
-    def adjust_brightness(color, factor):
+    def adjust_brightness(color: Union[str, tuple], factor: float) -> str:
         """ Adjusts brightness of a given color by the provided factor. """
         color = np.array(mcolors.to_rgb(color))
         adjusted_color = np.clip(color * factor, 0, 1)
@@ -19,7 +24,7 @@ class MapUtils:
 
 
     @staticmethod
-    def adjust_hue(color, hue_factor):
+    def adjust_hue(color: Union[str, tuple], hue_factor: float) -> str:
         """ Adjusts the hue of a given color by the provided factor. """
         color = np.array(mcolors.to_rgb(color))
         h, l, s = colorsys.rgb_to_hls(*color)
@@ -29,7 +34,7 @@ class MapUtils:
 
 
     @staticmethod
-    def geocode_places(base_places, location="Newcastle, Australia"):
+    def geocode_places(base_places: List[List[str]], location: str = "Newcastle, Australia") -> List[Any]:
         """ Geocodes a list of places to their geographical coordinates. """
         regions = []
         for base_group in base_places:
@@ -40,7 +45,7 @@ class MapUtils:
 
 
     @staticmethod
-    def add_css(map_object):
+    def add_css(map_object: folium.Map) -> None:
         custom_css = """
         <style>
         /* Increase the size of the layer control */
@@ -80,7 +85,7 @@ class MapUtils:
 
 
     @staticmethod
-    def post_process_html(filename):
+    def post_process_html(filename: Union[str, bytes, os.PathLike]) -> None:
         """Post-process the HTML file by removing the last five lines and adding the correct content."""
         # Read the HTML file into a string
         with open(filename, 'r') as file:
@@ -127,58 +132,8 @@ class MapUtils:
 
 
     @staticmethod
-    def generate_recenter_code(suburb_data, map_memory_number):
-        """
-        Generates the JavaScript code block to recenter the map on specific suburbs and regions
-        when their layers are added.
-
-        :param suburb_data: A list of suburb data dictionaries containing names, feature groups, centroids, zoom levels, and regions.
-        :param map_memory_number: The unique identifier for the map (e.g., map_96432543117ac5c1a2617564a0927e1b).
-        :return: A string containing the JavaScript code block.
-        """
-        # Ensure suburb_data is a list of dictionaries
-        if not isinstance(suburb_data, list) or not all(isinstance(suburb, dict) for suburb in suburb_data):
-            raise ValueError("suburb_data must be a list of dictionaries")
-
-        js_code = f"""
-        document.addEventListener('DOMContentLoaded', function() {{
-            var map = {map_memory_number};  // Access the Leaflet map instance by its ID
-
-            // Event listener for overlay addition
-            map.on('overlayadd', function(e) {{
-                console.log("Overlay added: ", e.layer);  // Debug: Log the layer added
-        """
-
-        regions = {}
-        for suburb in suburb_data:
-            # Ensure each dictionary has the expected keys
-            if all(key in suburb for key in ("feature_group", "centroid", "zoom_level", "name", "region")):
-                suburb_name = suburb["name"]
-                feature_group_var = suburb["feature_group"]
-                latitude, longitude = suburb["centroid"]
-                zoom_level = suburb["zoom_level"]
-                region_name = suburb["region"]
-
-                # Generate the recenter block for each suburb
-                js_code += f"""
-                // Recenter for {suburb_name}
-                if (e.layer === {feature_group_var}) {{
-                    console.log("Recenter to {suburb_name}");  // Debug: Log if condition is met
-                    map.setView([{latitude:.5f}, {longitude:.5f}], {zoom_level}, {{
-                        animate: true,
-                        pan: {{duration: 1}}
-                    }});
-                }}
-                """
-
-                # Group suburbs by region
-                if region_name not in regions:
-                    regions[region_name] = []
-                regions[region_name].append(suburb)
-
-        # Generate the recenter block for each region
-        for region_name, suburbs in regions.items():
-            # Calculate the bounding box of the suburb centroids
+    def get_region_zoom(suburbs: List[Dict]) -> Tuple[float, float, int]:
+        # Calculate the bounding box of the suburb centroids
             min_lat = min(suburb["centroid"][0] for suburb in suburbs)
             max_lat = max(suburb["centroid"][0] for suburb in suburbs)
             min_lon = min(suburb["centroid"][1] for suburb in suburbs)
@@ -199,6 +154,74 @@ class MapUtils:
             # Apply the zoom bias
             region_zoom_level += 2
 
+            return region_centroid, region_zoom_level
+    
+
+    @staticmethod
+    def group_suburbs_by_region(suburb_data: List[Dict], js_code: str) -> Tuple[str, Dict]:
+        """
+        Groups suburbs by their region and appends JavaScript code for recentering the map on each suburb.
+
+        :param suburb_data: A list of suburb data dictionaries containing names, feature groups, centroids, zoom levels, and regions.
+        :param js_code: The existing JavaScript code string to which new code will be appended.
+        :return: A tuple with the updated JavaScript code and a dictionary of grouped suburbs by region.
+        """
+        regions = {}
+
+        for suburb in suburb_data:
+            # Ensure each dictionary has the expected keys
+            if all(key in suburb for key in ("feature_group", "centroid", "zoom_level", "name", "region")):
+                suburb_name = suburb["name"]
+                feature_group_var = suburb["feature_group"]
+                latitude, longitude = suburb["centroid"]
+                zoom_level = suburb["zoom_level"]
+                region_name = suburb["region"]
+
+                # Append the recenter block for each suburb to the existing js_code
+                js_code += f"""
+                // Recenter for {suburb_name}
+                if (e.layer === {feature_group_var}) {{
+                    console.log("Recenter to {suburb_name}");  // Debug: Log if condition is met
+                    map.setView([{latitude:.5f}, {longitude:.5f}], {zoom_level}, {{
+                        animate: true,
+                        pan: {{duration: 1}}
+                    }});
+                }}
+                """
+
+                # Group suburbs by region
+                if region_name not in regions:
+                    regions[region_name] = []
+                regions[region_name].append(suburb)
+
+        return js_code, regions
+
+
+    @staticmethod
+    def generate_recenter_code(suburb_data: List[Dict], map_memory_number: str) -> str:
+        """
+        Generates the JavaScript code block to recenter the map on specific suburbs and regions when their layers are added.
+
+        :param suburb_data: A list of suburb data dictionaries containing names, feature groups, centroids, zoom levels, and regions.
+        :param map_memory_number: The unique identifier for the map (e.g., map_96432543117ac5c1a2617564a0927e1b).
+        :return: A string containing the JavaScript code block.
+        """
+        # Initialize the JavaScript code
+        js_code = f"""
+        document.addEventListener('DOMContentLoaded', function() {{
+            var map = {map_memory_number};  // Access the Leaflet map instance by its ID
+
+            // Event listener for overlay addition
+            map.on('overlayadd', function(e) {{
+                console.log("Overlay added: ", e.layer);  // Debug: Log the layer added
+        """
+
+        # Updates regions and js_code.
+        js_code, regions = MapUtils.group_suburbs_by_region(suburb_data, js_code)
+
+        # Generate the recenter block for each region
+        for region_name, suburbs in regions.items():
+            region_centroid, region_zoom_level = MapUtils.get_region_zoom(suburbs)
             feature_groups = " && ".join([f"map.hasLayer({suburb['feature_group']})" for suburb in suburbs])
 
             js_code += f"""
@@ -221,9 +244,8 @@ class MapUtils:
         return js_code
 
 
-
     @staticmethod
-    def insert_recenter_code_in_html(html_file_path, recenter_code):
+    def insert_recenter_code_in_html(html_file_path: Union[str, bytes, os.PathLike], recenter_code: str) -> None:
         """
         Inserts the recentering JavaScript code into the second-to-last line of the HTML file.
 
