@@ -95,8 +95,6 @@ class SuburbManager:
         return zoom_level
 
 
-        return zoom_level
-
     def extract_suburb_data(self, html_content):
         """Extracts feature groups and assigns them to the corresponding suburbs."""
         # Simplified regex pattern to match and capture name and feature_group

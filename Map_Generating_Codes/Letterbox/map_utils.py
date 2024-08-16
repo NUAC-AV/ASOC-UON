@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import matplotlib.colors as mcolors
 import colorsys
 import osmnx as ox
@@ -173,16 +174,31 @@ class MapUtils:
                 # Group suburbs by region
                 if region_name not in regions:
                     regions[region_name] = []
-                regions[region_name].append({
-                    "feature_group": feature_group_var,
-                    "centroid": (latitude, longitude),
-                    "zoom_level": zoom_level
-                })
+                regions[region_name].append(suburb)
 
         # Generate the recenter block for each region
         for region_name, suburbs in regions.items():
-            region_centroid = np.mean([suburb["centroid"] for suburb in suburbs], axis=0)
-            region_zoom_level = max(suburb["zoom_level"] for suburb in suburbs)
+            # Calculate the bounding box of the suburb centroids
+            min_lat = min(suburb["centroid"][0] for suburb in suburbs)
+            max_lat = max(suburb["centroid"][0] for suburb in suburbs)
+            min_lon = min(suburb["centroid"][1] for suburb in suburbs)
+            max_lon = max(suburb["centroid"][1] for suburb in suburbs)
+
+            # Calculate the centroid of the bounding box
+            region_centroid = ((min_lat + max_lat) / 2, (min_lon + max_lon) / 2)
+
+            # Estimate the zoom level based on the bounding box
+            lat_diff = max_lat - min_lat
+            lon_diff = max_lon - min_lon
+            max_dim_m = max(lat_diff * 111_320, lon_diff * 111_320 * math.cos(math.radians(region_centroid[0])))
+
+            # Calculate the zoom level for the region
+            region_zoom_level = math.log2(40_075_017 / max_dim_m) - math.log2(max(800, 600) / 256)
+            region_zoom_level = max(1, min(18, round(region_zoom_level)))
+
+            # Apply the zoom bias
+            region_zoom_level += 2
+
             feature_groups = " && ".join([f"map.hasLayer({suburb['feature_group']})" for suburb in suburbs])
 
             js_code += f"""
@@ -204,7 +220,7 @@ class MapUtils:
 
         return js_code
 
-    
+
 
     @staticmethod
     def insert_recenter_code_in_html(html_file_path, recenter_code):
