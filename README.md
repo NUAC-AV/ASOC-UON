@@ -62,6 +62,14 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
   <summary><h3><a name="project-structure">📚 Project Structure</a></h3></summary>
   <ul>
     <li>
+      <strong>Docs</strong>: Contains all the documentation for project.
+      <ul>
+        <li><em><a href="Docs/Letterbox_Documentation.md">Letterbox_Documentation.md</a></em>Documents the letterbox code.</li>
+        <li><em><a href ="Docs/Using_GPX_Studio.md">Using_GPX_Studio.md</a></em> Details how GPX Studio can be used to create gpx files.
+        </li>
+      </ul>
+    </li>
+    <li>
       <strong>GPX_Files</strong>: Contains all GPX files
       <ul>
         <li><em><a href="GPX_Files/Church_Locations/">Church_Locations</a></em>: Contains GPX files for Church Locations.</li>
@@ -95,6 +103,7 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
       <strong>Images</strong>: Contains all images used in this repo.
       <ul>
         <li><em><a href="Images/Icons/">Icons</a></em>: Contains Font Awesome Icons.</li>
+        <li><em><a href="Images/UML_Diagrams"/>UML_Diagrams</a></em>: Contails UML diagrams for code.
       </ul>
     </li>
     <li><em><a href="ASOC_Walks.ipynb">ASOC_Walks.ipynb</a></em>: Jupyter notebook for code testing.</li>
