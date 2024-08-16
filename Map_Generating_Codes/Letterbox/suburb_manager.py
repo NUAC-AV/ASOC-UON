@@ -1,37 +1,15 @@
 import math
 import re
+from typing import List, Dict, Tuple, Any, Optional
 from map_utils import MapUtils
 
 class SuburbManager:
-    def __init__(self, base_places, location="Newcastle, Australia"):
-        self.base_places = base_places
-        self.location = location
-        self.suburb_data = self.initialize_suburbs()
+    def __init__(self, base_places: List[List[str]], location: str = "Newcastle, Australia") -> None:
+        self.base_places: List[List[str]] = base_places
+        self.location: str = location
+        self.suburb_data: List[Dict[str, Any]] = self.initialize_suburbs()
 
-    # def initialize_suburbs(self):
-    #     """ Initialize the suburb data with names, feature groups, GeoJSON, centroids, and zoom levels. """
-    #     suburb_data = []
-    #     geojson_data = MapUtils.geocode_places(self.base_places, self.location)  # Use MapUtils to geocode places
-
-    #     for base_group, geojson in zip(self.base_places, geojson_data):
-    #         for suburb_name, (index, row) in zip(base_group, geojson.iterrows()):
-    #             suburb_short_name = suburb_name.split(',')[0]  # Extract only the suburb name
-    #             geometry = row['geometry']
-    #             centroid = geometry.centroid  # Calculate the centroid of the GeoJSON
-    #             zoom_level = self.calculate_zoom_level(geometry)  # Calculate the zoom level
-
-    #             suburb_info = {
-    #                 "name": suburb_short_name,
-    #                 "geojson": geometry,
-    #                 "centroid": (centroid.y, centroid.x),  # Store the centroid as (latitude, longitude)
-    #                 "zoom_level": zoom_level,
-    #                 "feature_group": None  # Placeholder for feature group, to be populated later
-    #             }
-    #             suburb_data.append(suburb_info)
-
-    #     return suburb_data
-    
-    def initialize_suburbs(self):
+    def initialize_suburbs(self) -> List[Dict[str, Any]]:
         """ Initialize the suburb data with names, feature groups, GeoJSON, centroids, zoom levels, and regions. """
         suburb_data = []
         geojson_data = MapUtils.geocode_places(self.base_places, self.location)  # Use MapUtils to geocode places
@@ -56,7 +34,7 @@ class SuburbManager:
 
         return suburb_data
 
-    def calculate_zoom_level(self, geometry, map_width_px=800, map_height_px=600, zoom_bias=2.5):
+    def calculate_zoom_level(self, geometry: Any, map_width_px: int = 800, map_height_px: int = 600, zoom_bias: float = 2.5) -> int:
         """
         Estimates an appropriate zoom level for the given geometry.
 
@@ -94,8 +72,7 @@ class SuburbManager:
 
         return zoom_level
 
-
-    def extract_suburb_data(self, html_content):
+    def extract_suburb_data(self, html_content: str) -> None:
         """Extracts feature groups and assigns them to the corresponding suburbs."""
         # Simplified regex pattern to match and capture name and feature_group
         pattern = re.compile(r'''
@@ -107,39 +84,39 @@ class SuburbManager:
         matches = pattern.findall(html_content)
 
         # Update the suburb_data with the extracted feature groups
-        for match in matches:
-            name, feature_group = match
+        for name, feature_group in matches:
             for suburb in self.suburb_data:
                 if suburb["name"] == name:
                     suburb["feature_group"] = feature_group
 
-    def set_feature_group(self, suburb_name, feature_group):
-        """ Assigns a feature group to a specific suburb by name. """
+    def set_feature_group(self, suburb_name: str, feature_group: str) -> None:
+        """Assigns a feature group to a specific suburb by name."""
         for suburb in self.suburb_data:
             if suburb["name"] == suburb_name:
                 suburb["feature_group"] = feature_group
 
-    def get_suburb_info(self):
-        """ Returns the list of all suburb data. """
+    def get_suburb_info(self) -> List[Dict[str, Any]]:
+        """Returns the list of all suburb data."""
         return self.suburb_data
 
-    def get_geojson_by_name(self, suburb_name):
-        """ Returns the GeoJSON data for a specific suburb by name. """
+    def get_geojson_by_name(self, suburb_name: str) -> Optional[Any]:
+        """Returns the GeoJSON data for a specific suburb by name."""
         for suburb in self.suburb_data:
             if suburb["name"] == suburb_name:
                 return suburb["geojson"]
         return None
 
-    def get_centroid_by_name(self, suburb_name):
-        """ Returns the centroid (latitude, longitude) for a specific suburb by name. """
+    def get_centroid_by_name(self, suburb_name: str) -> Optional[Tuple[float, float]]:
+        """Returns the centroid (latitude, longitude) for a specific suburb by name."""
         for suburb in self.suburb_data:
             if suburb["name"] == suburb_name:
                 return suburb["centroid"]
         return None
 
-    def get_zoom_level_by_name(self, suburb_name):
-        """ Returns the zoom level for a specific suburb by name. """
+    def get_zoom_level_by_name(self, suburb_name: str) -> Optional[int]:
+        """Returns the zoom level for a specific suburb by name."""
         for suburb in self.suburb_data:
             if suburb["name"] == suburb_name:
                 return suburb["zoom_level"]
         return None
+
