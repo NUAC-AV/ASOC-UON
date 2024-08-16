@@ -31,13 +31,14 @@ class SuburbManager:
 
         return suburb_data
 
-    def calculate_zoom_level(self, geometry, map_width_px=800, map_height_px=600):
+    def calculate_zoom_level(self, geometry, map_width_px=800, map_height_px=600, zoom_bias=2.5):
         """
         Estimates an appropriate zoom level for the given geometry.
 
         :param geometry: The GeoJSON geometry to calculate the zoom level for.
         :param map_width_px: The width of the map display area in pixels.
         :param map_height_px: The height of the map display area in pixels.
+        :param zoom_bias: A bias factor to adjust the zoom level. Increase this to zoom in more.
         :return: An estimated zoom level as an integer.
         """
         bounds = geometry.bounds  # Get the bounding box (min_lon, min_lat, max_lon, max_lat)
@@ -60,8 +61,14 @@ class SuburbManager:
         # Here we assume a certain pixel resolution of the map, for example, 256px per tile at zoom level 0.
         zoom_level = math.log2(40_075_017 / max_dim_m) - math.log2(max(map_width_px, map_height_px) / 256)
 
+        # Apply the zoom bias
+        zoom_level += zoom_bias
+
         # Clamp the zoom level to reasonable limits (e.g., between 1 and 18)
         zoom_level = max(1, min(18, round(zoom_level)))
+
+        return zoom_level
+
 
         return zoom_level
 
