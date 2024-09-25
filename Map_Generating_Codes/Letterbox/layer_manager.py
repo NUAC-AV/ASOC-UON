@@ -78,11 +78,18 @@ class LayerManager:
 
     def add_gpx_routes(self, folder_path: Union[str, os.PathLike], color: str = 'black', show: bool = True) -> None:
         """Add multiple GPX routes from a folder to the map."""
+        gpx_tree = self.overlay_tree["children"][1]["children"]  # Add GPX routes under "GPX Routes" in the tree
         for filename in os.listdir(folder_path):
             if filename.endswith(".gpx"):
                 gpx_file_path: str = os.path.join(folder_path, filename)
                 layer_name: str = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
                 self.add_gpx_route(gpx_file_path, layer_name, color, show)
+                # Add GPX route to the tree structure
+                gpx_tree.append({
+                    "label": FontManager.get_label_font(layer_name),
+                    "select_all_checkbox": True,
+                    "collapsed": True,
+                })
 
     def get_gpx_layers(self) -> List[Dict[str, Union[str, folium.FeatureGroup]]]:
         """Return the list of GPX layers."""

@@ -35,8 +35,14 @@ class CreateMap:
                     "label": FontManager.get_header_font('Regions and Suburbs'),
                     "select_all_checkbox": True,
                     "collapsed": True,
-                    "children": []  # Will be populated by LayerManager
+                    "children": []  # Will be populated by LayerManager for Regions and Suburbs
                 },
+                {
+                    "label": FontManager.get_header_font('GPX Routes'),
+                    "select_all_checkbox": True,
+                    "collapsed": True,
+                    "children": []  # Will be populated by LayerManager for GPX Routes
+                }
             ]
         }
 
@@ -47,6 +53,7 @@ class CreateMap:
 
         # Initialize the SuburbManager and store it as an attribute
         self.suburb_manager: SuburbManager = SuburbManager(self.base_places)
+
 
     @staticmethod
     def get_map_memory_number(html_content: str) -> str:
