@@ -36,3 +36,9 @@ Added checkboxes for major features on roadmap
     - Added folder `Sabbath_Walks` to Create_Routes with subfolders for each walk location. 
     - Added documentation for `Create_Routes`.
 - Added Islington Park Walk to Maps/Sabbath_Walks.
+
+## v2.0.0
+
+This is the production version of the letterbox maps.
+
+

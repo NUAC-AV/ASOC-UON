@@ -64,46 +64,46 @@ Specifically, maps are created for ASOC church locations/routes, Sabbath walks a
     <li>
       <strong>Docs</strong>: Contains all the documentation for project.
       <ul>
-        <li><em><a href="Docs/Letterbox_Documentation.md">Letterbox_Documentation.md</a></em>Documents the letterbox code.</li>
-        <li><em><a href ="Docs/Using_GPX_Studio.md">Using_GPX_Studio.md</a></em> Details how GPX Studio can be used to create gpx files.
+        <li><em><a href="docs/website">Website Folder</a></em>Small webpage wrapper.</li>
+        <li><em><a href="docs/Letterbox_Documentation.md">Letterbox_Documentation.md</a></em>Documents the letterbox code.</li>
+        <li><em><a href ="docs/Using_GPX_Studio.md">Using_GPX_Studio.md</a></em> Details how GPX Studio can be used to create gpx files.
         </li>
       </ul>
     </li>
     <li>
-      <strong>GPX_Files</strong>: Contains all GPX files
+      <strong>gpx</strong>: Contains all GPX files
       <ul>
-        <li><em><a href="GPX_Files/Church_Locations/">Church_Locations</a></em>: Contains GPX files for Church Locations.</li>
-        <li><em><a href="GPX_Files/Letterbox_Routes/">Letterbox_Routes</a></em>: Contains GPX files of completed Letterbox routes.</li>
-        <li><em><a href="GPX_Files/Misc/">Misc</a></em>: Contains any other GPX files.</li>
+        <li><em><a href="gpx/Church_Locations/">Church_Locations</a></em>: Contains GPX files for Church Locations.</li>
+        <li><em><a href="gpx/Letterbox_Routes/">Letterbox_Routes</a></em>: Contains GPX files of completed Letterbox routes.</li>
+        <li><em><a href="gpx/Misc/">Misc</a></em>: Contains any other GPX files.</li>
         <li><em><a href="GPX_Files/Sabbath_Walks">Sabbath_Walks</a></em>: Contains GPX files for Sabbath walks.</li>
-        <li><em><a href="GPX_Files/GPX_Studio.md">GPX_Studio.md</a></em>: Details how to produce GPX file using GPX Studio.</li>
       </ul>
     </li>
     <li>
-      <strong>Map_Generating_Codes</strong>: Contains the code for generating maps.
+      <strong>src</strong>: Contains the code for generating maps.
       <ul>
-        <li><em><a href="Map_Generating_Codes/Create_Routes/">Create_Routes</a></em>: Creates a route.</li>
-        <li><em><a href="Map_Generating_Codes/Letterbox/">Letterbox</a></em>: Creates the letterbox maps.</li>
-        <li><em><a href="Map_Generating_Codes/Misc/">Misc</a></em>: Other codes.</li>
-        <li><em><a href="Map_Generating_Codes/Route_Code/">Route_Code</a></em></li>
-        <li><em><a href="Map_Generating_Codes/README.md/">README.md</a></em></li>
-        <li><em><a href="Map_Generating_Codes/Update_Walks.py/">Update_Walks.py</a></em>: Updates the map of ASOC walks.</li>
+        <li><em><a href="src/Create_Routes/">Create_Routes</a></em>: Creates a route.</li>
+        <li><em><a href=src/Letterbox/">Letterbox</a></em>: Creates the letterbox maps.</li>
+        <li><em><a href="src/Misc/">Misc</a></em>: Other codes.</li>
+        <li><em><a href="src/Route_Code/">Route_Code</a></em></li>
+        <li><em><a href="src/README.md/">README.md</a></em></li>
+        <li><em><a href="src/Update_Walks.py/">Update_Walks.py</a></em>: Updates the map of ASOC walks.</li>
       </ul>
     </li>
     <li>
-      <strong>Maps</strong>: Contains the HTML files for the maps.
+      <strong>maps</strong>: Contains the HTML files for the maps.
       <ul>
-        <li><em><a href="Maps/Church_Locations/">Church_Locations</a></em>: Contains maps for church and caregroup locations.</li>
-        <li><em><a href="Maps/Letterbox/">Letterbox</a></em>: Contains maps used for letterboxing.</li>
-        <li><em><a href="Maps/Misc/">Misc</a></em>: Other maps.</li>
-        <li><em><a href="Maps/Sabbath_Walks/">Sabbath_Walks</a></em>: Contains maps for Sabbath walks.</li>
+        <li><em><a href="maps/Church_Locations/">Church_Locations</a></em>: Contains maps for church and caregroup locations.</li>
+        <li><em><a href="maps/Letterbox/">Letterbox</a></em>: Contains maps used for letterboxing.</li>
+        <li><em><a href="maps/Misc/">Misc</a></em>: Other maps.</li>
+        <li><em><a href="maps/Sabbath_Walks/">Sabbath_Walks</a></em>: Contains maps for Sabbath walks.</li>
       </ul>
     </li>
     <li>
       <strong>Images</strong>: Contains all images used in this repo.
       <ul>
-        <li><em><a href="Images/Icons/">Icons</a></em>: Contains Font Awesome Icons.</li>
-        <li><em><a href="Images/UML_Diagrams"/>UML_Diagrams</a></em>: Contails UML diagrams for code.
+        <li><em><a href="res/Icons/">Icons</a></em>: Contains Font Awesome Icons.</li>
+        <li><em><a href="res/UML_Diagrams"/>UML_Diagrams</a></em>: Contails UML diagrams for code.
       </ul>
     </li>
     <li><em><a href="ASOC_Walks.ipynb">ASOC_Walks.ipynb</a></em>: Jupyter notebook for code testing.</li>
@@ -135,9 +135,9 @@ Here are some example usages of the maps:
    - **Description**: This map shows the main locations for the ASOC walks.
    - **Link**: https://nuac-av.github.io/ASOC-UON/Maps/Misc/ASOC_walk_locations_map.html
 
-2. **Mount Sugarloaf Map**:
-   - **Description**: This map highlights the route for the mount Sugarloaf walk.
-   - **Link**:  https://nuac-av.github.io/ASOC-UON/Maps/Sabbath_Walks/Mount%20Sugarloaf/Sugarloaf_Walk.html
+2. **Letterbox Map**:
+   - **Description**: This map shows the letterbox regions and completed streets.
+   - **Link**:  https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/main.html
 
 
 ### How To Use
@@ -169,6 +169,8 @@ Here are some example usages of the maps:
         <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_1.html">letterbox_test_1.html</a></li>
         <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_2.html">letterbox_test_2.html</a></li>
         <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_3.html">letterbox_test_3.html</a></li>
+        <li>&#8942;</li>
+        <li><a href="https://nuac-av.github.io/ASOC-UON/Maps/Letterbox/letterbox_test_23.html">letterbox_test_23.html</a></li>
       </ul>
     </li>
     <li>Misc
@@ -285,14 +287,14 @@ The Sabbath Walk, Caregroup and Church locations are stored in a google sheet. W
 
 | Icon Symbol                                             | Icon Name        | Colour                                           | Description                   |
 |:-------------------------------------------------------:|:----------------:|:------------------------------------------------:|:-------------------------------------------------:|
-| ![water icon](Images/Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
-| ![plant-wilt icon](Images/Icons/plant-wilt.svg)         | `plant-wilt`     | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                     |
-| ![tree icon](Images/Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                        |
-| ![umbrella-beach icon](Images/Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.           |
-| ![mountain icon](Images/Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.            |
-| ![sailboat icon](Images/Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                        |
-| ![ferry icon](Images/Icons/ferry.svg), ![ship icon](Images/Icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.  |
-| ![flag icon](Images/Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                       |
+| ![water icon](res/Icons/water.svg)                   | `water`          | <span style="color:blue">blue</span>             | Used for rivers and lakes (excluding saltwater).  |
+| ![plant-wilt icon](res/Icons/plant-wilt.svg)         | `plant-wilt`     | <span style="color:lightgreen">lightgreen</span> | Used for wetlands.                     |
+| ![tree icon](res/Icons/tree.svg)                     | `tree`           | <span style="color:green">green</span>           | Used for forests and parks.                        |
+| ![umbrella-beach icon](res/Icons/umbrella-beach.svg) | `umbrella-beach` | <span style="color:beige">beige</span>           | For beaches and other sandy environments.           |
+| ![mountain icon](res/Icons/mountain.svg)             | `mountain`       | <span style="color:darkgreen">darkgreen</span>   | For hilly and mountainous walks.            |
+| ![sailboat icon](res/Icons/sailboat.svg)             | `sailboat`       | <span style="color:pink">pink</span>             | For boat ramps.                        |
+| ![ferry icon](res/Icons/ferry.svg), ![ship icon](res/Icons/ship.svg) | `Ferry` and `Ship` | <span style="color:black">black</span> | Used for other harbour/coastal walks.  |
+| ![flag icon](res/Icons/flag.svg)                     | `flag`           | <span style="color:red">red</span>               | Other walks not listed.                       |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
