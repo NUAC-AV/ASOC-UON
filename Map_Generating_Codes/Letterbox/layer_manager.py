@@ -84,12 +84,15 @@ class LayerManager:
                 gpx_file_path: str = os.path.join(folder_path, filename)
                 layer_name: str = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
                 self.add_gpx_route(gpx_file_path, layer_name, color, show)
-                # Add GPX route to the tree structure
+                # Get the last added GPX layer from self.gpx_layers
+                layer_info = self.gpx_layers[-1]
+                # Add GPX route to the tree structure with the layer
                 gpx_tree.append({
-                    "label": FontManager.get_label_font(layer_name),
-                    "select_all_checkbox": True,
-                    "collapsed": True,
+                    "label": layer_info["label"],
+                    "layer": layer_info["layer"],
+                    "collapsed": False,
                 })
+
 
     def get_gpx_layers(self) -> List[Dict[str, Union[str, folium.FeatureGroup]]]:
         """Return the list of GPX layers."""

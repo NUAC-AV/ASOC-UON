@@ -118,6 +118,10 @@ class CreateMap:
         # Extract feature groups using the SuburbManager
         self.suburb_manager.extract_suburb_data(html_content)
 
+        # # 5. Extract GPX feature groups using LayerManager (make sure LayerManager is initialized properly)
+        # print("Extracting GPX feature groups...")
+        # self.layer_manager.extract_gpx_feature_groups(html_content)
+
         # Get the map memory number (ID) from the HTML content
         self.map_memory_number = self.get_map_memory_number(html_content)
 
