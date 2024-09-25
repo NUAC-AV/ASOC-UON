@@ -44,4 +44,3 @@ class FontManager:
     def get_expand_all_label(color: str = 'green') -> str:
         """Return formatted 'Expand all' label."""
         return FontManager.expand_all_label.format(color=color)
-
