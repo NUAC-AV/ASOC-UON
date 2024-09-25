@@ -96,13 +96,16 @@ class LayerManager:
                 gpx_tree.append({
                     "label": layer_info["label"],
                     "layer": layer_info["layer"],
-                    "collapsed": False,
+                    "collapsed": True,
                 })
 
     def add_gpx_routes_with_weeks(self, base_folder_path: Union[str, os.PathLike], color: str = 'black', show: bool = True) -> None:
         """Add multiple GPX routes from subfolders (weeks) to the map, organizing them under week groups."""
         # Get the "GPX Routes" tree under which we will add week groups
-        gpx_tree = self.overlay_tree["children"][1]["children"]  # Assuming "GPX Routes" is the second child
+        if "children" in self.overlay_tree and len(self.overlay_tree["children"]) > 1:
+            gpx_tree = self.overlay_tree["children"][1]["children"]  # Assuming "GPX Routes" is the second child
+        else:
+            raise ValueError("Invalid overlay_tree structure")
         
         # List all subfolders in the base_folder_path
         for week_folder in sorted(os.listdir(base_folder_path)):
@@ -116,26 +119,53 @@ class LayerManager:
                 for filename in os.listdir(week_folder_path):
                     if filename.endswith(".gpx"):
                         gpx_file_path: str = os.path.join(week_folder_path, filename)
-                        layer_name: str = filename.split(".gpx")[0]  # Use the file name (without extension) as the layer name
-                        # Add the GPX route, specifying the parent_layer as week_layer
-                        self.add_gpx_route(gpx_file_path, layer_name, color, show=False, parent_layer=week_layer)
-                        # Get the last added GPX layer
-                        gpx_layer_info = self.gpx_layers[-1]
-                        # Add to the week_children for overlay_tree
-                        week_children.append({
-                            "label": gpx_layer_info["label"],
-                            "layer": gpx_layer_info["layer"],
-                            "collapsed": False
-                        })
-                # Add the week layer to the map
-                week_layer.add_to(self.map)
-                # Add the week group to the overlay_tree under "GPX Routes"
-                gpx_tree.append({
-                    "label": FontManager.get_label_font(week_folder),
-                    "layer": week_layer,
-                    "collapsed": False,
-                    "children": week_children
-                })
+                        
+                        # Check if the file exists before processing
+                        if os.path.isfile(gpx_file_path):
+                            layer_name: str = os.path.splitext(filename)[0]  # More robust than split
+                            route_layer: folium.FeatureGroup = folium.FeatureGroup(name=layer_name, show=True)  # Changed to show=True
+
+                            # Parse the GPX file
+                            try:
+                                with open(gpx_file_path, 'r') as f:
+                                    gpx = gpxpy.parse(f)
+                            except Exception as e:
+                                logger.error(f"Failed to parse {gpx_file_path}: {e}")
+                                continue  # Skip this file
+
+                            # Add tracks and segments from the GPX file as polylines to the route layer
+                            for track in gpx.tracks:
+                                for segment in track.segments:
+                                    points: List[Tuple[float, float]] = [(point.latitude, point.longitude) for point in segment.points]
+                                    folium.PolyLine(points, color=color, weight=2.5, opacity=1).add_to(route_layer)
+                            
+                            # Add the route layer to the week layer
+                            route_layer.add_to(week_layer)
+                            
+                            # Append the route to the week_children for the overlay tree
+                            week_children.append({
+                                "label": layer_name,  # Use plain string
+                                "layer": route_layer,
+                                "collapsed": False
+                            })
+                            
+                            # Append to the GPX layers list for reference
+                            self.gpx_layers.append({
+                                "label": layer_name,  # Use plain string
+                                "layer": route_layer,
+                                "collapsed": False
+                            })
+                        
+                # After adding all GPX files for the week, add the week layer to the map
+                if len(week_children) > 0:  # Only add non-empty weeks
+                    week_layer.add_to(self.map)
+                    # Add the week group to the overlay_tree under "GPX Routes"
+                    gpx_tree.append({
+                        "label": week_folder,  # Use plain string
+                        "layer": week_layer,
+                        "collapsed": False,
+                        "children": week_children
+                    })
 
     def get_gpx_layers(self) -> List[Dict[str, Union[str, folium.FeatureGroup]]]:
         """Return the list of GPX layers."""

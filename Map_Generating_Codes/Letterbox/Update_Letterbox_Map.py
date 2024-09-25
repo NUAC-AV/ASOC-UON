@@ -35,13 +35,13 @@ if __name__ == "__main__":
         ["Argenton",  "Cardiff Heights", "Glendale", "New Lambton Heights", "Rankin Park"],
         ["Adamstown", "Adamstown Heights", "Garden Suburb", "Kotara", "Kotara South"],
         ["Bar Beach", "Hamilton", "Hamilton South", "Merewether", "Merewether Heights", "The Junction"],
-        # ["Cooks Hill", "Newcastle", "Newcastle East", "Newcastle West", "The Hill"],
+        ["Cooks Hill", "Newcastle", "Newcastle East", "Newcastle West", "The Hill"],
         # ["Stockton", "Fern Bay"],
         # ["Boolaroo", "Cardiff", "Hillsborough", "Lakelands", "Macquarie Hills", "Speers Point"],
         # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
     ]
     gpx_folder = "GPX_Files/Letterbox_Routes/"
-    output_html = "Maps/Letterbox/letterbox_test_23.html"
+    output_html = "Maps/Letterbox/main.html"
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)
     app.run()

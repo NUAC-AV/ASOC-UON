@@ -38,7 +38,7 @@ class CreateMap:
                     "children": []  # Will be populated by LayerManager for Regions and Suburbs
                 },
                 {
-                    "label": FontManager.get_header_font('GPX Routes'),
+                    "label": FontManager.get_header_font('Completed Streets'),
                     "select_all_checkbox": True,
                     "collapsed": True,
                     "children": []  # Will be populated by LayerManager for GPX Routes

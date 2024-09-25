@@ -119,4 +119,3 @@ class SuburbManager:
             if suburb["name"] == suburb_name:
                 return suburb["zoom_level"]
         return None
-
