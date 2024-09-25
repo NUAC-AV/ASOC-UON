@@ -49,7 +49,7 @@ class CreateMap:
         # Initialize LayerManager to handle both suburb and GPX layer creation
         self.layer_manager: LayerManager = LayerManager(self.map, self.base_places, self.base_colors, self.overlay_tree)
         self.layer_manager.add_layers()  # Add suburb layers to the map
-        self.layer_manager.add_gpx_routes(self.gpx_folder)  # Add GPX layers to the map
+        self.layer_manager.add_gpx_routes_with_weeks(self.gpx_folder)  # Add GPX layers to the map
 
         # Initialize the SuburbManager and store it as an attribute
         self.suburb_manager: SuburbManager = SuburbManager(self.base_places)
@@ -117,10 +117,6 @@ class CreateMap:
 
         # Extract feature groups using the SuburbManager
         self.suburb_manager.extract_suburb_data(html_content)
-
-        # # 5. Extract GPX feature groups using LayerManager (make sure LayerManager is initialized properly)
-        # print("Extracting GPX feature groups...")
-        # self.layer_manager.extract_gpx_feature_groups(html_content)
 
         # Get the map memory number (ID) from the HTML content
         self.map_memory_number = self.get_map_memory_number(html_content)
