@@ -40,7 +40,7 @@ if __name__ == "__main__":
         # ["Boolaroo", "Cardiff", "Hillsborough", "Lakelands", "Macquarie Hills", "Speers Point"],
         # ["Charlestown", "Dudley", "Kahibah", "Highlands", "Whitebridge"]
     ]
-    gpx_folder = "GPX_Files/Letterbox_Routes/"
+    gpx_folder = "gpx/Letterbox_Routes/"
     output_html = "Maps/Letterbox/main.html"
     
     app = UpdateLetterboxMap(base_places, gpx_folder, output_html)

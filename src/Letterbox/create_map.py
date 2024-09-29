@@ -77,7 +77,7 @@ class CreateMap:
 
     def add_tree_layer_control(self) -> None:
         """Add the TreeLayerControl to the map."""
-        self.overlay_tree["label"] = '<img src="../../Images/ASOC-Logo-orange.png" alt="ASOC Logo" style="width: 205px; height: 90px; vertical-align: middle;">'
+        self.overlay_tree["label"] = '<img src="../../res/ASOC-Logo-orange.png" alt="ASOC Logo" style="width: 205px; height: 90px; vertical-align: middle;">'
 
         tree_control = TreeLayerControl(
             base_tree=None,

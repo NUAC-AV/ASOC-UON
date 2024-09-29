@@ -146,14 +146,14 @@ class LayerManager:
                             week_children.append({
                                 "label": layer_name,  # Use plain string
                                 "layer": route_layer,
-                                "collapsed": False
+                                "collapsed": True
                             })
                             
                             # Append to the GPX layers list for reference
                             self.gpx_layers.append({
                                 "label": layer_name,  # Use plain string
                                 "layer": route_layer,
-                                "collapsed": False
+                                "collapsed": True
                             })
                         
                 # After adding all GPX files for the week, add the week layer to the map
