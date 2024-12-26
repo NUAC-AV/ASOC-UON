@@ -207,18 +207,100 @@ Here are some example usages of the maps:
 
 
 ## Requirements
-- Python 3.x
-- `numpy` library
-- `pandas` library
-- `geopandas` libary
-- `folium` library
-- `gpxpy` library
-- `pdf2image` library
-- `Pillow` library
-- `OSMnx` library
-- `shapely` library
+The requirements are contained in the [requirements.txt](requirements.txt) file.
 
-### Installing Libraries
+### Required Libraries
+- Python 3.x
+
+<details>
+  <summary>📚 Libraries</summary>
+  <div style="display: flex; gap: 40px;">
+    <table>
+      <tr><th>Library</th><th>Version</th></tr>
+      <tr><td>branca</td><td>0.7.2</td></tr>
+      <tr><td>charset-normalizer</td><td>3.3.2</td></tr>
+      <tr><td>cycler</td><td>0.12.1</td></tr>
+      <tr><td>fonttools</td><td>4.53.1</td></tr>
+      <tr><td>gpxpy</td><td>1.6.2</td></tr>
+      <tr><td>Jinja2</td><td>3.1.4</td></tr>
+      <tr><td>MarkupSafe</td><td>2.1.5</td></tr>
+      <tr><td>networkx</td><td>3.3</td></tr>
+      <tr><td>osmnx</td><td>1.9.3</td></tr>
+      <tr><td>pandas</td><td>2.2.2</td></tr>
+      <tr><td>pillow</td><td>10.4.0</td></tr>
+      <tr><td>pyparsing</td><td>3.1.2</td></tr>
+      <tr><td>python-dateutil</td><td>2.9.0.post0</td></tr>
+      <tr><td>requests</td><td>2.32.3</td></tr>
+      <tr><td>six</td><td>1.16.0</td></tr>
+      <tr><td>urllib3</td><td>2.2.2</td></tr>
+      <tr><td>xyzservices</td><td>2024.6.0</td></tr>
+    </table>
+
+    <table>
+      <tr><th>Library</th><th>Version</th></tr>
+      <tr><td>certifi</td><td>2024.7.4</td></tr>
+      <tr><td>contourpy</td><td>1.2.1</td></tr>
+      <tr><td>folium</td><td>0.17.0</td></tr>
+      <tr><td>geopandas</td><td>1.0.1</td></tr>
+      <tr><td>idna</td><td>3.7</td></tr>
+      <tr><td>kiwisolver</td><td>1.4.5</td></tr>
+      <tr><td>matplotlib</td><td>3.9.2</td></tr>
+      <tr><td>numpy</td><td>2.0.0</td></tr>
+      <tr><td>packaging</td><td>24.1</td></tr>
+      <tr><td>pathlib</td><td>1.0.1</td></tr>
+      <tr><td>pyogrio</td><td>0.9.0</td></tr>
+      <tr><td>pyproj</td><td>3.6.1</td></tr>
+      <tr><td>pytz</td><td>2024.1</td></tr>
+      <tr><td>shapely</td><td>2.0.5</td></tr>
+      <tr><td>tzdata</td><td>2024.1</td></tr>
+      <tr><td>uuid</td><td>1.30</td></tr>
+    </table>
+  </div>
+</details>
+
+> **⚠️ Disclaimer:** Please ensure to use the specific package versions listed in the `requirements.txt` file. This guarantees that the program runs as expected and avoids compatibility issues.
+
+### Virtual Enviroments
+To run this software using the specific configureations a virtual environment can be setup using the following procedure.
+
+<details>
+  <summary>🔧 Setting Up a Virtual Environment</summary>
+  
+  <p><strong>Install GDAL (Required for pyogrio and geopandas):</strong></p>
+  <ul>
+    <li>On macOS:
+      <pre><code>brew install gdal</code></pre>
+    </li>
+    <li>On Ubuntu:
+      <pre><code>sudo apt update && sudo apt install gdal-bin libgdal-dev</code></pre>
+    </li>
+    <li>On Windows:
+      <pre><code>choco install gdal</code></pre>
+      <p>Alternatively, download and install the GDAL binaries from <a href="https://gdal.org/download.html">GDAL's official site</a> and add the installation path to your system's PATH variable.</p>
+    </li>
+  </ul>
+
+  <p><strong>Create a virtual environment:</strong></p>
+  <pre><code>python3 -m venv asoc_maps</code></pre>
+
+  <p><strong>Activate the virtual environment:</strong></p>
+  <ul>
+    <li>On macOS/Linux:
+      <pre><code>source asoc_maps/bin/activate</code></pre>
+    </li>
+    <li>On Windows:
+      <pre><code>asoc_maps\Scripts\activate</code></pre>
+    </li>
+  </ul>
+
+  <p><strong>Install required packages from <code>requirements.txt</code>:</strong></p>
+  <pre><code>pip install -r requirements.txt</code></pre>
+
+  <p><strong>Deactivate the virtual environment when done:</strong></p>
+  <pre><code>deactivate</code></pre>
+</details>
+
+<!-- ### Installing Libraries
 Make sure you have the libraries installed. You can install these libraries using `pip install library-name`
 <details>
   <summary>📚 Commands for downloading libraries</summary>
@@ -251,7 +333,7 @@ Make sure you have the libraries installed. You can install these libraries usin
       <pre><code>pip install shapely</code></pre>
     </ol>
   </ol>
-</details>
+</details> -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -367,7 +449,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
 
 
 ### Updating Letterbox Map
- 
+
 <ol>
   <li>
     <details>
@@ -379,7 +461,16 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
     Add all gpx files to GPX_Files/Letterbox_Routes folder.
   </li>
   <li>
-    Run Update_Letterbox_Map.py file.
+    <details>
+      <summary>Activate the virtual environment:</summary>
+      <pre><code>source asoc_maps/bin/activate</code></pre>
+    </details>
+  </li>
+  <li>
+    <details>
+    <summary>Run the Update_Letterbox_Map.py file:</summary>
+    <pre><code>python3 src/Letterbox/Update_Letterbox_Map.py</code></pre>
+    </details>
   </li>
   <li>
     <details>
@@ -390,7 +481,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
   <li>
     <details>
       <summary>Commit changes:</summary>
-      <pre><code>git commit -m "📮 Update letterbox map</code></pre>
+      <pre><code>git commit -m "📮 Update letterbox map"</code></pre>
     </details>
   </li>
   <li>
@@ -398,7 +489,7 @@ git clone https://github.com/NUAC-AV/ASOC-UON.git
       <summary>Push changes:</summary>
       <pre><code>git push origin main</code></pre>
     </details>
-  </li> 
+  </li>
 </ol>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
